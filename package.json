@@ -5,9 +5,12 @@
   "type": "module",
   "description": "Catalogue communautaire de contenu fan-made pour Horreur à Arkham : le JCE",
   "scripts": {
-    "thumbs": "node tools/make-thumbs.mjs"
+    "thumbs": "node tools/make-thumbs.mjs",
+    "validate": "node tools/validate-catalogue.mjs"
   },
   "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "sharp": "^0.33.5"
   }
 }

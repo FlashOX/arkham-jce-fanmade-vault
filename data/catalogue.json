@@ -51,7 +51,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR."
+      "commentaire": "Création originale FR.",
+      "archive": null
     },
     {
       "id": "jouet-dune-illusion",
@@ -72,7 +73,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Traduction (VO à confirmer)."
+      "commentaire": "Traduction (VO à confirmer).",
+      "archive": null
     },
     {
       "id": "le-festival",
@@ -93,7 +95,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "le-palais-du-rire",
@@ -114,7 +117,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "le-pont-des-soupirs",
@@ -135,7 +139,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "le-wyrm-de-pensher",
@@ -156,7 +161,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "les-seuils-de-la-croyance",
@@ -177,7 +183,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Scénario solo."
+      "commentaire": "Scénario solo.",
+      "archive": null
     },
     {
       "id": "pulsions-cynegetiques",
@@ -198,7 +205,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR."
+      "commentaire": "Création originale FR.",
+      "archive": null
     },
     {
       "id": "investigateurs-fan-made",
@@ -219,7 +227,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "6 enquêteurs (5 traductions + 1 création FR)."
+      "commentaire": "6 enquêteurs (5 traductions + 1 création FR).",
+      "archive": null
     },
     {
       "id": "intercalaires",
@@ -240,7 +249,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "desolation-a-bord-du-constellation",
@@ -261,7 +271,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "la-symphonie-derich-zann",
@@ -282,7 +293,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Livré avec un enquêteur dédié."
+      "commentaire": "Livré avec un enquêteur dédié.",
+      "archive": null
     },
     {
       "id": "les-chiens-de-tindalos",
@@ -303,7 +315,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "au-bord-du-gouffre",
@@ -324,7 +337,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "sang-verse-a-salem",
@@ -345,7 +359,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "la-couleur-tombee-du-ciel",
@@ -366,7 +381,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "levenement-de-svalbard",
@@ -387,7 +403,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "lhotel-du-grand-chene",
@@ -408,7 +425,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "investigateurs-fan-made-cycle-2",
@@ -429,7 +447,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "intercalaires-cycle-2",
@@ -450,7 +469,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "cartes-joueurs-laureates-du-concours-2020",
@@ -471,7 +491,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "au-coeur-des-tenebres",
@@ -492,7 +513,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "la-maison-voodoo",
@@ -513,7 +535,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "les-disparus-de-killineq",
@@ -534,7 +557,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "matiere-noire",
@@ -555,7 +579,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "dimensions-etranges",
@@ -576,7 +601,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "lappel-du-porte-peste",
@@ -597,7 +623,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "fondations-cyclopeenes",
@@ -618,7 +645,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "la-guerre-des-mondes",
@@ -639,7 +667,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "la-legende-du-cavalier-sans-tete",
@@ -660,7 +689,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "letrange-cas-du-docteur-jekyll-et-mr-hyde",
@@ -681,7 +711,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "alice-au-pays-des-merveilles",
@@ -702,7 +733,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "les-ombres-de-yog-sothoth",
@@ -723,7 +755,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "renouveau-conspiration-dinnsmouth",
@@ -744,7 +777,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "À classer — retraduction/refonte de l'extension officielle."
+      "commentaire": "À classer — retraduction/refonte de l'extension officielle.",
+      "archive": null
     },
     {
       "id": "renouveau-devoreurs-des-reves",
@@ -765,7 +799,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "À classer — retraduction/refonte de l'extension officielle."
+      "commentaire": "À classer — retraduction/refonte de l'extension officielle.",
+      "archive": null
     },
     {
       "id": "quete-onirique-etendue",
@@ -786,7 +821,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "À classer — vraisemblablement une campagne (Dream-Quest étendue)."
+      "commentaire": "À classer — vraisemblablement une campagne (Dream-Quest étendue).",
+      "archive": null
     },
     {
       "id": "noel-a-arkham",
@@ -807,7 +843,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "À vérifier — scénario one-shot de Noël."
+      "commentaire": "À vérifier — scénario one-shot de Noël.",
+      "archive": null
     },
     {
       "id": "la-cite-de-linvisible",
@@ -828,7 +865,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "circus-ex-mortis",
@@ -849,7 +887,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "lombre-des-grands-anciens",
@@ -870,7 +909,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null
+      "commentaire": null,
+      "archive": null
     },
     {
       "id": "ages-unwound",
@@ -891,7 +931,8 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "VO anglaise — statut de traduction FR à préciser."
+      "commentaire": "VO anglaise — statut de traduction FR à préciser.",
+      "archive": null
     }
   ]
 }

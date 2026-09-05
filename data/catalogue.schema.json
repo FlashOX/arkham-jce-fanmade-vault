@@ -38,6 +38,37 @@
         "disponibilite": { "type": "string" }
       }
     },
+    "archive": {
+      "type": "object",
+      "description": "Item archive.org correspondant à la fiche (1 fiche = 1 item).",
+      "required": ["id", "fichiers"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "Identifiant de l'item archive.org (page : archive.org/details/<id>). Convention : 'ahlcg-fr-' + id de la fiche."
+        },
+        "fichiers": {
+          "type": "array",
+          "description": "Fichiers de l'item, dans l'ordre d'affichage. Nom de fichier relatif (téléchargement : archive.org/download/<id>/<file>).",
+          "items": {
+            "type": "object",
+            "required": ["role", "label", "file"],
+            "additionalProperties": false,
+            "properties": {
+              "role": {
+                "type": "string",
+                "enum": ["guide", "print", "cards", "sets", "scenario", "extension", "cover", "source"],
+                "description": "guide=règles ; print=PDF prêt à imprimer ; cards=images de cartes ; sets=sets de rencontre partagés ; scenario=bundle d'un scénario de campagne ; extension=add-on (enquêteur, classe) ; cover=visuels de couverture ; source=fichiers sources (projet Strange Eons, etc.)."
+              },
+              "label": { "type": "string", "minLength": 1 },
+              "file": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    },
     "item": {
       "type": "object",
       "required": ["id", "titre", "type", "cycle", "etat", "langue", "publie", "liens"],
@@ -97,9 +128,13 @@
             "fichier": {
               "type": ["string", "null"],
               "format": "uri",
-              "description": "URL du fichier final hébergé (à terme : item archive.org)."
+              "description": "Ancien champ : URL unique. Remplacé par `archive` ; laisser null."
             }
           }
+        },
+        "archive": {
+          "oneOf": [{ "$ref": "#/$defs/archive" }, { "type": "null" }],
+          "description": "Item archive.org. null tant que le contenu n'est pas hébergé."
         },
         "images": {
           "type": "object",

@@ -211,6 +211,20 @@
   .card .links a:hover { text-decoration: underline; }
   .card .links .disabled { color: var(--text-dim); cursor: not-allowed; }
 
+  .card .files { margin: 0 0 14px; font-size: 0.8rem; }
+  .card .files summary { color: var(--text-dim); cursor: pointer; }
+  .card .files ul { list-style: none; margin: 8px 0 0; padding: 0; }
+  .card .files li { margin: 2px 0; }
+  .card .files li.role {
+    color: var(--text-dim);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 8px;
+  }
+  .card .files li a { color: var(--accent); text-decoration: none; }
+  .card .files li a:hover { text-decoration: underline; }
+
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
   .tag {
     font-size: 0.7rem;
@@ -299,6 +313,47 @@ const ETAT_LABEL = {
   autre: "Autre",
   inconnu: null,
 };
+const ROLE_LABEL = {
+  guide: "Règles",
+  print: "Impression",
+  cards: "Cartes",
+  sets: "Sets de rencontre",
+  scenario: "Scénarios",
+  extension: "Extensions",
+  cover: "Visuels",
+  source: "Sources",
+};
+const ROLE_ORDER = ["guide", "print", "sets", "scenario", "extension", "cards", "cover", "source"];
+
+const IA_DETAILS = (id) => `https://archive.org/details/${encodeURIComponent(id)}`;
+const IA_DOWNLOAD = (id, f) =>
+  `https://archive.org/download/${encodeURIComponent(id)}/${f.split("/").map(encodeURIComponent).join("/")}`;
+
+function archiveFilesHtml(archive) {
+  const byRole = new Map();
+  for (const f of archive.fichiers || []) {
+    if (!byRole.has(f.role)) byRole.set(f.role, []);
+    byRole.get(f.role).push(f);
+  }
+  const roles = [...byRole.keys()].sort(
+    (a, b) => (ROLE_ORDER.indexOf(a) + 1 || 99) - (ROLE_ORDER.indexOf(b) + 1 || 99),
+  );
+  const n = (archive.fichiers || []).length;
+  const rows = roles
+    .map(
+      (role) =>
+        `<li class="role">${esc(ROLE_LABEL[role] || role)}</li>` +
+        byRole
+          .get(role)
+          .map(
+            (f) =>
+              `<li><a href="${esc(IA_DOWNLOAD(archive.id, f.file))}">${esc(f.label)} ↓</a></li>`,
+          )
+          .join(""),
+    )
+    .join("");
+  return `<details class="files"><summary>${n} fichier${n > 1 ? "s" : ""}</summary><ul>${rows}</ul></details>`;
+}
 
 const grid = document.getElementById("grid");
 const emptyEl = document.getElementById("empty");
@@ -334,7 +389,7 @@ function render(list) {
     .map((it) => {
       const etat = ETAT_LABEL[it.etat];
       const src = it.liens?.source;
-      const file = it.liens?.fichier;
+      const archive = it.archive;
       return `
     <div class="card">
       <div class="thumb">
@@ -348,10 +403,11 @@ function render(list) {
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
         <div class="links">
           ${src ? `<a href="${esc(src)}" target="_blank" rel="noopener">Fil d'origine ↗</a>` : ""}
-          ${file
-            ? `<a href="${esc(file)}" target="_blank" rel="noopener">Télécharger ↗</a>`
+          ${archive
+            ? `<a href="${esc(IA_DETAILS(archive.id))}" target="_blank" rel="noopener">archive.org ↗</a>`
             : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}
         </div>
+        ${archive && (archive.fichiers || []).length ? archiveFilesHtml(archive) : ""}
         <div class="tags">
           ${it.cycle ? `<span class="tag cycle">${esc(it.cycle)}</span>` : ""}
           <span class="tag">${esc(TYPE_LABEL[it.type] || it.type)}</span>
