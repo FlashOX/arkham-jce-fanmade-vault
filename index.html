@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archives d'Arkham — contenu fan-made AHLCG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Spectral:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #17181c;
+    --bg-elevated: #1f2025;
+    --card: #212228;
+    --border: #2c2d34;
+    --text: #e7e6e3;
+    --text-dim: #9a9aa2;
+    --accent: #7d6b9e;
+    --accent-soft: rgba(125,107,158,0.16);
+    --seal: #b3743f;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  a { color: inherit; }
+
+  /* Header */
+  header {
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand svg { width: 32px; height: 32px; flex-shrink: 0; }
+
+  .brand-text .name {
+    font-family: 'Spectral', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+  }
+
+  .brand-text .tagline {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+  }
+
+  nav { display: flex; gap: 28px; }
+  nav a { text-decoration: none; color: var(--text-dim); font-size: 0.92rem; }
+  nav a:hover { color: var(--text); }
+
+  .search {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    width: 200px;
+  }
+
+  /* Intro strip */
+  .intro-strip {
+    padding: 28px 32px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .poc-flag {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--seal);
+    color: var(--seal);
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+
+  .intro-strip p {
+    color: var(--text-dim);
+    max-width: 640px;
+    line-height: 1.55;
+    margin: 0 0 24px;
+  }
+
+  /* Filter bar */
+  .filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 14px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .filters select {
+    background: transparent;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.85rem;
+  }
+
+  /* Grid */
+  .grid {
+    max-width: 1100px;
+    margin: 32px auto 80px;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card .thumb {
+    position: relative;
+    height: 150px;
+    background: linear-gradient(135deg, var(--accent-soft), #14151a 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card .thumb svg { width: 48px; height: 48px; opacity: 0.5; }
+
+  .card .thumb .dl {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(23,24,28,0.75);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card .thumb .dl svg { width: 15px; height: 15px; opacity: 0.9; }
+
+  .card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
+
+  .card h3 {
+    font-family: 'Spectral', serif;
+    font-size: 1.15rem;
+    margin: 0 0 2px;
+  }
+
+  .card .author {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+
+  .card .meta {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .card .desc {
+    font-size: 0.88rem;
+    color: #c7c6c2;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    flex: 1;
+  }
+
+  .card .links { display: flex; gap: 16px; margin-bottom: 14px; }
+  .card .links a { font-size: 0.82rem; color: var(--accent); text-decoration: none; }
+  .card .links a:hover { text-decoration: underline; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: #cabfe0;
+  }
+  .tag.status { background: rgba(179,116,63,0.18); color: #e0ac7c; }
+
+  footer {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    padding: 24px 32px 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  .hidden { display: none !important; }
+
+  @media (max-width: 640px) {
+    header { padding: 14px 18px; }
+    nav { display: none; }
+    .grid, .filters, .intro-strip { padding-left: 18px; padding-right: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="44" fill="none" stroke="#7d6b9e" stroke-width="3"/>
+      <path d="M50 22 L58 44 L82 44 L62 58 L70 80 L50 66 L30 80 L38 58 L18 44 L42 44 Z" fill="#7d6b9e"/>
+    </svg>
+    <div class="brand-text">
+      <div class="name">Archives d'Arkham</div>
+      <div class="tagline">Contenu fan-made pour Arkham Horror : le Jeu de Cartes</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#">Intro</a>
+    <a href="#">Catalogue</a>
+    <a href="#">Contribuer</a>
+    <a href="#">À propos</a>
+  </nav>
+  <input class="search" type="text" placeholder="Rechercher..." id="searchInput">
+</header>
+
+<div class="intro-strip">
+  <span class="poc-flag">POC — test d'hébergement en cours</span>
+  <p>Chaque fiche pointe vers un fichier conservé sur Internet Archive. Aucun lien Drive personnel : le contenu reste accessible même si un contributeur s'en va.</p>
+</div>
+
+<div class="filters">
+  <select id="filterType">
+    <option value="">Type</option>
+    <option value="Campagne">Campagne</option>
+    <option value="Enquêteurs">Enquêteurs</option>
+    <option value="Add-on">Add-on</option>
+  </select>
+  <select id="filterStatus">
+    <option value="">Statut</option>
+    <option value="Disponible">Disponible</option>
+    <option value="En travaux">En travaux</option>
+  </select>
+  <select id="filterLang">
+    <option value="">Langue</option>
+    <option value="Français">Français</option>
+    <option value="English">English</option>
+  </select>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<footer>
+  Site statique — hébergeable gratuitement sur GitHub Pages · Fichiers hébergés sur archive.org
+</footer>
+
+<script>
+const items = [
+  {
+    title: "Les Cloches de Kingsport",
+    author: "par un contributeur",
+    type: "Campagne",
+    status: "Disponible",
+    lang: "Français",
+    cards: 214,
+    scenarios: 6,
+    desc: "Campagne complète en 6 scénarios, portée sur les rues brumeuses de Kingsport. Inclut cartes joueur et rencontre.",
+    url: "https://archive.org/details/PLACEHOLDER-cloches-kingsport"
+  },
+  {
+    title: "Le Cercle de Whateley",
+    author: "par un contributeur",
+    type: "Enquêteurs",
+    status: "En travaux",
+    lang: "Français",
+    cards: 60,
+    scenarios: 0,
+    desc: "Extension de 4 nouveaux enquêteurs et leurs decks associés, thème occulte rural.",
+    url: "https://archive.org/details/PLACEHOLDER-cercle-whateley"
+  },
+  {
+    title: "Sac de Chaos — Variante Cartes",
+    author: "par un contributeur",
+    type: "Add-on",
+    status: "Disponible",
+    lang: "Français",
+    cards: 72,
+    scenarios: 0,
+    desc: "Remplace les jetons du sac de chaos par des cartes, pour un rangement plus compact.",
+    url: "https://archive.org/details/PLACEHOLDER-sac-chaos-cartes"
+  }
+];
+
+const grid = document.getElementById('grid');
+
+function render(list) {
+  grid.innerHTML = list.map(it => `
+    <div class="card">
+      <div class="thumb">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#e7e6e3" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M4 15l4-4 4 4 4-6 4 6"/></svg>
+        <a class="dl" href="${it.url}" title="Télécharger">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e7e6e3" stroke-width="2"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+        </a>
+      </div>
+      <div class="card-body">
+        <h3>${it.title}</h3>
+        <div class="author">${it.author}</div>
+        <div class="meta">Cartes : ${it.cards}${it.scenarios ? ' · Scénarios : ' + it.scenarios : ''}</div>
+        <p class="desc">${it.desc}</p>
+        <div class="links">
+          <a href="${it.url}" target="_blank">En savoir plus ↗</a>
+          <a href="${it.url}" target="_blank">Voir les fichiers ↗</a>
+        </div>
+        <div class="tags">
+          <span class="tag">${it.lang}</span>
+          <span class="tag status">${it.status}</span>
+          <span class="tag">${it.type}</span>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function applyFilters() {
+  const type = document.getElementById('filterType').value;
+  const status = document.getElementById('filterStatus').value;
+  const lang = document.getElementById('filterLang').value;
+  const q = document.getElementById('searchInput').value.toLowerCase();
+
+  const filtered = items.filter(it =>
+    (!type || it.type === type) &&
+    (!status || it.status === status) &&
+    (!lang || it.lang === lang) &&
+    (!q || it.title.toLowerCase().includes(q) || it.desc.toLowerCase().includes(q))
+  );
+  render(filtered);
+}
+
+['filterType', 'filterStatus', 'filterLang'].forEach(id =>
+  document.getElementById(id).addEventListener('change', applyFilters)
+);
+document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+render(items);
+</script>
+
+</body>
+</html>
