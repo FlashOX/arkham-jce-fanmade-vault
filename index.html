@@ -272,7 +272,6 @@
   <select id="filterType"><option value="">Type</option></select>
   <select id="filterCycle"><option value="">Cycle</option></select>
   <select id="filterEtat"><option value="">État</option></select>
-  <select id="filterLang"><option value="">Langue</option></select>
   <span class="count" id="count"></span>
 </div>
 
@@ -300,7 +299,6 @@ const ETAT_LABEL = {
   autre: "Autre",
   inconnu: null,
 };
-const LANG_LABEL = { fr: "Français", en: "English" };
 
 const grid = document.getElementById("grid");
 const emptyEl = document.getElementById("empty");
@@ -358,7 +356,6 @@ function render(list) {
           ${it.cycle ? `<span class="tag cycle">${esc(it.cycle)}</span>` : ""}
           <span class="tag">${esc(TYPE_LABEL[it.type] || it.type)}</span>
           ${etat ? `<span class="tag status">${esc(etat)}</span>` : ""}
-          <span class="tag">${esc(LANG_LABEL[it.langue] || it.langue)}</span>
         </div>
       </div>
     </div>`;
@@ -385,7 +382,6 @@ function applyFilters() {
   const type = document.getElementById("filterType").value;
   const cycle = document.getElementById("filterCycle").value;
   const etat = document.getElementById("filterEtat").value;
-  const lang = document.getElementById("filterLang").value;
   const q = document.getElementById("searchInput").value.trim().toLowerCase();
 
   updateCycleInfo(cycle);
@@ -395,7 +391,6 @@ function applyFilters() {
         (!type || it.type === type) &&
         (!cycle || (cycle === "—" ? !it.cycle : it.cycle === cycle)) &&
         (!etat || it.etat === etat) &&
-        (!lang || it.langue === lang) &&
         (!q ||
           it.titre.toLowerCase().includes(q) ||
           (it.titreVO || "").toLowerCase().includes(q) ||
@@ -410,7 +405,8 @@ fetch("data/catalogue.json")
     return r.json();
   })
   .then((data) => {
-    items = data.items || [];
+    // Seules les fiches publiées apparaissent dans le catalogue.
+    items = (data.items || []).filter((i) => i.publie !== false);
     cycles = data.cycles || {};
 
     const types = [...new Set(items.map((i) => i.type))].sort(
@@ -422,7 +418,6 @@ fetch("data/catalogue.json")
     const etats = [...new Set(items.map((i) => i.etat))].filter(
       (e) => ETAT_LABEL[e],
     );
-    const langs = [...new Set(items.map((i) => i.langue))];
 
     fillOptions(document.getElementById("filterType"), types, (t) => TYPE_LABEL[t] || t);
     fillOptions(document.getElementById("filterCycle"), cycleNames);
@@ -433,7 +428,6 @@ fetch("data/catalogue.json")
       document.getElementById("filterCycle").appendChild(o);
     }
     fillOptions(document.getElementById("filterEtat"), etats, (e) => ETAT_LABEL[e]);
-    fillOptions(document.getElementById("filterLang"), langs, (l) => LANG_LABEL[l] || l);
 
     render(items);
   })
@@ -443,7 +437,7 @@ fetch("data/catalogue.json")
     emptyEl.textContent = `Impossible de charger le catalogue (${err.message}).`;
   });
 
-["filterType", "filterCycle", "filterEtat", "filterLang"].forEach((id) =>
+["filterType", "filterCycle", "filterEtat"].forEach((id) =>
   document.getElementById(id).addEventListener("change", applyFilters),
 );
 document.getElementById("searchInput").addEventListener("input", applyFilters);
