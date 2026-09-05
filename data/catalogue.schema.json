@@ -53,6 +53,10 @@
           "type": ["string", "null"],
           "description": "Titre original (VO anglaise) si le contenu est une traduction."
         },
+        "image": {
+          "type": ["string", "null"],
+          "description": "Chemin (relatif à la racine du site) d'une miniature pour la fiche, ex. 'img/thumbs/<id>.jpg'."
+        },
         "type": {
           "type": "string",
           "enum": [
