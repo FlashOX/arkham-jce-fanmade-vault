@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://flashox.github.io/arkham-jce-fanmade-vault/data/catalogue.schema.json",
+  "title": "Catalogue de contenu fan-made Arkham JCE",
+  "type": "object",
+  "required": ["meta", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["langue", "miseAJour"],
+      "additionalProperties": true,
+      "properties": {
+        "langue": { "type": "string", "examples": ["fr"] },
+        "miseAJour": { "type": "string", "format": "date" },
+        "source": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "cycles": {
+      "type": "object",
+      "description": "Détail de chaque cycle de traduction fan-made, indexé par son nom (ex. 'Cycle 1').",
+      "additionalProperties": { "$ref": "#/$defs/cycle" }
+    },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/item" }
+    }
+  },
+  "$defs": {
+    "cycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lien": { "type": ["string", "null"], "format": "uri" },
+        "organisateur": { "type": "string" },
+        "description": { "type": "string" },
+        "disponibilite": { "type": "string" }
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": ["id", "titre", "type", "cycle", "etat", "langue", "liens"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "Identifiant stable (slug). Ne pas modifier une fois publié."
+        },
+        "titre": { "type": "string", "minLength": 1 },
+        "titreVO": {
+          "type": ["string", "null"],
+          "description": "Titre original (VO anglaise) si le contenu est une traduction."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario",
+            "campagne",
+            "investigateurs",
+            "cartes-joueur",
+            "intercalaires",
+            "autre"
+          ],
+          "description": "Type de contenu. Indépendant du cycle de traduction."
+        },
+        "cycle": {
+          "type": ["string", "null"],
+          "description": "Cycle de traduction fan-made (arkhamhorrorfr), ex. 'Cycle 1'. null si hors cycle.",
+          "examples": ["Cycle 1", "Cycle 2", "Cycle 3", "Cycle 8", null]
+        },
+        "etat": {
+          "type": "string",
+          "enum": ["disponible", "en-travaux", "autre", "inconnu"],
+          "description": "Avancement de la mise à disposition du fichier."
+        },
+        "langue": { "type": "string", "examples": ["fr", "en"] },
+        "liens": {
+          "type": "object",
+          "required": ["source", "fichier"],
+          "additionalProperties": false,
+          "properties": {
+            "source": {
+              "type": ["string", "null"],
+              "format": "uri",
+              "description": "Fil d'origine (forum / Discord) où le contenu est publié / discuté."
+            },
+            "fichier": {
+              "type": ["string", "null"],
+              "format": "uri",
+              "description": "URL du fichier final hébergé (à terme : item archive.org)."
+            }
+          }
+        },
+        "images": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "noBleed": { "type": "boolean" },
+            "bleed": { "type": "boolean" }
+          }
+        },
+        "contactPanierPartage": { "type": ["string", "null"] },
+        "commentaire": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

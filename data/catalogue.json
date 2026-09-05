@@ -1,0 +1,815 @@
+{
+  "meta": {
+    "langue": "fr",
+    "miseAJour": "2026-09-05",
+    "source": "fanmade_listing_fr.csv — communauté arkhamhorrorfr (forum + Discord)",
+    "note": "Champ `type` = type de contenu ; champ `cycle` = cycle de traduction fan-made (indépendant du type). Voir `cycles` pour le détail de chaque cycle."
+  },
+  "cycles": {
+    "Cycle 1": {
+      "lien": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+      "organisateur": "Ligue des Joueurs Francophones d'Arkham JCE",
+      "description": "Premier lot : 8 scénarios indépendants (traductions de scénarios fan anglophones + créations originales FR) et 6 enquêteurs fan-made. Impression groupée via MakePlayingCards.",
+      "disponibilite": "Disponible (fils de téléchargement individuels sur le forum)."
+    },
+    "Cycle 2": {
+      "lien": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+      "organisateur": "Ligue des Joueurs Francophones d'Arkham JCE",
+      "description": "Deuxième lot : 8 scénarios indépendants + enquêteur(s) dédié(s), après plusieurs mois de playtest. Impression groupée MPC.",
+      "disponibilite": "Disponible depuis le 31 mars 2021."
+    },
+    "Cycle 3": {
+      "lien": "https://discord.com/channels/443151671846109195/711513306069729330/1503888152237047819",
+      "organisateur": "Ligue des Joueurs Francophones d'Arkham JCE",
+      "description": "Troisième lot de scénarios fan-made. Détails sur le Discord de la communauté.",
+      "disponibilite": "À préciser (source Discord)."
+    },
+    "Cycle 8": {
+      "lien": "https://discord.com/channels/443151671846109195/998284425177600042",
+      "organisateur": "Ligue des Joueurs Francophones d'Arkham JCE",
+      "description": "Lot de scénarios fan-made numéroté « Cycle 8 ». Détails sur le Discord de la communauté.",
+      "disponibilite": "À préciser (source Discord)."
+    }
+  },
+  "items": [
+    {
+      "id": "face-au-wendigo",
+      "titre": "Face au Wendigo",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR."
+    },
+    {
+      "id": "jouet-dune-illusion",
+      "titre": "Jouet d'une Illusion",
+      "titreVO": "The Nephew Cal",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "autre",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Traduction (VO à confirmer)."
+    },
+    {
+      "id": "le-festival",
+      "titre": "Le Festival",
+      "titreVO": "The Festival",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "le-palais-du-rire",
+      "titre": "Le Palais du Rire",
+      "titreVO": "Happy's Funhouse",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "le-pont-des-soupirs",
+      "titre": "Le Pont des Soupirs",
+      "titreVO": "Bridge of Sighs",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "le-wyrm-de-pensher",
+      "titre": "Le Wyrm de Pensher",
+      "titreVO": "The Pensher Wyrm",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "les-seuils-de-la-croyance",
+      "titre": "Les Seuils de la Croyance",
+      "titreVO": "The Limens Belief",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Scénario solo."
+    },
+    {
+      "id": "pulsions-cynegetiques",
+      "titre": "Pulsions Cynégétiques",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR."
+    },
+    {
+      "id": "investigateurs-fan-made",
+      "titre": "Investigateurs fan-made",
+      "titreVO": null,
+      "type": "investigateurs",
+      "cycle": "Cycle 1",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "6 enquêteurs (5 traductions + 1 création FR)."
+    },
+    {
+      "id": "intercalaires",
+      "titre": "Intercalaires",
+      "titreVO": null,
+      "type": "intercalaires",
+      "cycle": "Cycle 1",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "desolation-a-bord-du-constellation",
+      "titre": "Désolation à Bord du Constellation",
+      "titreVO": "Consternation on the Constellation",
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "la-symphonie-derich-zann",
+      "titre": "La Symphonie d'Erich Zann",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Livré avec un enquêteur dédié."
+    },
+    {
+      "id": "les-chiens-de-tindalos",
+      "titre": "Les chiens de tindalos",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "au-bord-du-gouffre",
+      "titre": "Au bord du gouffre",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "sang-verse-a-salem",
+      "titre": "Sang versé à salem",
+      "titreVO": "Blood Spilled in Salem",
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "la-couleur-tombee-du-ciel",
+      "titre": "La couleur tombée du ciel",
+      "titreVO": "The Colour Out of Space",
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "levenement-de-svalbard",
+      "titre": "L'évènement de Svalbard",
+      "titreVO": "The Svalbard Event",
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "lhotel-du-grand-chene",
+      "titre": "L’hôtel du grand chêne",
+      "titreVO": "The Grand Oak Hotel",
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "investigateurs-fan-made-cycle-2",
+      "titre": "Investigateurs fan-made",
+      "titreVO": null,
+      "type": "investigateurs",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "intercalaires-cycle-2",
+      "titre": "Intercalaires",
+      "titreVO": null,
+      "type": "intercalaires",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "cartes-joueurs-laureates-du-concours-2020",
+      "titre": "Cartes joueurs lauréates du concours 2020",
+      "titreVO": null,
+      "type": "cartes-joueur",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "au-coeur-des-tenebres",
+      "titre": "Au Coeur des Ténèbres",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 3",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/711513306069729330/1503888152237047819",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "la-maison-voodoo",
+      "titre": "La Maison Voodoo",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 3",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/711513306069729330/1503888152237047819",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "les-disparus-de-killineq",
+      "titre": "Les Disparus de Killineq",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 3",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/711513306069729330/1503888152237047819",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "matiere-noire",
+      "titre": "Matière Noire",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "dimensions-etranges",
+      "titre": "Dimensions Étranges",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "lappel-du-porte-peste",
+      "titre": "L'Appel du Porte Peste",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "fondations-cyclopeenes",
+      "titre": "Fondations Cyclopéenes",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "la-guerre-des-mondes",
+      "titre": "La guerre des mondes",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 8",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/998284425177600042",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "la-legende-du-cavalier-sans-tete",
+      "titre": "La légende du cavalier sans tête",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 8",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/998284425177600042",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "letrange-cas-du-docteur-jekyll-et-mr-hyde",
+      "titre": "L'étrange cas du docteur Jekyll et Mr Hyde",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 8",
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/998284425177600042",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "alice-au-pays-des-merveilles",
+      "titre": "Alice au Pays des Merveilles",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/977511254572814346",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "les-ombres-de-yog-sothoth",
+      "titre": "Les Ombres de Yog Sothoth",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/977511254572814346",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "renouveau-conspiration-dinnsmouth",
+      "titre": "Renouveau Conspiration d'Innsmouth",
+      "titreVO": null,
+      "type": "autre",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/1340972554558640189",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "À classer — retraduction/refonte de l'extension officielle."
+    },
+    {
+      "id": "renouveau-devoreurs-des-reves",
+      "titre": "Renouveau Dévoreurs des Rêves",
+      "titreVO": null,
+      "type": "autre",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/1340972554558640189",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "À classer — retraduction/refonte de l'extension officielle."
+    },
+    {
+      "id": "quete-onirique-etendue",
+      "titre": "Quête Onirique Étendue",
+      "titreVO": null,
+      "type": "autre",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/1340972554558640189",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "À classer — vraisemblablement une campagne (Dream-Quest étendue)."
+    },
+    {
+      "id": "noel-a-arkham",
+      "titre": "Noel à Arkham",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/1340972554558640189",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "À vérifier — scénario one-shot de Noël."
+    },
+    {
+      "id": "la-cite-de-linvisible",
+      "titre": "La Cité de l'Invisible",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": null,
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "circus-ex-mortis",
+      "titre": "Circus Ex Mortis",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": null,
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "lombre-des-grands-anciens",
+      "titre": "L'ombre des Grands Anciens",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": null,
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null
+    },
+    {
+      "id": "ages-unwound",
+      "titre": "Ages Unwound",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "liens": {
+        "source": null,
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "VO anglaise — statut de traduction FR à préciser."
+    }
+  ]
+}

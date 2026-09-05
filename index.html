@@ -106,6 +106,7 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    align-items: center;
     padding: 14px 32px;
     max-width: 1100px;
     margin: 0 auto;
@@ -122,6 +123,27 @@
     font-size: 0.85rem;
   }
 
+  .filters .count {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  .cycle-info {
+    max-width: 1100px;
+    margin: 18px auto 0;
+    padding: 14px 18px;
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #d9cdf0;
+  }
+  .cycle-info strong { color: var(--text); }
+  .cycle-info .meta { color: var(--text-dim); display: block; margin-top: 4px; }
+  @media (max-width: 640px) { .cycle-info { margin-left: 18px; margin-right: 18px; } }
+
   /* Grid */
   .grid {
     max-width: 1100px;
@@ -130,6 +152,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
+  }
+
+  .empty {
+    max-width: 1100px;
+    margin: 48px auto;
+    padding: 0 32px;
+    color: var(--text-dim);
+    text-align: center;
   }
 
   .card {
@@ -143,29 +173,14 @@
 
   .card .thumb {
     position: relative;
-    height: 150px;
+    height: 120px;
     background: linear-gradient(135deg, var(--accent-soft), #14151a 70%);
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .card .thumb svg { width: 48px; height: 48px; opacity: 0.5; }
-
-  .card .thumb .dl {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: rgba(23,24,28,0.75);
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .card .thumb .dl svg { width: 15px; height: 15px; opacity: 0.9; }
+  .card .thumb svg { width: 42px; height: 42px; opacity: 0.5; }
 
   .card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
 
@@ -175,31 +190,27 @@
     margin: 0 0 2px;
   }
 
-  .card .author {
+  .card .vo {
     font-size: 0.78rem;
     color: var(--text-dim);
-    margin-bottom: 10px;
+    font-style: italic;
+    margin: 0 0 8px;
+  }
+  .card h3:last-child { margin-bottom: 8px; }
+
+  .card .note {
+    font-size: 0.8rem;
+    color: var(--seal);
+    line-height: 1.45;
+    margin: 0 0 12px;
   }
 
-  .card .meta {
-    font-size: 0.78rem;
-    color: var(--text-dim);
-    margin-bottom: 8px;
-  }
-
-  .card .desc {
-    font-size: 0.88rem;
-    color: #c7c6c2;
-    line-height: 1.5;
-    margin-bottom: 14px;
-    flex: 1;
-  }
-
-  .card .links { display: flex; gap: 16px; margin-bottom: 14px; }
+  .card .links { display: flex; gap: 16px; margin: 4px 0 14px; flex-wrap: wrap; }
   .card .links a { font-size: 0.82rem; color: var(--accent); text-decoration: none; }
   .card .links a:hover { text-decoration: underline; }
+  .card .links .disabled { color: var(--text-dim); cursor: not-allowed; }
 
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
   .tag {
     font-size: 0.7rem;
     padding: 3px 10px;
@@ -208,6 +219,7 @@
     color: #cabfe0;
   }
   .tag.status { background: rgba(179,116,63,0.18); color: #e0ac7c; }
+  .tag.cycle { background: rgba(125,107,158,0.28); color: #d9cdf0; }
 
   footer {
     text-align: center;
@@ -250,122 +262,188 @@
 
 <div class="intro-strip">
   <span class="poc-flag">POC — test d'hébergement en cours</span>
-  <p>Chaque fiche pointe vers un fichier conservé sur Internet Archive. Aucun lien Drive personnel : le contenu reste accessible même si un contributeur s'en va.</p>
+  <p>Catalogue du contenu fan-made francophone pour <em>Horreur à Arkham : le JCE</em>.
+     Les données proviennent du recensement de la communauté ; les liens de fichiers
+     pointeront à terme vers des copies pérennes sur Internet Archive.</p>
 </div>
 
 <div class="filters">
-  <select id="filterType">
-    <option value="">Type</option>
-    <option value="Campagne">Campagne</option>
-    <option value="Enquêteurs">Enquêteurs</option>
-    <option value="Add-on">Add-on</option>
-  </select>
-  <select id="filterStatus">
-    <option value="">Statut</option>
-    <option value="Disponible">Disponible</option>
-    <option value="En travaux">En travaux</option>
-  </select>
-  <select id="filterLang">
-    <option value="">Langue</option>
-    <option value="Français">Français</option>
-    <option value="English">English</option>
-  </select>
+  <select id="filterType"><option value="">Type</option></select>
+  <select id="filterCycle"><option value="">Cycle</option></select>
+  <select id="filterEtat"><option value="">État</option></select>
+  <select id="filterLang"><option value="">Langue</option></select>
+  <span class="count" id="count"></span>
 </div>
 
+<div class="cycle-info hidden" id="cycleInfo"></div>
+
 <div class="grid" id="grid"></div>
+<div class="empty hidden" id="empty">Aucune fiche ne correspond à ces filtres.</div>
 
 <footer>
-  Site statique — hébergeable gratuitement sur GitHub Pages · Fichiers hébergés sur archive.org
+  Site statique — GitHub Pages · Données : <a href="data/catalogue.json">catalogue.json</a> · Fichiers hébergés sur archive.org
 </footer>
 
 <script>
-const items = [
-  {
-    title: "Les Cloches de Kingsport",
-    author: "par un contributeur",
-    type: "Campagne",
-    status: "Disponible",
-    lang: "Français",
-    cards: 214,
-    scenarios: 6,
-    desc: "Campagne complète en 6 scénarios, portée sur les rues brumeuses de Kingsport. Inclut cartes joueur et rencontre.",
-    url: "https://archive.org/details/PLACEHOLDER-cloches-kingsport"
-  },
-  {
-    title: "Le Cercle de Whateley",
-    author: "par un contributeur",
-    type: "Enquêteurs",
-    status: "En travaux",
-    lang: "Français",
-    cards: 60,
-    scenarios: 0,
-    desc: "Extension de 4 nouveaux enquêteurs et leurs decks associés, thème occulte rural.",
-    url: "https://archive.org/details/PLACEHOLDER-cercle-whateley"
-  },
-  {
-    title: "Sac de Chaos — Variante Cartes",
-    author: "par un contributeur",
-    type: "Add-on",
-    status: "Disponible",
-    lang: "Français",
-    cards: 72,
-    scenarios: 0,
-    desc: "Remplace les jetons du sac de chaos par des cartes, pour un rangement plus compact.",
-    url: "https://archive.org/details/PLACEHOLDER-sac-chaos-cartes"
-  }
-];
+const TYPE_LABEL = {
+  scenario: "Scénario",
+  campagne: "Campagne",
+  investigateurs: "Enquêteurs",
+  "cartes-joueur": "Cartes joueur",
+  intercalaires: "Intercalaires",
+  autre: "Autre",
+};
+const ETAT_LABEL = {
+  disponible: "Disponible",
+  "en-travaux": "En travaux",
+  autre: "Autre",
+  inconnu: null,
+};
+const LANG_LABEL = { fr: "Français", en: "English" };
 
-const grid = document.getElementById('grid');
+const grid = document.getElementById("grid");
+const emptyEl = document.getElementById("empty");
+const countEl = document.getElementById("count");
+const cycleInfoEl = document.getElementById("cycleInfo");
+let items = [];
+let cycles = {};
+
+const esc = (s) =>
+  String(s ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[c]));
+
+function cycleSortKey(c) {
+  if (!c) return Infinity;
+  const m = /(\d+)/.exec(c);
+  return m ? Number(m[1]) : 999;
+}
+
+function fillOptions(sel, values, labelFn) {
+  for (const v of values) {
+    const o = document.createElement("option");
+    o.value = v;
+    o.textContent = labelFn ? labelFn(v) : v;
+    sel.appendChild(o);
+  }
+}
 
 function render(list) {
-  grid.innerHTML = list.map(it => `
+  emptyEl.classList.toggle("hidden", list.length > 0);
+  countEl.textContent = `${list.length} / ${items.length} fiche${items.length > 1 ? "s" : ""}`;
+  grid.innerHTML = list
+    .map((it) => {
+      const etat = ETAT_LABEL[it.etat];
+      const src = it.liens?.source;
+      const file = it.liens?.fichier;
+      return `
     <div class="card">
       <div class="thumb">
         <svg viewBox="0 0 24 24" fill="none" stroke="#e7e6e3" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M4 15l4-4 4 4 4-6 4 6"/></svg>
-        <a class="dl" href="${it.url}" title="Télécharger">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#e7e6e3" stroke-width="2"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
-        </a>
       </div>
       <div class="card-body">
-        <h3>${it.title}</h3>
-        <div class="author">${it.author}</div>
-        <div class="meta">Cartes : ${it.cards}${it.scenarios ? ' · Scénarios : ' + it.scenarios : ''}</div>
-        <p class="desc">${it.desc}</p>
+        <h3>${esc(it.titre)}</h3>
+        ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
+        ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
         <div class="links">
-          <a href="${it.url}" target="_blank">En savoir plus ↗</a>
-          <a href="${it.url}" target="_blank">Voir les fichiers ↗</a>
+          ${src ? `<a href="${esc(src)}" target="_blank" rel="noopener">Fil d'origine ↗</a>` : ""}
+          ${file
+            ? `<a href="${esc(file)}" target="_blank" rel="noopener">Télécharger ↗</a>`
+            : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}
         </div>
         <div class="tags">
-          <span class="tag">${it.lang}</span>
-          <span class="tag status">${it.status}</span>
-          <span class="tag">${it.type}</span>
+          ${it.cycle ? `<span class="tag cycle">${esc(it.cycle)}</span>` : ""}
+          <span class="tag">${esc(TYPE_LABEL[it.type] || it.type)}</span>
+          ${etat ? `<span class="tag status">${esc(etat)}</span>` : ""}
+          <span class="tag">${esc(LANG_LABEL[it.langue] || it.langue)}</span>
         </div>
       </div>
-    </div>
-  `).join('');
+    </div>`;
+    })
+    .join("");
+}
+
+function updateCycleInfo(cycle) {
+  const c = cycle && cycles[cycle];
+  if (!c) {
+    cycleInfoEl.classList.add("hidden");
+    return;
+  }
+  cycleInfoEl.classList.remove("hidden");
+  cycleInfoEl.innerHTML = `
+    <strong>${esc(cycle)}</strong> — ${esc(c.description || "")}
+    <span class="meta">
+      ${c.organisateur ? esc(c.organisateur) + " · " : ""}${esc(c.disponibilite || "")}
+      ${c.lien ? ` · <a href="${esc(c.lien)}" target="_blank" rel="noopener">source ↗</a>` : ""}
+    </span>`;
 }
 
 function applyFilters() {
-  const type = document.getElementById('filterType').value;
-  const status = document.getElementById('filterStatus').value;
-  const lang = document.getElementById('filterLang').value;
-  const q = document.getElementById('searchInput').value.toLowerCase();
+  const type = document.getElementById("filterType").value;
+  const cycle = document.getElementById("filterCycle").value;
+  const etat = document.getElementById("filterEtat").value;
+  const lang = document.getElementById("filterLang").value;
+  const q = document.getElementById("searchInput").value.trim().toLowerCase();
 
-  const filtered = items.filter(it =>
-    (!type || it.type === type) &&
-    (!status || it.status === status) &&
-    (!lang || it.lang === lang) &&
-    (!q || it.title.toLowerCase().includes(q) || it.desc.toLowerCase().includes(q))
+  updateCycleInfo(cycle);
+  render(
+    items.filter(
+      (it) =>
+        (!type || it.type === type) &&
+        (!cycle || (cycle === "—" ? !it.cycle : it.cycle === cycle)) &&
+        (!etat || it.etat === etat) &&
+        (!lang || it.langue === lang) &&
+        (!q ||
+          it.titre.toLowerCase().includes(q) ||
+          (it.titreVO || "").toLowerCase().includes(q) ||
+          (it.commentaire || "").toLowerCase().includes(q)),
+    ),
   );
-  render(filtered);
 }
 
-['filterType', 'filterStatus', 'filterLang'].forEach(id =>
-  document.getElementById(id).addEventListener('change', applyFilters)
-);
-document.getElementById('searchInput').addEventListener('input', applyFilters);
+fetch("data/catalogue.json")
+  .then((r) => {
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  })
+  .then((data) => {
+    items = data.items || [];
+    cycles = data.cycles || {};
 
-render(items);
+    const types = [...new Set(items.map((i) => i.type))].sort(
+      (a, b) => (TYPE_LABEL[a] || a).localeCompare(TYPE_LABEL[b] || b),
+    );
+    const cycleNames = [...new Set(items.map((i) => i.cycle).filter(Boolean))].sort(
+      (a, b) => cycleSortKey(a) - cycleSortKey(b),
+    );
+    const etats = [...new Set(items.map((i) => i.etat))].filter(
+      (e) => ETAT_LABEL[e],
+    );
+    const langs = [...new Set(items.map((i) => i.langue))];
+
+    fillOptions(document.getElementById("filterType"), types, (t) => TYPE_LABEL[t] || t);
+    fillOptions(document.getElementById("filterCycle"), cycleNames);
+    if (items.some((i) => !i.cycle)) {
+      const o = document.createElement("option");
+      o.value = "—";
+      o.textContent = "Hors cycle";
+      document.getElementById("filterCycle").appendChild(o);
+    }
+    fillOptions(document.getElementById("filterEtat"), etats, (e) => ETAT_LABEL[e]);
+    fillOptions(document.getElementById("filterLang"), langs, (l) => LANG_LABEL[l] || l);
+
+    render(items);
+  })
+  .catch((err) => {
+    grid.innerHTML = "";
+    emptyEl.classList.remove("hidden");
+    emptyEl.textContent = `Impossible de charger le catalogue (${err.message}).`;
+  });
+
+["filterType", "filterCycle", "filterEtat", "filterLang"].forEach((id) =>
+  document.getElementById(id).addEventListener("change", applyFilters),
+);
+document.getElementById("searchInput").addEventListener("input", applyFilters);
 </script>
 
 </body>
