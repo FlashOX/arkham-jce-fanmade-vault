@@ -60,7 +60,7 @@
     {
       "id": "jouet-dune-illusion",
       "titre": "Jouet d'une Illusion",
-      "titreVO": "The Nephew Cal",
+      "titreVO": "The Nephew Calls",
       "type": "scenario",
       "cycle": "Cycle 1",
       "etat": "autre",
@@ -76,7 +76,7 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Traduction (VO à confirmer).",
+      "commentaire": null,
       "archive": null
     },
     {
