@@ -183,13 +183,32 @@
   .card .thumb svg { width: 42px; height: 42px; opacity: 0.5; }
   .card .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-  .card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
+  .card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; position: relative; }
 
   .card h3 {
     font-family: 'Spectral', serif;
     font-size: 1.15rem;
     margin: 0 0 2px;
+    padding-right: 42px;
   }
+
+  .dl-btn {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .dl-btn:hover { color: var(--text); border-color: var(--accent); }
+  .dl-btn svg { width: 17px; height: 17px; }
 
   .card .vo {
     font-size: 0.78rem;
@@ -375,14 +394,14 @@ function render(list) {
           : `<svg viewBox="0 0 24 24" fill="none" stroke="#e7e6e3" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M4 15l4-4 4 4 4-6 4 6"/></svg>`}
       </div>
       <div class="card-body">
+        ${archive && archive.zip
+          ? `<a class="dl-btn" href="${esc(IA_DOWNLOAD(archive.id, archive.zip))}" title="Télécharger le ZIP" aria-label="Télécharger le ZIP — ${esc(it.titre)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
+          : ""}
         <h3>${esc(it.titre)}</h3>
         ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
         <div class="links">
           ${src ? `<a href="${esc(src)}" target="_blank" rel="noopener">Fil d'origine ↗</a>` : ""}
-          ${archive && archive.zip
-            ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.zip))}">Télécharger (ZIP) ↓</a>`
-            : ""}
           ${archive
             ? `<a href="${esc(IA_DETAILS(archive.id))}" target="_blank" rel="noopener">${archive.zip ? "archive.org ↗" : "Télécharger sur archive.org ↗"}</a>`
             : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}
