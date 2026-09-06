@@ -38,7 +38,7 @@
       "titreVO": null,
       "type": "scenario",
       "cycle": "Cycle 1",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/face-au-wendigo.jpg",
@@ -52,7 +52,10 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-face-au-wendigo",
+        "zip": "ahlcg-fr-face-au-wendigo.zip"
+      }
     },
     {
       "id": "jouet-dune-illusion",
