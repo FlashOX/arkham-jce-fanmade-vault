@@ -41,7 +41,7 @@
     "archive": {
       "type": "object",
       "description": "Item archive.org correspondant à la fiche (1 fiche = 1 item).",
-      "required": ["id", "fichiers"],
+      "required": ["id", "zip"],
       "additionalProperties": false,
       "properties": {
         "id": {
@@ -49,23 +49,10 @@
           "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
           "description": "Identifiant de l'item archive.org (page : archive.org/details/<id>). Convention : 'ahlcg-fr-' + id de la fiche."
         },
-        "fichiers": {
-          "type": "array",
-          "description": "Fichiers de l'item, dans l'ordre d'affichage. Nom de fichier relatif (téléchargement : archive.org/download/<id>/<file>).",
-          "items": {
-            "type": "object",
-            "required": ["role", "label", "file"],
-            "additionalProperties": false,
-            "properties": {
-              "role": {
-                "type": "string",
-                "enum": ["guide", "print", "cards", "sets", "scenario", "extension", "cover", "source"],
-                "description": "guide=règles ; print=PDF prêt à imprimer ; cards=images de cartes ; sets=sets de rencontre partagés ; scenario=bundle d'un scénario de campagne ; extension=add-on (enquêteur, classe) ; cover=visuels de couverture ; source=fichiers sources (projet Strange Eons, etc.)."
-              },
-              "label": { "type": "string", "minLength": 1 },
-              "file": { "type": "string", "minLength": 1 }
-            }
-          }
+        "zip": {
+          "type": ["string", "null"],
+          "description": "Nom du fichier .zip « tout compris » dans l'item (téléchargement direct : archive.org/download/<id>/<zip>). null si le contenu est trop volumineux pour un seul zip : la fiche renvoie alors vers la page de l'item.",
+          "pattern": "\\.zip$"
         }
       }
     },
