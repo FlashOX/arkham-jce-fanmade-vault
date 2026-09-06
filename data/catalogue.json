@@ -229,7 +229,7 @@
       "cycle": "Cycle 1",
       "etat": "inconnu",
       "langue": "fr",
-      "publie": true,
+      "publie": false,
       "image": null,
       "liens": {
         "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
@@ -240,7 +240,7 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null,
+      "commentaire": "Intégré aux items archive.org des cycles, pas de fiche dédiée.",
       "archive": null
     },
     {
@@ -449,7 +449,7 @@
       "cycle": "Cycle 2",
       "etat": "inconnu",
       "langue": "fr",
-      "publie": true,
+      "publie": false,
       "image": null,
       "liens": {
         "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
@@ -460,7 +460,7 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null,
+      "commentaire": "Intégré aux items archive.org des cycles, pas de fiche dédiée.",
       "archive": null
     },
     {
