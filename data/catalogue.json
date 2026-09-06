@@ -222,28 +222,6 @@
       "archive": null
     },
     {
-      "id": "intercalaires",
-      "titre": "Intercalaires",
-      "titreVO": null,
-      "type": "intercalaires",
-      "cycle": "Cycle 1",
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": false,
-      "image": null,
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Intégré aux items archive.org des cycles, pas de fiche dédiée.",
-      "archive": null
-    },
-    {
       "id": "desolation-a-bord-du-constellation",
       "titre": "Désolation à Bord du Constellation",
       "titreVO": "Consternation on the Constellation",
@@ -439,28 +417,6 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
-    },
-    {
-      "id": "intercalaires-cycle-2",
-      "titre": "Intercalaires",
-      "titreVO": null,
-      "type": "intercalaires",
-      "cycle": "Cycle 2",
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": false,
-      "image": null,
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Intégré aux items archive.org des cycles, pas de fiche dédiée.",
       "archive": null
     },
     {

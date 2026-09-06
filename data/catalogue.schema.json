@@ -82,7 +82,6 @@
             "campagne",
             "investigateurs",
             "cartes-joueur",
-            "intercalaires",
             "autre"
           ],
           "description": "Type de contenu. Indépendant du cycle de traduction."
