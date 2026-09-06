@@ -325,7 +325,6 @@
 <div class="filters">
   <select id="filterType"><option value="">Type</option></select>
   <select id="filterCycle"><option value="">Cycle</option></select>
-  <select id="filterEtat"><option value="">État</option></select>
   <span class="count" id="count"></span>
 </div>
 
@@ -346,12 +345,6 @@ const TYPE_LABEL = {
   "cartes-joueur": "Cartes joueur",
   intercalaires: "Intercalaires",
   autre: "Autre",
-};
-const ETAT_LABEL = {
-  disponible: "Disponible",
-  "en-travaux": "En travaux",
-  autre: "Autre",
-  inconnu: null,
 };
 const IA_DETAILS = (id) => `https://archive.org/details/${encodeURIComponent(id)}`;
 const IA_DOWNLOAD = (id, f) =>
@@ -446,7 +439,6 @@ function updateCycleInfo(cycle) {
 function applyFilters() {
   const type = document.getElementById("filterType").value;
   const cycle = document.getElementById("filterCycle").value;
-  const etat = document.getElementById("filterEtat").value;
   const q = document.getElementById("searchInput").value.trim().toLowerCase();
 
   updateCycleInfo(cycle);
@@ -455,7 +447,6 @@ function applyFilters() {
       (it) =>
         (!type || it.type === type) &&
         (!cycle || (cycle === "—" ? !it.cycle : it.cycle === cycle)) &&
-        (!etat || it.etat === etat) &&
         (!q ||
           it.titre.toLowerCase().includes(q) ||
           (it.titreVO || "").toLowerCase().includes(q) ||
@@ -480,10 +471,6 @@ fetch("data/catalogue.json")
     const cycleNames = [...new Set(items.map((i) => i.cycle).filter(Boolean))].sort(
       (a, b) => cycleSortKey(a) - cycleSortKey(b),
     );
-    const etats = [...new Set(items.map((i) => i.etat))].filter(
-      (e) => ETAT_LABEL[e],
-    );
-
     fillOptions(document.getElementById("filterType"), types, (t) => TYPE_LABEL[t] || t);
     fillOptions(document.getElementById("filterCycle"), cycleNames);
     if (items.some((i) => !i.cycle)) {
@@ -492,7 +479,6 @@ fetch("data/catalogue.json")
       o.textContent = "Hors cycle";
       document.getElementById("filterCycle").appendChild(o);
     }
-    fillOptions(document.getElementById("filterEtat"), etats, (e) => ETAT_LABEL[e]);
 
     render(items);
   })
@@ -502,7 +488,7 @@ fetch("data/catalogue.json")
     emptyEl.textContent = `Impossible de charger le catalogue (${err.message}).`;
   });
 
-["filterType", "filterCycle", "filterEtat"].forEach((id) =>
+["filterType", "filterCycle"].forEach((id) =>
   document.getElementById(id).addEventListener("change", applyFilters),
 );
 document.getElementById("searchInput").addEventListener("input", applyFilters);
@@ -515,7 +501,7 @@ grid.addEventListener("click", (e) => {
   const { fk, fv } = chip.dataset;
   const sel = document.getElementById(fk);
   const wasActive = sel.value === fv;
-  ["filterType", "filterCycle", "filterEtat"].forEach((id) => {
+  ["filterType", "filterCycle"].forEach((id) => {
     if (id !== fk) document.getElementById(id).value = "";
   });
   sel.value = wasActive ? "" : fv;
