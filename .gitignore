@@ -1,3 +1,14 @@
 node_modules/
 .DS_Store
 Thumbs.db
+
+# Secrets — ne jamais versionner
+ia.ini
+.ia
+.env
+.env.*
+*.key
+*.pem
+credentials*
+*secret*
+*-keys.md
