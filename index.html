@@ -141,7 +141,6 @@
     color: #d9cdf0;
   }
   .cycle-info strong { color: var(--text); }
-  .cycle-info .meta { color: var(--text-dim); display: block; margin-top: 4px; }
   @media (max-width: 640px) { .cycle-info { margin-left: 18px; margin-right: 18px; } }
 
   /* Grid */
@@ -428,12 +427,7 @@ function updateCycleInfo(cycle) {
     return;
   }
   cycleInfoEl.classList.remove("hidden");
-  cycleInfoEl.innerHTML = `
-    <strong>${esc(cycle)}</strong> — ${esc(c.description || "")}
-    <span class="meta">
-      ${c.organisateur ? esc(c.organisateur) + " · " : ""}${esc(c.disponibilite || "")}
-      ${c.lien ? ` · <a href="${esc(c.lien)}" target="_blank" rel="noopener">source ↗</a>` : ""}
-    </span>`;
+  cycleInfoEl.innerHTML = `<strong>${esc(cycle)}</strong> — ${esc(c.description || "")}`;
 }
 
 function applyFilters() {
