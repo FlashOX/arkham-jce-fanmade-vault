@@ -4,7 +4,7 @@
 //   dist/print/ahlcg-fr-<id>/
 //     ahlcg-fr-<id>-guide.pdf          (si présent)
 //     ahlcg-fr-<id>-planche-a4.pdf     (si présent)
-//     ahlcg-fr-<id>-cartes-fond-perdu.zip
+//     ahlcg-fr-<id>-cartes-avec-bleed.zip
 //
 // Usage :
 //   node tools/build-print-items.mjs                 -> toutes les entrées du manifeste
@@ -85,7 +85,7 @@ for (const [id, it] of entries) {
     if (!existsSync(imgSrc)) {
       console.error(`! ${id} : dossier images absent ${it.imagesDir}`);
     } else {
-      const zip = path.join(itemDir, `ahlcg-fr-${id}-cartes-fond-perdu.zip`);
+      const zip = path.join(itemDir, `ahlcg-fr-${id}-cartes-avec-bleed.zip`);
       sevenzip(["a", "-tzip", "-mx=0", "-bso0", "-bsp0", zip, "."], { cwd: imgSrc });
       files.push([path.basename(zip), statSync(zip).size]);
     }

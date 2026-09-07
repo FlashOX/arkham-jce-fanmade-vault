@@ -52,7 +52,7 @@ for (const dirName of dirs) {
     `subject:fan-made`,
     `subject:français`,
     cycle ? `subject:${cycle}` : null,
-    `description:${fiche?.titre || id} — contenu fan-made pour «Horreur à Arkham : le JCE»${cycle ? ", " + cycle + " (Les Dossiers d'Arkham)" : ""}. Planche d'impression A4 + images de cartes avec fond perdu + guide. Fiche : ${SITE}`,
+    `description:${fiche?.titre || id} — contenu fan-made pour «Horreur à Arkham : le JCE»${cycle ? ", " + cycle + " (Les Dossiers d'Arkham)" : ""}. Planche d'impression A4 + images de cartes avec bleed + guide. Fiche : ${SITE}`,
   ].filter(Boolean);
 
   const ia = [
