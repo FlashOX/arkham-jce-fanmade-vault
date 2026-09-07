@@ -6,7 +6,9 @@
   "description": "Catalogue communautaire de contenu fan-made pour Horreur à Arkham : le JCE",
   "scripts": {
     "thumbs": "node tools/make-thumbs.mjs",
-    "validate": "node tools/validate-catalogue.mjs"
+    "validate": "node tools/validate-catalogue.mjs",
+    "build:print": "node tools/build-print-items.mjs",
+    "upload:print": "node tools/upload-print-items.mjs"
   },
   "devDependencies": {
     "ajv": "^8.20.0",

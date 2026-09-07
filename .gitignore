@@ -12,3 +12,6 @@ ia.ini
 credentials*
 *secret*
 *-keys.md
+
+# staging local (upload archive.org)
+dist/
