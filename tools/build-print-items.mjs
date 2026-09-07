@@ -28,18 +28,23 @@ const SEVENZIP_CANDIDATES = [
   "C:/Program Files/7-Zip/7z.exe",
 ].filter(Boolean);
 
-function sevenzip(args, opts) {
-  let lastErr;
-  for (const bin of SEVENZIP_CANDIDATES) {
+function runFrom(candidates, args, opts) {
+  for (const bin of candidates.filter(Boolean)) {
     try {
       return execFileSync(bin, args, { stdio: ["ignore", "ignore", "inherit"], ...opts });
     } catch (e) {
-      lastErr = e;
       if (e.code !== "ENOENT") throw e;
     }
   }
-  throw new Error(`7-Zip introuvable (essayé : ${SEVENZIP_CANDIDATES.join(", ")})`);
+  throw new Error(`binaire introuvable (essayé : ${candidates.filter(Boolean).join(", ")})`);
 }
+const sevenzip = (args, opts) => runFrom(SEVENZIP_CANDIDATES, args, opts);
+const pdfunite = (args, opts) =>
+  runFrom(
+    [process.env.PDFUNITE, "pdfunite", "C:/Users/nasso/scoop/shims/pdfunite.exe"],
+    args,
+    opts,
+  );
 
 const mo = (n) => (n / 1048576).toFixed(1).padStart(7) + " Mo";
 const dirSize = (d) =>
@@ -78,7 +83,31 @@ for (const [id, it] of entries) {
   };
 
   put(it.guide, `ahlcg-fr-${id}-guide.pdf`);
-  put(it.planche, `ahlcg-fr-${id}-planche-a4.pdf`);
+
+  // planche : chaîne = un PDF copié ; tableau = plusieurs PDF fusionnés (pdfunite)
+  if (Array.isArray(it.planche)) {
+    const srcs = it.planche.map((rel) => path.join(root, rel));
+    const missing = srcs.filter((p) => !existsSync(p));
+    if (missing.length) {
+      console.error(`! ${id} : ${missing.length} PDF planche absent(s), ex. ${path.basename(missing[0])}`);
+    } else {
+      // pdfunite (poppler Windows) plante sur les chemins accentués :
+      // on recopie d'abord les sources sous des noms ASCII dans un dossier temp.
+      const tmp = path.join(itemDir, "_merge");
+      mkdirSync(tmp, { recursive: true });
+      const ascii = srcs.map((s, i) => {
+        const d = path.join(tmp, `${String(i).padStart(3, "0")}.pdf`);
+        copyFileSync(s, d);
+        return d;
+      });
+      const dest = path.join(itemDir, `ahlcg-fr-${id}-planche-a4.pdf`);
+      pdfunite([...ascii, dest]);
+      rmSync(tmp, { recursive: true, force: true });
+      files.push([path.basename(dest), statSync(dest).size]);
+    }
+  } else {
+    put(it.planche, `ahlcg-fr-${id}-planche-a4.pdf`);
+  }
 
   if (it.imagesDir) {
     const imgSrc = path.join(root, it.imagesDir);
