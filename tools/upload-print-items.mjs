@@ -90,6 +90,7 @@ for (let idx = 0; idx < dirs.length; idx++) {
     "upload", dirName,
     ...files.map((f) => `dist/print/${dirName}/${f}`),
     ...md.map((m) => `--metadata=${m}`),
+    "--checksum",     // saute les fichiers déjà en ligne à l'identique -> reprise propre
     "--retries", "5",
   ];
 
