@@ -41,7 +41,7 @@
     "archive": {
       "type": "object",
       "description": "Item archive.org correspondant à la fiche (1 fiche = 1 item). Chemins de téléchargement : archive.org/download/<id>/<fichier>.",
-      "required": ["id", "planche", "images"],
+      "required": ["id", "images"],
       "additionalProperties": false,
       "properties": {
         "id": {
@@ -55,9 +55,9 @@
           "description": "Nom du fichier guide (PDF), ou null s'il n'y en a pas (ex. packs d'enquêteurs)."
         },
         "planche": {
-          "type": "string",
+          "type": ["string", "null"],
           "pattern": "\\.pdf$",
-          "description": "Nom du fichier planche d'impression A4 (PDF imposé, traits de coupe, fond perdu)."
+          "description": "Nom du fichier planche d'impression A4 (PDF imposé, traits de coupe, fond perdu), ou null si pas encore disponible."
         },
         "images": {
           "type": "string",
