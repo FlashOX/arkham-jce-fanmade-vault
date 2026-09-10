@@ -224,6 +224,7 @@
   }
 
   .card .links { display: flex; gap: 16px; margin: 4px 0 14px; flex-wrap: wrap; }
+  .card .links:empty { display: none; }
   .card .links a { font-size: 0.82rem; color: var(--accent); text-decoration: none; }
   .card .links a:hover { text-decoration: underline; }
   .card .links .disabled { color: var(--text-dim); cursor: not-allowed; }
@@ -397,7 +398,6 @@ function render(list) {
   countEl.textContent = `${list.length} / ${items.length} fiche${items.length > 1 ? "s" : ""}`;
   grid.innerHTML = list
     .map((it) => {
-      const src = it.liens?.source;
       const archive = it.archive;
       return `
     <div class="card">
@@ -413,12 +413,9 @@ function render(list) {
         <h3>${esc(it.titre)}</h3>
         ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
-        <div class="links">
-          ${src ? `<a href="${esc(src)}" target="_blank" rel="noopener">Fil d'origine ↗</a>` : ""}
-          ${archive
-            ? (archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}">Guide (PDF) ↓</a>` : "")
-            : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}
-        </div>
+        <div class="links">${archive
+          ? archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}">Guide (PDF) ↓</a>` : ""
+          : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}</div>
         <div class="tags">
           ${it.cycle ? chip("filterCycle", it.cycle, it.cycle, "cycle") : ""}
           ${chip("filterType", it.type, TYPE_LABEL[it.type] || it.type)}
