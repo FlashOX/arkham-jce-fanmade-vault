@@ -21,8 +21,10 @@ const JPEG_QUALITY = 80;
 const ART_TOP = 0.2;
 const ART_BOTTOM = 0.82;
 
-// id de fiche  ->  soit "sous-dossier/fichier", soit { src, top?, bottom? }
-// pour surcharger la bande illustrée quand la couverture s'écarte du gabarit.
+// id de fiche  ->  soit "sous-dossier/fichier", soit { src, top?, bottom?, left?, right? }
+// top/bottom : bande illustrée en fraction de la hauteur (défaut 0.2 / 0.82).
+// left/right : idem en fraction de la largeur (défaut 0 / 1) — utile quand la
+// source est une carte pleine (illustration sur une partie de la largeur).
 const MAP = {
   // --- Cycle 1 (couvertures gabarit "Ligue") ---
   "face-au-wendigo": "cycle 1/face_a10.jpg",
@@ -45,6 +47,14 @@ const MAP = {
   "lhotel-du-grand-chene": "covers/S2/lhotel-du-grand-chene.jpg",
   // illustration pleine page (pas le gabarit) -> on garde le haut (visage)
   "investigateurs-fan-made-cycle-2": { src: "covers/S2/investigateurs.png", top: 0, bottom: 0.58 },
+
+  // --- Cycle 1, enquêteurs : source = carte de Jenna Hunter (paysage) ---
+  // On isole l'illustration (moitié gauche), centrée sur le visage, sans le
+  // bandeau-titre ni l'encadré de texte.
+  "investigateurs-fan-made": {
+    src: "covers/S1/investigateurs-jenna-hunter.jpg",
+    left: 0.049, right: 0.449, top: 0.206, bottom: 0.654,
+  },
 };
 
 await mkdir(OUT_DIR, { recursive: true });
@@ -52,8 +62,11 @@ await mkdir(OUT_DIR, { recursive: true });
 let done = 0;
 for (const [id, entry] of Object.entries(MAP)) {
   const rel = typeof entry === "string" ? entry : entry.src;
-  const fTop = (typeof entry === "object" && entry.top) || ART_TOP;
-  const fBottom = (typeof entry === "object" && entry.bottom) || ART_BOTTOM;
+  const o = typeof entry === "object" ? entry : {};
+  const fTop = o.top || ART_TOP;
+  const fBottom = o.bottom || ART_BOTTOM;
+  const fLeft = o.left || 0;
+  const fRight = o.right || 1;
   const src = path.join(ROOT, "img", rel);
   if (!existsSync(src)) {
     console.warn(`! source absente, ignoré : ${rel}`);
@@ -62,10 +75,12 @@ for (const [id, entry] of Object.entries(MAP)) {
   const { width, height } = await sharp(src).metadata();
   const top = Math.round(height * fTop);
   const cropH = Math.round(height * (fBottom - fTop));
+  const left = Math.round(width * fLeft);
+  const cropW = Math.round(width * (fRight - fLeft));
 
   const out = path.join(OUT_DIR, `${id}.jpg`);
   await sharp(src)
-    .extract({ left: 0, top, width, height: cropH })
+    .extract({ left, top, width: cropW, height: cropH })
     .resize({ width: OUT_WIDTH, withoutEnlargement: true })
     .jpeg({ quality: JPEG_QUALITY, mozjpeg: true })
     .toFile(out);

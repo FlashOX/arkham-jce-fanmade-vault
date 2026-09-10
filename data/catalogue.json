@@ -238,14 +238,14 @@
     },
     {
       "id": "investigateurs-fan-made",
-      "titre": "Investigateurs fan-made",
+      "titre": "Investigateurs fan-made (Cycle 1)",
       "titreVO": null,
       "type": "investigateurs",
       "cycle": "Cycle 1",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
-      "image": null,
+      "image": "img/thumbs/investigateurs-fan-made.jpg",
       "liens": {
         "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
         "fichier": null
@@ -441,7 +441,7 @@
     },
     {
       "id": "investigateurs-fan-made-cycle-2",
-      "titre": "Investigateurs fan-made",
+      "titre": "Investigateurs fan-made (Cycle 2)",
       "titreVO": null,
       "type": "investigateurs",
       "cycle": "Cycle 2",
