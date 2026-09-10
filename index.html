@@ -68,6 +68,15 @@
   nav a { text-decoration: none; color: var(--text-dim); font-size: 0.92rem; white-space: nowrap; }
   nav a:hover { color: var(--text); }
 
+  .header-right {
+    margin-left: auto;   /* recherche + « À propos », collés à droite */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
   .search {
     background: var(--bg);
     border: 1px solid var(--border);
@@ -268,7 +277,9 @@
   @media (max-width: 640px) {
     header { padding: 14px 18px; }
     .brand-text .tagline { display: none; }
-    .search { width: 100%; order: 3; }
+    .header-right { width: 100%; }
+    .search { width: 100%; order: 2; }
+    .header-right nav { order: 1; }     /* « À propos » aligné à droite, puis recherche pleine largeur */
     .grid, .filters, .intro-strip { padding-left: 18px; padding-right: 18px; }
   }
 </style>
@@ -289,8 +300,10 @@
       <div class="tagline">Contenu fan-made pour Arkham Horror : le Jeu de Cartes</div>
     </div>
   </a>
-  <nav><a href="#a-propos">À propos</a></nav>
-  <input class="search" type="text" placeholder="Rechercher..." id="searchInput">
+  <div class="header-right">
+    <input class="search" type="text" placeholder="Rechercher..." id="searchInput">
+    <nav><a href="#a-propos">À propos</a></nav>
+  </div>
 </header>
 
 <div class="intro-strip">
@@ -331,7 +344,7 @@
 </section>
 
 <footer>
-  Site statique — GitHub Pages · Données : <a href="data/catalogue.json">catalogue.json</a> · Fichiers hébergés sur archive.org
+  Fichiers hébergés sur <a href="https://archive.org" target="_blank" rel="noopener">Internet Archive</a> — organisation à but non lucratif dédiée à la préservation numérique à long terme.
 </footer>
 
 <script>
