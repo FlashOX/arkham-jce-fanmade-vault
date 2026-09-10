@@ -58,11 +58,12 @@
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Guide/FS02H - Guide de Scénario version 2022 (A4).pdf",
       "planche": {
-        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (Poker - 3.2 marge)"
+        "impose": "C:/Users/nasso/Documents/Claude/Projects/Arkham-Fanmade-Vault/dist/print/pulsions_images"
       },
-      "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (Poker - 3.2 marge)",
-      "note": "Pas de PDF A4 imposé chez Shomm : planche générée par imposition des images unitaires (tools/impose.mjs). Cartes révisées 2022 (dossier « Version 2022 ») à substituer dans le dossier images avant build si voulu.",
-      "creator": "Docteur Cheux"
+      "imagesDir": "C:/Users/nasso/Documents/Claude/Projects/Arkham-Fanmade-Vault/dist/print/pulsions_images",
+      "note": "Images = jeu complet fourni par l utilisateur (révision 2022 incluse), sans fond perdu, dans dist/print/pulsions_images. planche imposée par tools/impose.mjs.",
+      "creator": "Docteur Cheux",
+      "imagesBleed": false
     },
     "investigateurs-fan-made": {
       "source": "shomm",

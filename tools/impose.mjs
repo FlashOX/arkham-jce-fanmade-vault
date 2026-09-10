@@ -14,12 +14,14 @@ import { PDFDocument } from "pdf-lib";
 import sharp from "sharp";
 
 const MM = 72 / 25.4;
+const DPI = 300;                     // résolution supposée des images
+const PT = 72 / DPI;                 // pixel -> point
 const A4 = [210 * MM, 297 * MM];
 const COLS = 3, ROWS = 3;
-const TRIM_W = 63.5 * MM, TRIM_H = 88.9 * MM; // carte finie
-const BLEED = 3.2 * MM;                       // fond perdu par bord
-const CARD_W = TRIM_W + 2 * BLEED, CARD_H = TRIM_H + 2 * BLEED;
+const TRIM_W = 63.5 * MM, TRIM_H = 88.9 * MM; // carte finie (référence pour la grille + les traits de coupe)
 const TICK_LEN = 5 * MM, TICK_GAP = 0.8 * MM, TICK_TH = 0.4;
+// Chaque image est centrée sur sa cellule de coupe à sa taille native (à 300 dpi) :
+// si elle a du fond perdu elle déborde, sinon elle rentre pile. Pas de mise à l'échelle.
 
 const [, , SRC, OUT] = process.argv;
 if (!SRC || !OUT) {
@@ -94,12 +96,21 @@ let pages = 0;
 for (let g = 0; g < list.length; g += per) {
   const group = list.slice(g, g + per);
 
+  // place une image centrée sur la cellule de coupe (c,r), à sa taille native
+  const place = (page, img, c, r) => {
+    const w = img.width * PT, h = img.height * PT;
+    page.drawImage(img, {
+      x: cellX(c) + TRIM_W / 2 - w / 2,
+      y: cellY(r) + TRIM_H / 2 - h / 2,
+      width: w,
+      height: h,
+    });
+  };
+
   // ---- page recto ----
   const front = doc.addPage(A4);
   for (let i = 0; i < group.length; i++) {
-    const c = i % COLS, r = Math.floor(i / COLS);
-    const img = await embed(group[i].recto, cache);
-    front.drawImage(img, { x: cellX(c) - BLEED, y: cellY(r) - BLEED, width: CARD_W, height: CARD_H });
+    place(front, await embed(group[i].recto, cache), i % COLS, Math.floor(i / COLS));
   }
   cropMarks(front);
 
@@ -107,9 +118,7 @@ for (let g = 0; g < list.length; g += per) {
   const back = doc.addPage(A4);
   for (let i = 0; i < group.length; i++) {
     if (!group[i].verso) continue;
-    const c = COLS - 1 - (i % COLS), r = Math.floor(i / COLS);
-    const img = await embed(group[i].verso, cache);
-    back.drawImage(img, { x: cellX(c) - BLEED, y: cellY(r) - BLEED, width: CARD_W, height: CARD_H });
+    place(back, await embed(group[i].verso, cache), COLS - 1 - (i % COLS), Math.floor(i / COLS));
   }
   cropMarks(back);
   pages += 2;

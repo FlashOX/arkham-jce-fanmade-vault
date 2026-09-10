@@ -75,7 +75,7 @@ for (const [id, it] of entries) {
   const files = [];
   const put = (relSrc, destName) => {
     if (!relSrc) return;
-    const src = path.join(root, relSrc);
+    const src = path.resolve(root, relSrc);
     if (!existsSync(src)) { console.error(`! ${id} : source absente ${relSrc}`); return; }
     const dest = path.join(itemDir, destName);
     copyFileSync(src, dest);
@@ -89,7 +89,7 @@ for (const [id, it] of entries) {
   //   ["a.pdf","b.pdf"]   -> PDF fusionnés (pdfunite)
   //   { impose: "dir" }   -> images de cartes imposées en A4 (tools/impose.mjs)
   if (it.planche && typeof it.planche === "object" && !Array.isArray(it.planche) && it.planche.impose) {
-    const dir = path.join(root, it.planche.impose);
+    const dir = path.resolve(root, it.planche.impose);
     const dest = path.join(itemDir, `ahlcg-fr-${id}-planche-a4.pdf`);
     if (!existsSync(dir)) console.error(`! ${id} : dossier à imposer absent ${it.planche.impose}`);
     else {
@@ -97,7 +97,7 @@ for (const [id, it] of entries) {
       files.push([path.basename(dest), statSync(dest).size]);
     }
   } else if (Array.isArray(it.planche)) {
-    const srcs = it.planche.map((rel) => path.join(root, rel));
+    const srcs = it.planche.map((rel) => path.resolve(root, rel));
     const missing = srcs.filter((p) => !existsSync(p));
     if (missing.length) {
       console.error(`! ${id} : ${missing.length} PDF planche absent(s), ex. ${path.basename(missing[0])}`);
@@ -121,11 +121,12 @@ for (const [id, it] of entries) {
   }
 
   if (it.imagesDir) {
-    const imgSrc = path.join(root, it.imagesDir);
+    const imgSrc = path.resolve(root, it.imagesDir);
     if (!existsSync(imgSrc)) {
       console.error(`! ${id} : dossier images absent ${it.imagesDir}`);
     } else {
-      const zip = path.join(itemDir, `ahlcg-fr-${id}-cartes-avec-bleed.zip`);
+      const suffix = it.imagesBleed === false ? "cartes-sans-bleed" : "cartes-avec-bleed";
+      const zip = path.join(itemDir, `ahlcg-fr-${id}-${suffix}.zip`);
       sevenzip(["a", "-tzip", "-mx=0", "-bso0", "-bsp0", zip, "."], { cwd: imgSrc });
       files.push([path.basename(zip), statSync(zip).size]);
     }
