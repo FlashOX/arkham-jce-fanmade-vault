@@ -215,7 +215,7 @@
       "titreVO": null,
       "type": "scenario",
       "cycle": "Cycle 1",
-      "etat": "disponible",
+      "etat": "en-travaux",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/pulsions-cynegetiques.jpg",
@@ -229,12 +229,7 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": {
-        "id": "ahlcg-fr-pulsions-cynegetiques",
-        "guide": "ahlcg-fr-pulsions-cynegetiques-guide.pdf",
-        "planche": "ahlcg-fr-pulsions-cynegetiques-planche-a4.pdf",
-        "images": "ahlcg-fr-pulsions-cynegetiques-cartes-avec-bleed.zip"
-      }
+      "archive": null
     },
     {
       "id": "investigateurs-fan-made",
