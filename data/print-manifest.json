@@ -8,49 +8,63 @@
     "face-au-wendigo": {
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02A - Face au Wendigo/Guide/FS02A - Guide de Scénario avec couverture (A4).pdf",
-      "planche": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02A - Face au Wendigo/Cartes/FS02A - Cartes (A4).pdf",
+      "planche": {
+        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02A - Face au Wendigo/Cartes/Cartes (Poker - 3.2 marge)"
+      },
       "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02A - Face au Wendigo/Cartes/Cartes (Poker - 3.2 marge)",
       "creator": "vinn_quest"
     },
     "jouet-dune-illusion": {
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02B - Jouet d_une Illusion/Guide/FS02B - Guide de Scénario (A4).pdf",
-      "planche": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02B - Jouet d_une Illusion/Cartes/FS02B - Cartes (A4).pdf",
+      "planche": {
+        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02B - Jouet d_une Illusion/Cartes/Cartes (Poker - 3.2 marge)"
+      },
       "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02B - Jouet d_une Illusion/Cartes/Cartes (Poker - 3.2 marge)",
       "creator": "Keith Owens (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     "le-festival": {
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02C - Le Festival/Guide/FS02C - Guides de Scénario (A4).pdf",
-      "planche": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02C - Le Festival/Cartes/FS02C - Cartes (A4).pdf",
+      "planche": {
+        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02C - Le Festival/Cartes/Cartes (Poker - 3.2 marge)"
+      },
       "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02C - Le Festival/Cartes/Cartes (Poker - 3.2 marge)",
       "creator": "Matthew Heiti (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     "le-palais-du-rire": {
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02D - Le Palais du Rire/Guide/FS02D - Guide de Scénario (A4).pdf",
-      "planche": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02D - Le Palais du Rire/Cartes/FS02D - Cartes (A4).pdf",
+      "planche": {
+        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02D - Le Palais du Rire/Cartes/Cartes (Poker - 3.2 marge)"
+      },
       "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02D - Le Palais du Rire/Cartes/Cartes (Poker - 3.2 marge)",
       "creator": "Nathan Sauter (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     "le-pont-des-soupirs": {
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02E - Le Pont des Soupirs/Guide/FS02E - Guide de Scénario (A4).pdf",
-      "planche": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02E - Le Pont des Soupirs/Cartes/FS02E - Cartes (A4).pdf",
+      "planche": {
+        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02E - Le Pont des Soupirs/Cartes/Cartes (Poker - 3.2 marge)"
+      },
       "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02E - Le Pont des Soupirs/Cartes/Cartes (Poker - 3.2 marge)",
       "creator": "Ben Cort (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     "le-wyrm-de-pensher": {
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02F - Le Wyrm de Pensher/Guide/FS02F - Guide de Scénario (A4).pdf",
-      "planche": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02F - Le Wyrm de Pensher/Cartes/FS02F - Cartes (A4).pdf",
+      "planche": {
+        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02F - Le Wyrm de Pensher/Cartes/Cartes (Poker - 3.2 marge)"
+      },
       "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02F - Le Wyrm de Pensher/Cartes/Cartes (Poker - 3.2 marge)",
       "creator": "Ben Clapperton (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     "les-seuils-de-la-croyance": {
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02G - Les Seuils de la Croyance/Guide/FS02G - Guide de Scénario (A4).pdf",
-      "planche": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02G - Les Seuils de la Croyance/Cartes/FS02G - Cartes (A4).pdf",
+      "planche": {
+        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02G - Les Seuils de la Croyance/Cartes/Cartes (Poker - 3.2 marge)"
+      },
       "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02G - Les Seuils de la Croyance/Cartes/Cartes (Poker - 3.2 marge)",
       "creator": "Dee Noaloha (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
@@ -58,16 +72,18 @@
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Guide/FS02H - Guide de Scénario version 2022 (A4).pdf",
       "planche": {
-        "impose": "C:/Users/nasso/Documents/Claude/Projects/Arkham-Fanmade-Vault/dist/print/pulsions_images"
+        "impose": "C:/Users/nasso/Documents/HaA/Fan-made/Contenu de Shomm/09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/pulsions_images_bleed_with_2022"
       },
-      "imagesDir": "C:/Users/nasso/Documents/Claude/Projects/Arkham-Fanmade-Vault/dist/print/pulsions_images",
-      "note": "Jeu complet avec fond perdu fourni par l utilisateur, révision 2022 incluse (14 cartes en PNG, reste en JPEG), dans dist/print/pulsions_images. Planche imposée par tools/impose.mjs.",
+      "imagesDir": "C:/Users/nasso/Documents/HaA/Fan-made/Contenu de Shomm/09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/pulsions_images_bleed_with_2022",
+      "note": "Jeu complet avec fond perdu + révision 2022 (14 cartes PNG) assemblé par l utilisateur, rangé dans le dossier Shomm FS02H/pulsions_images_bleed_with_2022.",
       "creator": "Docteur Cheux"
     },
     "investigateurs-fan-made": {
       "source": "shomm",
       "guide": null,
-      "planche": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02I - Investigateurs/Cartes/FS02I - Cartes investigateurs (A4).pdf",
+      "planche": {
+        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02I - Investigateurs/Cartes/Cartes (Poker - 3.2 marge)"
+      },
       "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02I - Investigateurs/Cartes/Cartes (Poker - 3.2 marge)",
       "note": "Pack d'enquêteurs : pas de guide de scénario.",
       "creator": "Ligue des Joueurs Francophones d'Arkham JCE"
