@@ -42,7 +42,9 @@
       "commentaire": "Création originale FR.",
       "archive": {
         "id": "ahlcg-fr-face-au-wendigo",
-        "zip": "ahlcg-fr-face-au-wendigo.zip"
+        "guide": "ahlcg-fr-face-au-wendigo-guide.pdf",
+        "planche": "ahlcg-fr-face-au-wendigo-planche-a4.pdf",
+        "images": "ahlcg-fr-face-au-wendigo-cartes-avec-bleed.zip"
       }
     },
     {
@@ -51,7 +53,7 @@
       "titreVO": "The Nephew Calls",
       "type": "scenario",
       "cycle": "Cycle 1",
-      "etat": "autre",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/jouet-dune-illusion.jpg",
@@ -65,7 +67,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-jouet-dune-illusion",
+        "guide": "ahlcg-fr-jouet-dune-illusion-guide.pdf",
+        "planche": "ahlcg-fr-jouet-dune-illusion-planche-a4.pdf",
+        "images": "ahlcg-fr-jouet-dune-illusion-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "le-festival",
@@ -73,7 +80,7 @@
       "titreVO": "The Festival",
       "type": "scenario",
       "cycle": "Cycle 1",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/le-festival.jpg",
@@ -87,7 +94,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-le-festival",
+        "guide": "ahlcg-fr-le-festival-guide.pdf",
+        "planche": "ahlcg-fr-le-festival-planche-a4.pdf",
+        "images": "ahlcg-fr-le-festival-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "le-palais-du-rire",
@@ -95,7 +107,7 @@
       "titreVO": "Happy's Funhouse",
       "type": "scenario",
       "cycle": "Cycle 1",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/le-palais-du-rire.jpg",
@@ -109,7 +121,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-le-palais-du-rire",
+        "guide": "ahlcg-fr-le-palais-du-rire-guide.pdf",
+        "planche": "ahlcg-fr-le-palais-du-rire-planche-a4.pdf",
+        "images": "ahlcg-fr-le-palais-du-rire-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "le-pont-des-soupirs",
@@ -117,7 +134,7 @@
       "titreVO": "Bridge of Sighs",
       "type": "scenario",
       "cycle": "Cycle 1",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/le-pont-des-soupirs.jpg",
@@ -131,7 +148,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-le-pont-des-soupirs",
+        "guide": "ahlcg-fr-le-pont-des-soupirs-guide.pdf",
+        "planche": "ahlcg-fr-le-pont-des-soupirs-planche-a4.pdf",
+        "images": "ahlcg-fr-le-pont-des-soupirs-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "le-wyrm-de-pensher",
@@ -139,7 +161,7 @@
       "titreVO": "The Pensher Wyrm",
       "type": "scenario",
       "cycle": "Cycle 1",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/le-wyrm-de-pensher.jpg",
@@ -153,7 +175,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-le-wyrm-de-pensher",
+        "guide": "ahlcg-fr-le-wyrm-de-pensher-guide.pdf",
+        "planche": "ahlcg-fr-le-wyrm-de-pensher-planche-a4.pdf",
+        "images": "ahlcg-fr-le-wyrm-de-pensher-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "les-seuils-de-la-croyance",
@@ -161,7 +188,7 @@
       "titreVO": "The Limens Belief",
       "type": "scenario",
       "cycle": "Cycle 1",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/les-seuils-de-la-croyance.jpg",
@@ -175,7 +202,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Scénario solo.",
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-les-seuils-de-la-croyance",
+        "guide": "ahlcg-fr-les-seuils-de-la-croyance-guide.pdf",
+        "planche": "ahlcg-fr-les-seuils-de-la-croyance-planche-a4.pdf",
+        "images": "ahlcg-fr-les-seuils-de-la-croyance-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "pulsions-cynegetiques",
@@ -183,7 +215,7 @@
       "titreVO": null,
       "type": "scenario",
       "cycle": "Cycle 1",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/pulsions-cynegetiques.jpg",
@@ -197,7 +229,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-pulsions-cynegetiques",
+        "guide": "ahlcg-fr-pulsions-cynegetiques-guide.pdf",
+        "planche": "ahlcg-fr-pulsions-cynegetiques-planche-a4.pdf",
+        "images": "ahlcg-fr-pulsions-cynegetiques-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "investigateurs-fan-made",
@@ -205,7 +242,7 @@
       "titreVO": null,
       "type": "investigateurs",
       "cycle": "Cycle 1",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": null,
@@ -219,7 +256,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": "6 enquêteurs (5 traductions + 1 création FR).",
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-investigateurs-fan-made",
+        "guide": null,
+        "planche": "ahlcg-fr-investigateurs-fan-made-planche-a4.pdf",
+        "images": "ahlcg-fr-investigateurs-fan-made-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "desolation-a-bord-du-constellation",

@@ -408,8 +408,8 @@ function render(list) {
           : `<svg viewBox="0 0 24 24" fill="none" stroke="#e7e6e3" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M4 15l4-4 4 4 4-6 4 6"/></svg>`}
       </div>
       <div class="card-body">
-        ${archive && archive.zip
-          ? `<a class="dl-btn" href="${esc(IA_DOWNLOAD(archive.id, archive.zip))}" title="Télécharger le ZIP" aria-label="Télécharger le ZIP — ${esc(it.titre)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
+        ${archive
+          ? `<a class="dl-btn" href="${esc(IA_DOWNLOAD(archive.id, archive.planche))}" title="Planche d'impression A4 (PDF)" aria-label="Planche d'impression — ${esc(it.titre)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
           : ""}
         <h3>${esc(it.titre)}</h3>
         ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
@@ -417,7 +417,9 @@ function render(list) {
         <div class="links">
           ${src ? `<a href="${esc(src)}" target="_blank" rel="noopener">Fil d'origine ↗</a>` : ""}
           ${archive
-            ? `<a href="${esc(IA_DETAILS(archive.id))}" target="_blank" rel="noopener">${archive.zip ? "archive.org ↗" : "Télécharger sur archive.org ↗"}</a>`
+            ? (archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}">Guide (PDF) ↓</a>` : "")
+              + `<a href="${esc(IA_DOWNLOAD(archive.id, archive.images))}">Images cartes (zip) ↓</a>`
+              + `<a href="${esc(IA_DETAILS(archive.id))}" target="_blank" rel="noopener">archive.org ↗</a>`
             : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}
         </div>
         <div class="tags">

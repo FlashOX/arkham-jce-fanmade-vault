@@ -40,8 +40,8 @@
     },
     "archive": {
       "type": "object",
-      "description": "Item archive.org correspondant à la fiche (1 fiche = 1 item).",
-      "required": ["id", "zip"],
+      "description": "Item archive.org correspondant à la fiche (1 fiche = 1 item). Chemins de téléchargement : archive.org/download/<id>/<fichier>.",
+      "required": ["id", "planche", "images"],
       "additionalProperties": false,
       "properties": {
         "id": {
@@ -49,10 +49,20 @@
           "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
           "description": "Identifiant de l'item archive.org (page : archive.org/details/<id>). Convention : 'ahlcg-fr-' + id de la fiche."
         },
-        "zip": {
+        "guide": {
           "type": ["string", "null"],
-          "description": "Nom du fichier .zip « tout compris » dans l'item (téléchargement direct : archive.org/download/<id>/<zip>). null si le contenu est trop volumineux pour un seul zip : la fiche renvoie alors vers la page de l'item.",
-          "pattern": "\\.zip$"
+          "pattern": "\\.pdf$",
+          "description": "Nom du fichier guide (PDF), ou null s'il n'y en a pas (ex. packs d'enquêteurs)."
+        },
+        "planche": {
+          "type": "string",
+          "pattern": "\\.pdf$",
+          "description": "Nom du fichier planche d'impression A4 (PDF imposé, traits de coupe, fond perdu)."
+        },
+        "images": {
+          "type": "string",
+          "pattern": "\\.zip$",
+          "description": "Nom du zip des images de cartes (une par face, avec fond perdu)."
         }
       }
     },
