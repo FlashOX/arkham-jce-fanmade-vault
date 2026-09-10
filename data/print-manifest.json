@@ -57,29 +57,11 @@
     "pulsions-cynegetiques": {
       "source": "shomm",
       "guide": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Guide/FS02H - Guide de Scénario version 2022 (A4).pdf",
-      "planche": [
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Acte et intrigue 1.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Acte et intrigue 2.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Lieux 1.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Lieux 2.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Lieux 3.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Lieux 4.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Lieux 5.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Lieux 6.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Lieux 7.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Set de Rencontre 1.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Set de Rencontre 2.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Set de Rencontre 3.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Set de Rencontre 4.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Set de Rencontre 5.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Set de Rencontre 6.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Set de Rencontre 7.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Soutiens 1.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Soutiens 2.pdf",
-        "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (A4)/FS02H - Autres.pdf"
-      ],
+      "planche": {
+        "impose": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (Poker - 3.2 marge)"
+      },
       "imagesDir": "09 - Scénarios Fan-Made/FS02 - Les Dossiers d_Arkham 01 (04-2019)/FS02H - Pulsions Cynégétiques/Cartes/Cartes (Poker - 3.2 marge)",
-      "note": "Planche = fusion des 19 PDF A4 de Shomm (Cartes (A4)/). Le dossier Version 2022 (4 sheets PNG) ne couvre que les cartes révisées — à comparer.",
+      "note": "Pas de PDF A4 imposé chez Shomm : planche générée par imposition des images unitaires (tools/impose.mjs). Cartes révisées 2022 (dossier « Version 2022 ») à substituer dans le dossier images avant build si voulu.",
       "creator": "Docteur Cheux"
     },
     "investigateurs-fan-made": {

@@ -84,8 +84,19 @@ for (const [id, it] of entries) {
 
   put(it.guide, `ahlcg-fr-${id}-guide.pdf`);
 
-  // planche : chaîne = un PDF copié ; tableau = plusieurs PDF fusionnés (pdfunite)
-  if (Array.isArray(it.planche)) {
+  // planche :
+  //   "chemin"            -> un PDF copié
+  //   ["a.pdf","b.pdf"]   -> PDF fusionnés (pdfunite)
+  //   { impose: "dir" }   -> images de cartes imposées en A4 (tools/impose.mjs)
+  if (it.planche && typeof it.planche === "object" && !Array.isArray(it.planche) && it.planche.impose) {
+    const dir = path.join(root, it.planche.impose);
+    const dest = path.join(itemDir, `ahlcg-fr-${id}-planche-a4.pdf`);
+    if (!existsSync(dir)) console.error(`! ${id} : dossier à imposer absent ${it.planche.impose}`);
+    else {
+      execFileSync("node", [path.join(ROOT, "tools/impose.mjs"), dir, dest], { stdio: "inherit" });
+      files.push([path.basename(dest), statSync(dest).size]);
+    }
+  } else if (Array.isArray(it.planche)) {
     const srcs = it.planche.map((rel) => path.join(root, rel));
     const missing = srcs.filter((p) => !existsSync(p));
     if (missing.length) {
