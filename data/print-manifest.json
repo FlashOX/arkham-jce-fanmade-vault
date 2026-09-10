@@ -61,9 +61,8 @@
         "impose": "C:/Users/nasso/Documents/Claude/Projects/Arkham-Fanmade-Vault/dist/print/pulsions_images"
       },
       "imagesDir": "C:/Users/nasso/Documents/Claude/Projects/Arkham-Fanmade-Vault/dist/print/pulsions_images",
-      "note": "Images = jeu complet fourni par l utilisateur (révision 2022 incluse), sans fond perdu, dans dist/print/pulsions_images. planche imposée par tools/impose.mjs.",
-      "creator": "Docteur Cheux",
-      "imagesBleed": false
+      "note": "Jeu complet avec fond perdu fourni par l utilisateur, révision 2022 incluse (14 cartes en PNG, reste en JPEG), dans dist/print/pulsions_images. Planche imposée par tools/impose.mjs.",
+      "creator": "Docteur Cheux"
     },
     "investigateurs-fan-made": {
       "source": "shomm",

@@ -51,12 +51,14 @@ if (missingVerso.length) console.warn("! sans verso : " + missingVerso.join(", "
 async function prep(file) {
   const buf = readFileSync(file);
   const meta = await sharp(buf).metadata();
-  const landscape = meta.width > meta.height;
   const isPng = /\.png$/i.test(file);
-  if (!landscape) return { bytes: buf, png: isPng };
-  // paysage -> portrait : rotation 90° horaire, ré-encodage JPEG qualité haute
-  const out = await sharp(buf).rotate(90).jpeg({ quality: 92 }).toBuffer();
-  return { bytes: out, png: false };
+  if (meta.width <= meta.height) return { bytes: buf, png: isPng }; // déjà portrait
+  // paysage -> portrait : rotation 90° horaire, même format (PNG sans perte)
+  const rot = sharp(buf).rotate(90);
+  const out = isPng
+    ? await rot.png({ compressionLevel: 6 }).toBuffer()
+    : await rot.jpeg({ quality: 95 }).toBuffer();
+  return { bytes: out, png: isPng };
 }
 
 const doc = await PDFDocument.create();
