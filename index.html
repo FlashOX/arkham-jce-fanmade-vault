@@ -358,6 +358,8 @@ const TYPE_LABEL = {
 };
 const IA_DOWNLOAD = (id, f) =>
   `https://archive.org/download/${encodeURIComponent(id)}/${encodeURIComponent(f)}`;
+// zip généré à la volée par archive.org avec tous les fichiers de l'item
+const IA_ARCHIVE = (id) => `https://archive.org/compress/${encodeURIComponent(id)}`;
 
 const grid = document.getElementById("grid");
 const emptyEl = document.getElementById("empty");
@@ -408,7 +410,7 @@ function render(list) {
       </div>
       <div class="card-body">
         ${archive
-          ? `<a class="dl-btn" href="${esc(IA_DOWNLOAD(archive.id, archive.planche))}" title="Planche d'impression A4 (PDF)" aria-label="Planche d'impression — ${esc(it.titre)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
+          ? `<a class="dl-btn" href="${esc(IA_ARCHIVE(archive.id))}" title="${esc(it.titre)} - Archive complète" aria-label="${esc(it.titre)} - Archive complète"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
           : ""}
         <h3>${esc(it.titre)}</h3>
         ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
