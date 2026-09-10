@@ -65,20 +65,8 @@
     color: var(--text-dim);
   }
 
-  nav { display: flex; gap: 28px; }
-  nav a { text-decoration: none; color: var(--text-dim); font-size: 0.92rem; }
+  nav a { text-decoration: none; color: var(--text-dim); font-size: 0.92rem; white-space: nowrap; }
   nav a:hover { color: var(--text); }
-
-  .nav-toggle {
-    display: none;
-    background: none;
-    border: 0;
-    color: var(--text-dim);
-    padding: 6px;
-    cursor: pointer;
-    line-height: 0;
-  }
-  .nav-toggle:hover { color: var(--text); }
 
   .search {
     background: var(--bg);
@@ -256,35 +244,31 @@
     border-top: 1px solid var(--border);
   }
 
+  .about {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .about h2 {
+    font-family: 'Spectral', serif;
+    font-size: 1.3rem;
+    margin: 0 0 12px;
+  }
+  .about p {
+    color: var(--text-dim);
+    line-height: 1.6;
+    max-width: 760px;
+    margin: 0 0 14px;
+  }
+  .about .disclaimer { font-size: 0.85rem; }
+
   .hidden { display: none !important; }
 
   @media (max-width: 640px) {
     header { padding: 14px 18px; }
-    .brand { padding-right: 40px; }
     .brand-text .tagline { display: none; }
-    .nav-toggle {
-      display: inline-flex;
-      position: absolute;
-      top: 8px;
-      right: 10px;
-    }
-    nav {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      gap: 0;
-      background: var(--bg-elevated);
-      border-bottom: 1px solid var(--border);
-      padding: 4px 18px 12px;
-      z-index: 20;
-    }
-    nav.open { display: flex; }
-    nav a { padding: 12px 2px; font-size: 0.95rem; }
-    nav a + a { border-top: 1px solid var(--border); }
-    .search { width: 100%; }
+    .search { width: 100%; order: 3; }
     .grid, .filters, .intro-strip { padding-left: 18px; padding-right: 18px; }
   }
 </style>
@@ -305,15 +289,7 @@
       <div class="tagline">Contenu fan-made pour Arkham Horror : le Jeu de Cartes</div>
     </div>
   </a>
-  <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-  </button>
-  <nav id="site-nav">
-    <a href="#">Intro</a>
-    <a href="#">Catalogue</a>
-    <a href="#">Contribuer</a>
-    <a href="#">À propos</a>
-  </nav>
+  <nav><a href="#a-propos">À propos</a></nav>
   <input class="search" type="text" placeholder="Rechercher..." id="searchInput">
 </header>
 
@@ -333,6 +309,26 @@
 
 <div class="grid" id="grid"></div>
 <div class="empty hidden" id="empty">Aucune fiche ne correspond à ces filtres.</div>
+
+<section class="about" id="a-propos">
+  <h2>À propos</h2>
+  <p>
+    <strong>Les Archives Miskatoniques</strong> recensent et hébergent durablement le
+    contenu fan-made francophone pour <em>Horreur à Arkham : le Jeu de Cartes</em> :
+    créations originales de la communauté et traductions de contenus anglophones
+    (guides, planches d'impression, images de cartes). Les fichiers sont conservés sur
+    Internet Archive afin de rester accessibles indépendamment de leurs auteurs. Projet
+    bénévole, non commercial.
+  </p>
+  <p class="disclaimer">
+    Ce projet est indépendant. Il n'est ni affilié, ni soutenu, ni approuvé par
+    Fantasy Flight Games, Asmodée ou Edge. « Horreur à Arkham : le Jeu de Cartes »,
+    « Arkham Horror: The Card Game », ainsi que les marques, logos et illustrations
+    officiels, demeurent la propriété de leurs détenteurs respectifs. Le contenu
+    recensé ici est produit et partagé gratuitement par la communauté et nécessite le
+    jeu de base officiel pour être utilisé.
+  </p>
+</section>
 
 <footer>
   Site statique — GitHub Pages · Données : <a href="data/catalogue.json">catalogue.json</a> · Fichiers hébergés sur archive.org
@@ -503,28 +499,6 @@ grid.addEventListener("click", (e) => {
   applyFilters();
 });
 
-// Menu burger (mobile)
-const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.getElementById("site-nav");
-if (navToggle && siteNav) {
-  const setNav = (open) => {
-    siteNav.classList.toggle("open", open);
-    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-  };
-  navToggle.addEventListener("click", () =>
-    setNav(!siteNav.classList.contains("open")),
-  );
-  siteNav.addEventListener("click", (e) => {
-    if (e.target.closest("a")) setNav(false);
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") setNav(false);
-  });
-  matchMedia("(min-width: 641px)").addEventListener("change", (e) => {
-    if (e.matches) setNav(false);
-  });
-}
-
 // Titre / logo -> retour à l'accueil : listing complet, sans filtre ni recherche
 document.querySelector(".brand").addEventListener("click", (e) => {
   e.preventDefault();
@@ -532,8 +506,6 @@ document.querySelector(".brand").addEventListener("click", (e) => {
   document.getElementById("filterCycle").value = "";
   document.getElementById("searchInput").value = "";
   applyFilters();
-  siteNav?.classList.remove("open");
-  navToggle?.setAttribute("aria-expanded", "false");
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>
