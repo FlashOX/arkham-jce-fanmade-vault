@@ -355,7 +355,6 @@ const TYPE_LABEL = {
   "cartes-joueur": "Cartes joueur",
   autre: "Autre",
 };
-const IA_DETAILS = (id) => `https://archive.org/details/${encodeURIComponent(id)}`;
 const IA_DOWNLOAD = (id, f) =>
   `https://archive.org/download/${encodeURIComponent(id)}/${encodeURIComponent(f)}`;
 
@@ -418,8 +417,6 @@ function render(list) {
           ${src ? `<a href="${esc(src)}" target="_blank" rel="noopener">Fil d'origine ↗</a>` : ""}
           ${archive
             ? (archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}">Guide (PDF) ↓</a>` : "")
-              + `<a href="${esc(IA_DOWNLOAD(archive.id, archive.images))}">Images cartes (zip) ↓</a>`
-              + `<a href="${esc(IA_DETAILS(archive.id))}" target="_blank" rel="noopener">archive.org ↗</a>`
             : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}
         </div>
         <div class="tags">
