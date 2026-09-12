@@ -288,7 +288,7 @@
     {
       "id": "la-symphonie-derich-zann",
       "titre": "La Symphonie d'Erich Zann",
-      "titreVO": null,
+      "titreVO": "The Symphony of Erich Zann",
       "type": "scenario",
       "cycle": "Cycle 2",
       "etat": "inconnu",
@@ -310,7 +310,7 @@
     {
       "id": "les-chiens-de-tindalos",
       "titre": "Les Chiens de Tindalos",
-      "titreVO": null,
+      "titreVO": "Hounds of Tindalos",
       "type": "scenario",
       "cycle": "Cycle 2",
       "etat": "inconnu",
