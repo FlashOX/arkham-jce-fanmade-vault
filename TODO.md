@@ -13,7 +13,8 @@ Idées et chantiers pas encore planifiés. Rien d'urgent ici.
 
 - [ ] **Page / section « Comment imprimer le contenu »** : options d'impression
       des planches et images (MBPrint, Shoggoth Card Printing, etc.), format A4
-      vs format carte, papier, fond perdu, recto/verso.
+      vs format carte, papier, fond perdu, recto/verso. Plan de travail détaillé
+      (MBPrint en priorité, puis MPC) : [plan_impression_facilitee.md](plan_impression_facilitee.md).
 - [ ] **Section « Divers » par cycle** proposant en téléchargement à part :
       les séparateurs (intercalaires) et le guide au format cycle complet
       (non découpé par scénario) — ce dernier contient les crédits et
