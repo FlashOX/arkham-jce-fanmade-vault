@@ -76,7 +76,7 @@ for (let idx = 0; idx < dirs.length; idx++) {
 
   const md = [
     `title:${fiche?.titre || id} — ${TYPE_LABEL[fiche?.type] || "contenu"} fan-made${cycle ? " (" + cycle + ")" : ""}`,
-    `mediatype:texts`,
+    `mediatype:data`,
     `language:fre`,
     man.creator ? `creator:${man.creator}` : null,
     `subject:Horreur à Arkham JCE`,
@@ -91,6 +91,7 @@ for (let idx = 0; idx < dirs.length; idx++) {
     ...files.map((f) => `dist/print/${dirName}/${f}`),
     ...md.map((m) => `--metadata=${m}`),
     "--checksum",     // saute les fichiers déjà en ligne à l'identique -> reprise propre
+    "--no-derive",    // mediatype:data + no-derive -> pas d'OCR/jp2/bookreader générés
     "--retries", "5",
   ];
 
