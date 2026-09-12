@@ -148,7 +148,10 @@
       "source": "shomm",
       "guide": null,
       "planche": "09 - Scénarios Fan-Made/FS06 - Les Dossiers d_Arkham 02 (03-2021)/FS06I - Investigateurs/Cartes/FS06I - Investigateurs - Cartes (A4).pdf",
-      "imagesDir": "09 - Scénarios Fan-Made/FS06 - Les Dossiers d_Arkham 02 (03-2021)/FS06I - Investigateurs/Cartes/Cartes (Poker - 3.2 marge)",
+      "imagesDir": [
+        "09 - Scénarios Fan-Made/FS06 - Les Dossiers d_Arkham 02 (03-2021)/FS06I - Investigateurs/Cartes/Cartes (Poker - 3.2 marge)",
+        "09 - Scénarios Fan-Made/FS06 - Les Dossiers d_Arkham 02 (03-2021)/FS06I - Investigateurs/Cartes Minis/Cartes Minis (Mini USA - 3.2 marge)"
+      ],
       "creator": "Ligue des Joueurs Francophones d'Arkham JCE"
     }
   }

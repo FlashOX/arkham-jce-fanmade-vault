@@ -121,15 +121,19 @@ for (const [id, it] of entries) {
   }
 
   if (it.imagesDir) {
-    const imgSrc = path.resolve(root, it.imagesDir);
-    if (!existsSync(imgSrc)) {
-      console.error(`! ${id} : dossier images absent ${it.imagesDir}`);
-    } else {
-      const suffix = it.imagesBleed === false ? "cartes-sans-bleed" : "cartes-avec-bleed";
-      const zip = path.join(itemDir, `ahlcg-fr-${id}-${suffix}.zip`);
+    // un seul dossier, ou une liste (ex. cartes taille normale + cartes minis)
+    // zippés ensemble dans un même zip.
+    const imgDirs = Array.isArray(it.imagesDir) ? it.imagesDir : [it.imagesDir];
+    const suffix = it.imagesBleed === false ? "cartes-sans-bleed" : "cartes-avec-bleed";
+    const zip = path.join(itemDir, `ahlcg-fr-${id}-${suffix}.zip`);
+    let anyOk = false;
+    for (const rel of imgDirs) {
+      const imgSrc = path.resolve(root, rel);
+      if (!existsSync(imgSrc)) { console.error(`! ${id} : dossier images absent ${rel}`); continue; }
       sevenzip(["a", "-tzip", "-mx=0", "-bso0", "-bsp0", zip, "."], { cwd: imgSrc });
-      files.push([path.basename(zip), statSync(zip).size]);
+      anyOk = true;
     }
+    if (anyOk) files.push([path.basename(zip), statSync(zip).size]);
   }
 
   const total = files.reduce((s, [, n]) => s + n, 0);
