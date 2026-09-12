@@ -269,7 +269,7 @@
       "titreVO": "Consternation on the Constellation",
       "type": "scenario",
       "cycle": "Cycle 2",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/desolation-a-bord-du-constellation.jpg",
@@ -283,7 +283,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-desolation-a-bord-du-constellation",
+        "guide": "ahlcg-fr-desolation-a-bord-du-constellation-guide.pdf",
+        "planche": "ahlcg-fr-desolation-a-bord-du-constellation-planche-a4.pdf",
+        "images": "ahlcg-fr-desolation-a-bord-du-constellation-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "la-symphonie-derich-zann",
@@ -291,7 +296,7 @@
       "titreVO": "The Symphony of Erich Zann",
       "type": "scenario",
       "cycle": "Cycle 2",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/la-symphonie-derich-zann.jpg",
@@ -305,7 +310,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-la-symphonie-derich-zann",
+        "guide": "ahlcg-fr-la-symphonie-derich-zann-guide.pdf",
+        "planche": "ahlcg-fr-la-symphonie-derich-zann-planche-a4.pdf",
+        "images": "ahlcg-fr-la-symphonie-derich-zann-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "les-chiens-de-tindalos",
@@ -313,7 +323,7 @@
       "titreVO": "Hounds of Tindalos",
       "type": "scenario",
       "cycle": "Cycle 2",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/les-chiens-de-tindalos.jpg",
@@ -327,7 +337,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-les-chiens-de-tindalos",
+        "guide": "ahlcg-fr-les-chiens-de-tindalos-guide.pdf",
+        "planche": "ahlcg-fr-les-chiens-de-tindalos-planche-a4.pdf",
+        "images": "ahlcg-fr-les-chiens-de-tindalos-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "au-bord-du-gouffre",
@@ -335,7 +350,7 @@
       "titreVO": null,
       "type": "scenario",
       "cycle": "Cycle 2",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/au-bord-du-gouffre.jpg",
@@ -349,7 +364,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-au-bord-du-gouffre",
+        "guide": "ahlcg-fr-au-bord-du-gouffre-guide.pdf",
+        "planche": "ahlcg-fr-au-bord-du-gouffre-planche-a4.pdf",
+        "images": "ahlcg-fr-au-bord-du-gouffre-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "sang-verse-a-salem",
@@ -357,7 +377,7 @@
       "titreVO": "Blood Spilled in Salem",
       "type": "scenario",
       "cycle": "Cycle 2",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/sang-verse-a-salem.jpg",
@@ -371,7 +391,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-sang-verse-a-salem",
+        "guide": "ahlcg-fr-sang-verse-a-salem-guide.pdf",
+        "planche": "ahlcg-fr-sang-verse-a-salem-planche-a4.pdf",
+        "images": "ahlcg-fr-sang-verse-a-salem-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "la-couleur-tombee-du-ciel",
@@ -379,7 +404,7 @@
       "titreVO": "The Colour Out of Space",
       "type": "scenario",
       "cycle": "Cycle 2",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/la-couleur-tombee-du-ciel.jpg",
@@ -393,7 +418,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-la-couleur-tombee-du-ciel",
+        "guide": "ahlcg-fr-la-couleur-tombee-du-ciel-guide.pdf",
+        "planche": "ahlcg-fr-la-couleur-tombee-du-ciel-planche-a4.pdf",
+        "images": "ahlcg-fr-la-couleur-tombee-du-ciel-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "levenement-de-svalbard",
@@ -401,7 +431,7 @@
       "titreVO": "The Svalbard Event",
       "type": "scenario",
       "cycle": "Cycle 2",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/levenement-de-svalbard.jpg",
@@ -415,7 +445,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-levenement-de-svalbard",
+        "guide": "ahlcg-fr-levenement-de-svalbard-guide.pdf",
+        "planche": "ahlcg-fr-levenement-de-svalbard-planche-a4.pdf",
+        "images": "ahlcg-fr-levenement-de-svalbard-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "lhotel-du-grand-chene",
@@ -423,7 +458,7 @@
       "titreVO": "The Grand Oak Hotel",
       "type": "scenario",
       "cycle": "Cycle 2",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/lhotel-du-grand-chene.jpg",
@@ -437,7 +472,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-lhotel-du-grand-chene",
+        "guide": "ahlcg-fr-lhotel-du-grand-chene-guide.pdf",
+        "planche": "ahlcg-fr-lhotel-du-grand-chene-planche-a4.pdf",
+        "images": "ahlcg-fr-lhotel-du-grand-chene-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "investigateurs-fan-made-cycle-2",
@@ -445,7 +485,7 @@
       "titreVO": null,
       "type": "investigateurs",
       "cycle": "Cycle 2",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/investigateurs-fan-made-cycle-2.jpg",
@@ -459,7 +499,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-investigateurs-fan-made-cycle-2",
+        "guide": null,
+        "planche": "ahlcg-fr-investigateurs-fan-made-cycle-2-planche-a4.pdf",
+        "images": "ahlcg-fr-investigateurs-fan-made-cycle-2-cartes-avec-bleed.zip"
+      }
     },
     {
       "id": "cartes-joueurs-laureates-du-concours-2020",
