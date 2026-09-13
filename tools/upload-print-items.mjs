@@ -83,7 +83,11 @@ for (let idx = 0; idx < dirs.length; idx++) {
     `subject:fan-made`,
     `subject:français`,
     cycle ? `subject:${cycle}` : null,
-    `description:${fiche?.titre || id} — contenu fan-made pour «Horreur à Arkham : le JCE»${cycle ? ", " + cycle + " (Les Dossiers d'Arkham)" : ""}. Planche d'impression A4 + images de cartes avec bleed + guide. Fiche : ${SITE}`,
+    `description:${fiche?.titre || id} — contenu fan-made pour «Horreur à Arkham : le JCE»${cycle ? ", " + cycle + " (Les Dossiers d'Arkham)" : ""}. ${
+      man.planche
+        ? "Planche d'impression A4 + images de cartes avec bleed + guide."
+        : "Archive complète (guide, cartes, planches) + guide au format PDF."
+    } Fiche : ${SITE}`,
   ].filter(Boolean);
 
   const iaArgs = [
