@@ -600,7 +600,7 @@
       "titreVO": null,
       "type": "campagne",
       "cycle": null,
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": null,
@@ -614,7 +614,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-matiere-noire",
+        "guide": "ahlcg-fr-matiere-noire-guide.pdf",
+        "planche": null,
+        "images": "ahlcg-fr-matiere-noire-archive-complete.zip"
+      }
     },
     {
       "id": "dimensions-etranges",
@@ -666,7 +671,7 @@
       "titreVO": null,
       "type": "campagne",
       "cycle": null,
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": null,
@@ -680,7 +685,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-fondations-cyclopeenes",
+        "guide": "ahlcg-fr-fondations-cyclopeenes-guide.pdf",
+        "planche": null,
+        "images": "ahlcg-fr-fondations-cyclopeenes-archive-complete.zip"
+      }
     },
     {
       "id": "la-guerre-des-mondes",
@@ -754,7 +764,7 @@
       "titreVO": null,
       "type": "campagne",
       "cycle": null,
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": null,
@@ -768,7 +778,12 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": {
+        "id": "ahlcg-fr-alice-au-pays-des-merveilles",
+        "guide": "ahlcg-fr-alice-au-pays-des-merveilles-guide.pdf",
+        "planche": null,
+        "images": "ahlcg-fr-alice-au-pays-des-merveilles-archive-complete.zip"
+      }
     },
     {
       "id": "les-ombres-de-yog-sothoth",
