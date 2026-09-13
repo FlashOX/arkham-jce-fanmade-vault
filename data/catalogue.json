@@ -21,17 +21,17 @@
   },
   "items": [
     {
-      "id": "face-au-wendigo",
-      "titre": "Face au Wendigo",
+      "id": "ages-unwound",
+      "titre": "Ages Unwound",
       "titreVO": null,
-      "type": "scenario",
-      "cycle": "Cycle 1",
-      "etat": "disponible",
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
       "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/face-au-wendigo.jpg",
+      "publie": false,
+      "image": null,
       "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "source": null,
         "fichier": null
       },
       "images": {
@@ -39,202 +39,23 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": {
-        "id": "ahlcg-fr-face-au-wendigo",
-        "guide": "ahlcg-fr-face-au-wendigo-guide.pdf",
-        "planche": "ahlcg-fr-face-au-wendigo-planche-a4.pdf",
-        "images": "ahlcg-fr-face-au-wendigo-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2019-04",
-      "sortKey": "Face au Wendigo"
+      "commentaire": "VO anglaise — statut de traduction FR à préciser.",
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Ages Unwound"
     },
     {
-      "id": "jouet-dune-illusion",
-      "titre": "Jouet d'une Illusion",
-      "titreVO": "The Nephew Calls",
-      "type": "scenario",
-      "cycle": "Cycle 1",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/jouet-dune-illusion.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-jouet-dune-illusion",
-        "guide": "ahlcg-fr-jouet-dune-illusion-guide.pdf",
-        "planche": "ahlcg-fr-jouet-dune-illusion-planche-a4.pdf",
-        "images": "ahlcg-fr-jouet-dune-illusion-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2019-04",
-      "sortKey": "Jouet d'une Illusion"
-    },
-    {
-      "id": "le-festival",
-      "titre": "Le Festival",
-      "titreVO": "The Festival",
-      "type": "scenario",
-      "cycle": "Cycle 1",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/le-festival.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-le-festival",
-        "guide": "ahlcg-fr-le-festival-guide.pdf",
-        "planche": "ahlcg-fr-le-festival-planche-a4.pdf",
-        "images": "ahlcg-fr-le-festival-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2019-04",
-      "sortKey": "Festival"
-    },
-    {
-      "id": "le-palais-du-rire",
-      "titre": "Le Palais du Rire",
-      "titreVO": "Happy's Funhouse",
-      "type": "scenario",
-      "cycle": "Cycle 1",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/le-palais-du-rire.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-le-palais-du-rire",
-        "guide": "ahlcg-fr-le-palais-du-rire-guide.pdf",
-        "planche": "ahlcg-fr-le-palais-du-rire-planche-a4.pdf",
-        "images": "ahlcg-fr-le-palais-du-rire-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2019-04",
-      "sortKey": "Palais du Rire"
-    },
-    {
-      "id": "le-pont-des-soupirs",
-      "titre": "Le Pont des Soupirs",
-      "titreVO": "Bridge of Sighs",
-      "type": "scenario",
-      "cycle": "Cycle 1",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/le-pont-des-soupirs.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-le-pont-des-soupirs",
-        "guide": "ahlcg-fr-le-pont-des-soupirs-guide.pdf",
-        "planche": "ahlcg-fr-le-pont-des-soupirs-planche-a4.pdf",
-        "images": "ahlcg-fr-le-pont-des-soupirs-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2019-04",
-      "sortKey": "Pont des Soupirs"
-    },
-    {
-      "id": "le-wyrm-de-pensher",
-      "titre": "Le Wyrm de Pensher",
-      "titreVO": "The Pensher Wyrm",
-      "type": "scenario",
-      "cycle": "Cycle 1",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/le-wyrm-de-pensher.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-le-wyrm-de-pensher",
-        "guide": "ahlcg-fr-le-wyrm-de-pensher-guide.pdf",
-        "planche": "ahlcg-fr-le-wyrm-de-pensher-planche-a4.pdf",
-        "images": "ahlcg-fr-le-wyrm-de-pensher-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2019-04",
-      "sortKey": "Wyrm de Pensher"
-    },
-    {
-      "id": "les-seuils-de-la-croyance",
-      "titre": "Les Seuils de la Croyance",
-      "titreVO": "The Limens Belief",
-      "type": "scenario",
-      "cycle": "Cycle 1",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/les-seuils-de-la-croyance.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-les-seuils-de-la-croyance",
-        "guide": "ahlcg-fr-les-seuils-de-la-croyance-guide.pdf",
-        "planche": "ahlcg-fr-les-seuils-de-la-croyance-planche-a4.pdf",
-        "images": "ahlcg-fr-les-seuils-de-la-croyance-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2019-04",
-      "sortKey": "Seuils de la Croyance"
-    },
-    {
-      "id": "pulsions-cynegetiques",
-      "titre": "Pulsions Cynégétiques",
+      "id": "alice-au-pays-des-merveilles",
+      "titre": "Alice au Pays des Merveilles",
       "titreVO": null,
-      "type": "scenario",
-      "cycle": "Cycle 1",
+      "type": "campagne",
+      "cycle": null,
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
-      "image": "img/thumbs/pulsions-cynegetiques.jpg",
+      "image": "img/thumbs/alice-au-pays-des-merveilles.jpg",
       "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "source": "https://discord.com/channels/443151671846109195/977511254572814346",
         "fichier": null
       },
       "images": {
@@ -242,131 +63,15 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
+      "commentaire": null,
       "archive": {
-        "id": "ahlcg-fr-pulsions-cynegetiques",
-        "guide": "ahlcg-fr-pulsions-cynegetiques-guide.pdf",
+        "id": "ahlcg-fr-alice-au-pays-des-merveilles",
+        "guide": "ahlcg-fr-alice-au-pays-des-merveilles-guide.pdf",
         "planche": null,
-        "images": "ahlcg-fr-pulsions-cynegetiques-cartes-avec-bleed.zip"
+        "images": "ahlcg-fr-alice-au-pays-des-merveilles-archive-complete.zip"
       },
-      "datePublication": "2019-04",
-      "sortKey": "Pulsions Cynégétiques"
-    },
-    {
-      "id": "investigateurs-fan-made",
-      "titre": "Investigateurs fan-made (Cycle 1)",
-      "titreVO": null,
-      "type": "investigateurs",
-      "cycle": "Cycle 1",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/investigateurs-fan-made.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "6 enquêteurs (5 traductions + 1 création FR).",
-      "archive": {
-        "id": "ahlcg-fr-investigateurs-fan-made",
-        "guide": null,
-        "planche": "ahlcg-fr-investigateurs-fan-made-planche-a4.pdf",
-        "images": "ahlcg-fr-investigateurs-fan-made-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2019-04",
-      "sortKey": "Investigateurs fan-made (Cycle 1)"
-    },
-    {
-      "id": "desolation-a-bord-du-constellation",
-      "titre": "Désolation à Bord du Constellation",
-      "titreVO": "Consternation on the Constellation",
-      "type": "scenario",
-      "cycle": "Cycle 2",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/desolation-a-bord-du-constellation.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-desolation-a-bord-du-constellation",
-        "guide": "ahlcg-fr-desolation-a-bord-du-constellation-guide.pdf",
-        "planche": "ahlcg-fr-desolation-a-bord-du-constellation-planche-a4.pdf",
-        "images": "ahlcg-fr-desolation-a-bord-du-constellation-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2021-03",
-      "sortKey": "Désolation à Bord du Constellation"
-    },
-    {
-      "id": "la-symphonie-derich-zann",
-      "titre": "La Symphonie d'Erich Zann",
-      "titreVO": "The Symphony of Erich Zann",
-      "type": "scenario",
-      "cycle": "Cycle 2",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/la-symphonie-derich-zann.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-la-symphonie-derich-zann",
-        "guide": "ahlcg-fr-la-symphonie-derich-zann-guide.pdf",
-        "planche": "ahlcg-fr-la-symphonie-derich-zann-planche-a4.pdf",
-        "images": "ahlcg-fr-la-symphonie-derich-zann-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2021-03",
-      "sortKey": "Symphonie d'Erich Zann"
-    },
-    {
-      "id": "les-chiens-de-tindalos",
-      "titre": "Les Chiens de Tindalos",
-      "titreVO": "Hounds of Tindalos",
-      "type": "scenario",
-      "cycle": "Cycle 2",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/les-chiens-de-tindalos.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-les-chiens-de-tindalos",
-        "guide": "ahlcg-fr-les-chiens-de-tindalos-guide.pdf",
-        "planche": "ahlcg-fr-les-chiens-de-tindalos-planche-a4.pdf",
-        "images": "ahlcg-fr-les-chiens-de-tindalos-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2021-03",
-      "sortKey": "Chiens de Tindalos"
+      "datePublication": "2020-10",
+      "sortKey": "Alice au Pays des Merveilles"
     },
     {
       "id": "au-bord-du-gouffre",
@@ -398,15 +103,68 @@
       "sortKey": "Au Bord du Gouffre"
     },
     {
-      "id": "sang-verse-a-salem",
-      "titre": "Sang Versé à Salem",
-      "titreVO": "Blood Spilled in Salem",
+      "id": "au-coeur-des-tenebres",
+      "titre": "Au Coeur des Ténèbres",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/au-coeur-des-tenebres.jpg",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/711513306069729330/1503888152237047819",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": {
+        "id": "ahlcg-fr-au-coeur-des-tenebres",
+        "guide": "ahlcg-fr-au-coeur-des-tenebres-guide.pdf",
+        "planche": null,
+        "images": "ahlcg-fr-au-coeur-des-tenebres-archive-complete.zip"
+      },
+      "datePublication": "2023-04",
+      "sortKey": "Au Coeur des Ténèbres"
+    },
+    {
+      "id": "cartes-joueurs-laureates-du-concours-2020",
+      "titre": "Cartes joueurs lauréates du concours 2020",
+      "titreVO": null,
+      "type": "cartes-joueur",
+      "cycle": "Cycle 2",
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": false,
+      "image": null,
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Cartes joueurs lauréates du concours 2020"
+    },
+    {
+      "id": "les-chiens-de-tindalos",
+      "titre": "Les Chiens de Tindalos",
+      "titreVO": "Hounds of Tindalos",
       "type": "scenario",
       "cycle": "Cycle 2",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
-      "image": "img/thumbs/sang-verse-a-salem.jpg",
+      "image": "img/thumbs/les-chiens-de-tindalos.jpg",
       "liens": {
         "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
         "fichier": null
@@ -418,13 +176,90 @@
       "contactPanierPartage": null,
       "commentaire": null,
       "archive": {
-        "id": "ahlcg-fr-sang-verse-a-salem",
-        "guide": "ahlcg-fr-sang-verse-a-salem-guide.pdf",
-        "planche": "ahlcg-fr-sang-verse-a-salem-planche-a4.pdf",
-        "images": "ahlcg-fr-sang-verse-a-salem-cartes-avec-bleed.zip"
+        "id": "ahlcg-fr-les-chiens-de-tindalos",
+        "guide": "ahlcg-fr-les-chiens-de-tindalos-guide.pdf",
+        "planche": "ahlcg-fr-les-chiens-de-tindalos-planche-a4.pdf",
+        "images": "ahlcg-fr-les-chiens-de-tindalos-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "Sang Versé à Salem"
+      "sortKey": "Chiens de Tindalos"
+    },
+    {
+      "id": "circus-ex-mortis",
+      "titre": "Circus Ex Mortis",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": true,
+      "image": null,
+      "liens": {
+        "source": null,
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": null,
+      "datePublication": "2023-08",
+      "sortKey": "Circus Ex Mortis"
+    },
+    {
+      "id": "circus-ex-mortis",
+      "titre": "Circus Ex Mortis",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/circus-ex-mortis.jpg",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-circus-ex-mortis",
+        "guide": "ahlcg-fr-circus-ex-mortis-guide.pdf",
+        "planche": null,
+        "images": "ahlcg-fr-circus-ex-mortis-archive-complete.zip"
+      },
+      "datePublication": "2023-08",
+      "sortKey": "Circus Ex Mortis"
+    },
+    {
+      "id": "la-cite-de-linvisible",
+      "titre": "La Cité de l'Invisible",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": false,
+      "image": null,
+      "liens": {
+        "source": null,
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": null,
+      "datePublication": "2024-02",
+      "sortKey": "Cité de l'Invisible"
     },
     {
       "id": "la-couleur-tombee-du-ciel",
@@ -454,6 +289,334 @@
       },
       "datePublication": "2021-03",
       "sortKey": "Couleur Tombée du Ciel"
+    },
+    {
+      "id": "desolation-a-bord-du-constellation",
+      "titre": "Désolation à Bord du Constellation",
+      "titreVO": "Consternation on the Constellation",
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/desolation-a-bord-du-constellation.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-desolation-a-bord-du-constellation",
+        "guide": "ahlcg-fr-desolation-a-bord-du-constellation-guide.pdf",
+        "planche": "ahlcg-fr-desolation-a-bord-du-constellation-planche-a4.pdf",
+        "images": "ahlcg-fr-desolation-a-bord-du-constellation-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Désolation à Bord du Constellation"
+    },
+    {
+      "id": "dimensions-etranges",
+      "titre": "Dimensions Étranges",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": true,
+      "image": null,
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": null,
+      "datePublication": "2023-05",
+      "sortKey": "Dimensions Étranges"
+    },
+    {
+      "id": "les-disparus-de-killineq",
+      "titre": "Les Disparus de Killineq",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/les-disparus-de-killineq.jpg",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/711513306069729330/1503888152237047819",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": {
+        "id": "ahlcg-fr-les-disparus-de-killineq",
+        "guide": "ahlcg-fr-les-disparus-de-killineq-guide.pdf",
+        "planche": null,
+        "images": "ahlcg-fr-les-disparus-de-killineq-archive-complete.zip"
+      },
+      "datePublication": "2020-05",
+      "sortKey": "Disparus de Killineq"
+    },
+    {
+      "id": "face-au-wendigo",
+      "titre": "Face au Wendigo",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/face-au-wendigo.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": {
+        "id": "ahlcg-fr-face-au-wendigo",
+        "guide": "ahlcg-fr-face-au-wendigo-guide.pdf",
+        "planche": "ahlcg-fr-face-au-wendigo-planche-a4.pdf",
+        "images": "ahlcg-fr-face-au-wendigo-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Face au Wendigo"
+    },
+    {
+      "id": "le-festival",
+      "titre": "Le Festival",
+      "titreVO": "The Festival",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/le-festival.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-le-festival",
+        "guide": "ahlcg-fr-le-festival-guide.pdf",
+        "planche": "ahlcg-fr-le-festival-planche-a4.pdf",
+        "images": "ahlcg-fr-le-festival-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Festival"
+    },
+    {
+      "id": "fondations-cyclopeenes",
+      "titre": "Fondations Cyclopéennes",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/fondations-cyclopeenes.jpg",
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-fondations-cyclopeenes",
+        "guide": "ahlcg-fr-fondations-cyclopeenes-guide.pdf",
+        "planche": null,
+        "images": "ahlcg-fr-fondations-cyclopeenes-archive-complete.zip"
+      },
+      "datePublication": "2021-05",
+      "sortKey": "Fondations Cyclopéennes"
+    },
+    {
+      "id": "la-guerre-des-mondes",
+      "titre": "La guerre des mondes",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 8",
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": true,
+      "image": null,
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/998284425177600042",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": null,
+      "datePublication": "2020-10",
+      "sortKey": "guerre des mondes"
+    },
+    {
+      "id": "investigateurs-fan-made",
+      "titre": "Investigateurs fan-made (Cycle 1)",
+      "titreVO": null,
+      "type": "investigateurs",
+      "cycle": "Cycle 1",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/investigateurs-fan-made.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "6 enquêteurs (5 traductions + 1 création FR).",
+      "archive": {
+        "id": "ahlcg-fr-investigateurs-fan-made",
+        "guide": null,
+        "planche": "ahlcg-fr-investigateurs-fan-made-planche-a4.pdf",
+        "images": "ahlcg-fr-investigateurs-fan-made-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Investigateurs fan-made (Cycle 1)"
+    },
+    {
+      "id": "investigateurs-fan-made-cycle-2",
+      "titre": "Investigateurs fan-made (Cycle 2)",
+      "titreVO": null,
+      "type": "investigateurs",
+      "cycle": "Cycle 2",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/investigateurs-fan-made-cycle-2.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-investigateurs-fan-made-cycle-2",
+        "guide": null,
+        "planche": "ahlcg-fr-investigateurs-fan-made-cycle-2-planche-a4.pdf",
+        "images": "ahlcg-fr-investigateurs-fan-made-cycle-2-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Investigateurs fan-made (Cycle 2)"
+    },
+    {
+      "id": "jouet-dune-illusion",
+      "titre": "Jouet d'une Illusion",
+      "titreVO": "The Nephew Calls",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/jouet-dune-illusion.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-jouet-dune-illusion",
+        "guide": "ahlcg-fr-jouet-dune-illusion-guide.pdf",
+        "planche": "ahlcg-fr-jouet-dune-illusion-planche-a4.pdf",
+        "images": "ahlcg-fr-jouet-dune-illusion-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Jouet d'une Illusion"
+    },
+    {
+      "id": "lappel-du-porte-peste",
+      "titre": "L'Appel du Porte Peste",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": false,
+      "image": null,
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": null,
+      "datePublication": "2021-10",
+      "sortKey": "L'Appel du Porte Peste"
+    },
+    {
+      "id": "letrange-cas-du-docteur-jekyll-et-mr-hyde",
+      "titre": "L'étrange cas du docteur Jekyll et Mr Hyde",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 8",
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": true,
+      "image": null,
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/998284425177600042",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": null,
+      "datePublication": "2021-03",
+      "sortKey": "L'étrange cas du docteur Jekyll et Mr Hyde"
     },
     {
       "id": "levenement-de-svalbard",
@@ -514,70 +677,17 @@
       "sortKey": "L'Hôtel du Grand Chêne"
     },
     {
-      "id": "investigateurs-fan-made-cycle-2",
-      "titre": "Investigateurs fan-made (Cycle 2)",
-      "titreVO": null,
-      "type": "investigateurs",
-      "cycle": "Cycle 2",
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/investigateurs-fan-made-cycle-2.jpg",
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-investigateurs-fan-made-cycle-2",
-        "guide": null,
-        "planche": "ahlcg-fr-investigateurs-fan-made-cycle-2-planche-a4.pdf",
-        "images": "ahlcg-fr-investigateurs-fan-made-cycle-2-cartes-avec-bleed.zip"
-      },
-      "datePublication": "2021-03",
-      "sortKey": "Investigateurs fan-made (Cycle 2)"
-    },
-    {
-      "id": "cartes-joueurs-laureates-du-concours-2020",
-      "titre": "Cartes joueurs lauréates du concours 2020",
-      "titreVO": null,
-      "type": "cartes-joueur",
-      "cycle": "Cycle 2",
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": false,
-      "image": null,
-      "liens": {
-        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": null,
-      "datePublication": null,
-      "sortKey": "Cartes joueurs lauréates du concours 2020"
-    },
-    {
-      "id": "au-coeur-des-tenebres",
-      "titre": "Au Coeur des Ténèbres",
+      "id": "lombre-des-grands-anciens",
+      "titre": "L'ombre des Grands Anciens",
       "titreVO": null,
       "type": "campagne",
       "cycle": null,
-      "etat": "disponible",
+      "etat": "inconnu",
       "langue": "fr",
       "publie": true,
-      "image": "img/thumbs/au-coeur-des-tenebres.jpg",
+      "image": null,
       "liens": {
-        "source": "https://discord.com/channels/443151671846109195/711513306069729330/1503888152237047819",
+        "source": null,
         "fichier": null
       },
       "images": {
@@ -586,14 +696,33 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": {
-        "id": "ahlcg-fr-au-coeur-des-tenebres",
-        "guide": "ahlcg-fr-au-coeur-des-tenebres-guide.pdf",
-        "planche": null,
-        "images": "ahlcg-fr-au-coeur-des-tenebres-archive-complete.zip"
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "L'ombre des Grands Anciens"
+    },
+    {
+      "id": "la-legende-du-cavalier-sans-tete",
+      "titre": "La légende du cavalier sans tête",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 8",
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": true,
+      "image": null,
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/998284425177600042",
+        "fichier": null
       },
-      "datePublication": "2023-04",
-      "sortKey": "Au Coeur des Ténèbres"
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": null,
+      "datePublication": "2020-10",
+      "sortKey": "légende du cavalier sans tête"
     },
     {
       "id": "la-maison-voodoo",
@@ -625,35 +754,6 @@
       "sortKey": "Maison Vaudou"
     },
     {
-      "id": "les-disparus-de-killineq",
-      "titre": "Les Disparus de Killineq",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/les-disparus-de-killineq.jpg",
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/711513306069729330/1503888152237047819",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": {
-        "id": "ahlcg-fr-les-disparus-de-killineq",
-        "guide": "ahlcg-fr-les-disparus-de-killineq-guide.pdf",
-        "planche": null,
-        "images": "ahlcg-fr-les-disparus-de-killineq-archive-complete.zip"
-      },
-      "datePublication": "2020-05",
-      "sortKey": "Disparus de Killineq"
-    },
-    {
       "id": "matiere-noire",
       "titre": "Matière Noire",
       "titreVO": null,
@@ -683,166 +783,17 @@
       "sortKey": "Matière Noire"
     },
     {
-      "id": "dimensions-etranges",
-      "titre": "Dimensions Étranges",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": "2023-05",
-      "sortKey": "Dimensions Étranges"
-    },
-    {
-      "id": "lappel-du-porte-peste",
-      "titre": "L'Appel du Porte Peste",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": false,
-      "image": null,
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": "2021-10",
-      "sortKey": "L'Appel du Porte Peste"
-    },
-    {
-      "id": "fondations-cyclopeenes",
-      "titre": "Fondations Cyclopéennes",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
-      "etat": "disponible",
-      "langue": "fr",
-      "publie": true,
-      "image": "img/thumbs/fondations-cyclopeenes.jpg",
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-fondations-cyclopeenes",
-        "guide": "ahlcg-fr-fondations-cyclopeenes-guide.pdf",
-        "planche": null,
-        "images": "ahlcg-fr-fondations-cyclopeenes-archive-complete.zip"
-      },
-      "datePublication": "2021-05",
-      "sortKey": "Fondations Cyclopéennes"
-    },
-    {
-      "id": "la-guerre-des-mondes",
-      "titre": "La guerre des mondes",
+      "id": "noel-a-arkham",
+      "titre": "Noel à Arkham",
       "titreVO": null,
       "type": "scenario",
-      "cycle": "Cycle 8",
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/998284425177600042",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": "2020-10",
-      "sortKey": "guerre des mondes"
-    },
-    {
-      "id": "la-legende-du-cavalier-sans-tete",
-      "titre": "La légende du cavalier sans tête",
-      "titreVO": null,
-      "type": "scenario",
-      "cycle": "Cycle 8",
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/998284425177600042",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": "2020-10",
-      "sortKey": "légende du cavalier sans tête"
-    },
-    {
-      "id": "letrange-cas-du-docteur-jekyll-et-mr-hyde",
-      "titre": "L'étrange cas du docteur Jekyll et Mr Hyde",
-      "titreVO": null,
-      "type": "scenario",
-      "cycle": "Cycle 8",
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/998284425177600042",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": "2021-03",
-      "sortKey": "L'étrange cas du docteur Jekyll et Mr Hyde"
-    },
-    {
-      "id": "alice-au-pays-des-merveilles",
-      "titre": "Alice au Pays des Merveilles",
-      "titreVO": null,
-      "type": "campagne",
       "cycle": null,
-      "etat": "disponible",
+      "etat": "inconnu",
       "langue": "fr",
       "publie": true,
-      "image": "img/thumbs/alice-au-pays-des-merveilles.jpg",
+      "image": null,
       "liens": {
-        "source": "https://discord.com/channels/443151671846109195/977511254572814346",
+        "source": "https://discord.com/channels/443151671846109195/1340972554558640189",
         "fichier": null
       },
       "images": {
@@ -850,15 +801,10 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": null,
-      "archive": {
-        "id": "ahlcg-fr-alice-au-pays-des-merveilles",
-        "guide": "ahlcg-fr-alice-au-pays-des-merveilles-guide.pdf",
-        "planche": null,
-        "images": "ahlcg-fr-alice-au-pays-des-merveilles-archive-complete.zip"
-      },
-      "datePublication": "2020-10",
-      "sortKey": "Alice au Pays des Merveilles"
+      "commentaire": "Création originale FR.",
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Noel à Arkham"
     },
     {
       "id": "les-ombres-de-yog-sothoth",
@@ -883,6 +829,117 @@
       "archive": null,
       "datePublication": "2023-05",
       "sortKey": "Ombres de Yog Sothoth"
+    },
+    {
+      "id": "le-palais-du-rire",
+      "titre": "Le Palais du Rire",
+      "titreVO": "Happy's Funhouse",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/le-palais-du-rire.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-le-palais-du-rire",
+        "guide": "ahlcg-fr-le-palais-du-rire-guide.pdf",
+        "planche": "ahlcg-fr-le-palais-du-rire-planche-a4.pdf",
+        "images": "ahlcg-fr-le-palais-du-rire-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Palais du Rire"
+    },
+    {
+      "id": "le-pont-des-soupirs",
+      "titre": "Le Pont des Soupirs",
+      "titreVO": "Bridge of Sighs",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/le-pont-des-soupirs.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-le-pont-des-soupirs",
+        "guide": "ahlcg-fr-le-pont-des-soupirs-guide.pdf",
+        "planche": "ahlcg-fr-le-pont-des-soupirs-planche-a4.pdf",
+        "images": "ahlcg-fr-le-pont-des-soupirs-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Pont des Soupirs"
+    },
+    {
+      "id": "pulsions-cynegetiques",
+      "titre": "Pulsions Cynégétiques",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/pulsions-cynegetiques.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": {
+        "id": "ahlcg-fr-pulsions-cynegetiques",
+        "guide": "ahlcg-fr-pulsions-cynegetiques-guide.pdf",
+        "planche": null,
+        "images": "ahlcg-fr-pulsions-cynegetiques-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Pulsions Cynégétiques"
+    },
+    {
+      "id": "quete-onirique-etendue",
+      "titre": "Quête Onirique Étendue",
+      "titreVO": null,
+      "type": "autre",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": true,
+      "image": null,
+      "liens": {
+        "source": "https://discord.com/channels/443151671846109195/1340972554558640189",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "À classer — vraisemblablement une campagne (Dream-Quest étendue).",
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Quête Onirique Étendue"
     },
     {
       "id": "renouveau-conspiration-dinnsmouth",
@@ -933,161 +990,17 @@
       "sortKey": "Renouveau Dévoreurs des Rêves"
     },
     {
-      "id": "quete-onirique-etendue",
-      "titre": "Quête Onirique Étendue",
-      "titreVO": null,
-      "type": "autre",
-      "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/1340972554558640189",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "À classer — vraisemblablement une campagne (Dream-Quest étendue).",
-      "archive": null,
-      "datePublication": null,
-      "sortKey": "Quête Onirique Étendue"
-    },
-    {
-      "id": "noel-a-arkham",
-      "titre": "Noel à Arkham",
-      "titreVO": null,
+      "id": "sang-verse-a-salem",
+      "titre": "Sang Versé à Salem",
+      "titreVO": "Blood Spilled in Salem",
       "type": "scenario",
-      "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/1340972554558640189",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": null,
-      "sortKey": "Noel à Arkham"
-    },
-    {
-      "id": "la-cite-de-linvisible",
-      "titre": "La Cité de l'Invisible",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": false,
-      "image": null,
-      "liens": {
-        "source": null,
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": "2024-02",
-      "sortKey": "Cité de l'Invisible"
-    },
-    {
-      "id": "circus-ex-mortis",
-      "titre": "Circus Ex Mortis",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": null,
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": "2023-08",
-      "sortKey": "Circus Ex Mortis"
-    },
-    {
-      "id": "lombre-des-grands-anciens",
-      "titre": "L'ombre des Grands Anciens",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": null,
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": null,
-      "sortKey": "L'ombre des Grands Anciens"
-    },
-    {
-      "id": "ages-unwound",
-      "titre": "Ages Unwound",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": false,
-      "image": null,
-      "liens": {
-        "source": null,
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "VO anglaise — statut de traduction FR à préciser.",
-      "archive": null,
-      "datePublication": null,
-      "sortKey": "Ages Unwound"
-    },
-    {
-      "id": "circus-ex-mortis",
-      "titre": "Circus Ex Mortis",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 2",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
-      "image": "img/thumbs/circus-ex-mortis.jpg",
+      "image": "img/thumbs/sang-verse-a-salem.jpg",
       "liens": {
-        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
         "fichier": null
       },
       "images": {
@@ -1097,13 +1010,100 @@
       "contactPanierPartage": null,
       "commentaire": null,
       "archive": {
-        "id": "ahlcg-fr-circus-ex-mortis",
-        "guide": "ahlcg-fr-circus-ex-mortis-guide.pdf",
-        "planche": null,
-        "images": "ahlcg-fr-circus-ex-mortis-archive-complete.zip"
+        "id": "ahlcg-fr-sang-verse-a-salem",
+        "guide": "ahlcg-fr-sang-verse-a-salem-guide.pdf",
+        "planche": "ahlcg-fr-sang-verse-a-salem-planche-a4.pdf",
+        "images": "ahlcg-fr-sang-verse-a-salem-cartes-avec-bleed.zip"
       },
-      "datePublication": "2023-08",
-      "sortKey": "Circus Ex Mortis"
+      "datePublication": "2021-03",
+      "sortKey": "Sang Versé à Salem"
+    },
+    {
+      "id": "les-seuils-de-la-croyance",
+      "titre": "Les Seuils de la Croyance",
+      "titreVO": "The Limens Belief",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/les-seuils-de-la-croyance.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-les-seuils-de-la-croyance",
+        "guide": "ahlcg-fr-les-seuils-de-la-croyance-guide.pdf",
+        "planche": "ahlcg-fr-les-seuils-de-la-croyance-planche-a4.pdf",
+        "images": "ahlcg-fr-les-seuils-de-la-croyance-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Seuils de la Croyance"
+    },
+    {
+      "id": "la-symphonie-derich-zann",
+      "titre": "La Symphonie d'Erich Zann",
+      "titreVO": "The Symphony of Erich Zann",
+      "type": "scenario",
+      "cycle": "Cycle 2",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/la-symphonie-derich-zann.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t3034-cycle-2-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-la-symphonie-derich-zann",
+        "guide": "ahlcg-fr-la-symphonie-derich-zann-guide.pdf",
+        "planche": "ahlcg-fr-la-symphonie-derich-zann-planche-a4.pdf",
+        "images": "ahlcg-fr-la-symphonie-derich-zann-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Symphonie d'Erich Zann"
+    },
+    {
+      "id": "le-wyrm-de-pensher",
+      "titre": "Le Wyrm de Pensher",
+      "titreVO": "The Pensher Wyrm",
+      "type": "scenario",
+      "cycle": "Cycle 1",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/le-wyrm-de-pensher.jpg",
+      "liens": {
+        "source": "https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made",
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "archive": {
+        "id": "ahlcg-fr-le-wyrm-de-pensher",
+        "guide": "ahlcg-fr-le-wyrm-de-pensher-guide.pdf",
+        "planche": "ahlcg-fr-le-wyrm-de-pensher-planche-a4.pdf",
+        "images": "ahlcg-fr-le-wyrm-de-pensher-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Wyrm de Pensher"
     }
   ]
 }
