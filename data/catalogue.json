@@ -214,6 +214,35 @@
       "sortKey": "Circus Ex Mortis"
     },
     {
+      "id": "dimensions-etranges",
+      "titre": "Dimensions Étranges",
+      "titreVO": null,
+      "type": "campagne",
+      "cycle": null,
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/dimensions-etranges.jpg",
+      "liens": {
+        "source": null,
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": "Création originale FR.",
+      "archive": {
+        "id": "ahlcg-fr-dimensions-etranges",
+        "guide": "FC10 - Dimensions Etranges - Guide de Campagne (A4).pdf",
+        "planche": null,
+        "images": "ahlcg-fr-dimensions-etranges-archive-complete.zip"
+      },
+      "datePublication": "2023-05",
+      "sortKey": "Dimensions Étranges"
+    },
+    {
       "id": "la-cite-de-linvisible",
       "titre": "La Cité de l'Invisible",
       "titreVO": null,

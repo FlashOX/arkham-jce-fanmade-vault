@@ -212,6 +212,13 @@
       "imagesSuffix": "archive-complete",
       "note": "Cartes 600 dpi. Pion Lune ajouté manuellement à l'archive.",
       "creator": "The Beard (Tyler Gotch) (VO) ; JohnSG1 (trad.)"
+    },
+    "dimensions-etranges": {
+      "source": "shomm",
+      "guide": "08 - Campagnes Fan-Made/FC10 - Dimensions Etranges (05-2023)/Guide/FC10 - Dimensions Etranges - Guide de Campagne (A4).pdf",
+      "planche": null,
+      "imagesDir": "08 - Campagnes Fan-Made/FC10 - Dimensions Etranges (05-2023)",
+      "creator": "Wywid"
     }
   }
 }
