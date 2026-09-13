@@ -11,6 +11,11 @@ Idées et chantiers pas encore planifiés. Rien d'urgent ici.
 - [ ] **Page « Archives »** : référencer l'ensemble des liens archive.org pour
       accès direct aux téléchargements (une ligne par item avec titre, type,
       lien direct archive.org).
+- [ ] **Thumbnails couvertures pour campagnes majeures** : utiliser les
+      couvertures des guides PDF pour les thumbnails des campagnes (comme fait
+      pour Circus Ex Mortis). À appliquer à : Matière Noire, Fondations
+      Cyclopéennes, Alice au Pays des Merveilles, Au Coeur des Ténèbres, Les
+      Disparus de Killineq.
 
 ## Contenu
 

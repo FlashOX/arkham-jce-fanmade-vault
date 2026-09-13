@@ -171,7 +171,7 @@
       "planche": null,
       "imagesDir": "08 - Campagnes Fan-Made/FC06 - Fondations Cyclopéennes (05-2021)",
       "imagesSuffix": "archive-complete",
-      "creator": "Tyler Gotch (VO) ; Franck2655 et Renaud Flavigny (trad.)"
+      "creator": "The Beard (Tyler Gotch) (VO) ; Franck2655 et Renaud Flavigny (trad.)"
     },
     "alice-au-pays-des-merveilles": {
       "source": "shomm",
@@ -179,7 +179,7 @@
       "planche": null,
       "imagesDir": "08 - Campagnes Fan-Made/FC03 - Alice au Pays des Merveilles (10-2020)",
       "imagesSuffix": "archive-complete",
-      "creator": "Tyler Gotch (VO) ; Franck2655 et Chertref (trad.)"
+      "creator": "The Beard (Tyler Gotch) (VO) ; Franck2655 et Chertref (trad.)"
     },
     "la-maison-vaudou": {
       "source": "shomm",
@@ -203,6 +203,14 @@
       "imagesSuffix": "archive-complete",
       "imagesExclude": ["FC01 - Les Disparus de Killineq (05-2020).md"],
       "creator": "Docteur Cheux"
+    },
+    "circus-ex-mortis": {
+      "source": "shomm",
+      "guide": "08 - Campagnes Fan-Made/FC12 - Circus Ex Mortis (08-2023)/Guide/FC12 - Guide de Campagne (US).pdf",
+      "planche": null,
+      "imagesDir": ["08 - Campagnes Fan-Made/FC12 - Circus Ex Mortis (08-2023)/Cartes", "08 - Campagnes Fan-Made/FC12 - Circus Ex Mortis (08-2023)/Autres"],
+      "imagesSuffix": "archive-complete",
+      "creator": "The Beard (Tyler Gotch) (VO) ; JohnSG1 (trad.)"
     }
   }
 }
