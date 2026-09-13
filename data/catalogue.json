@@ -455,13 +455,13 @@
     {
       "id": "la-guerre-des-mondes",
       "titre": "La Guerre des Mondes",
-      "titreVO": null,
-      "type": "scenario",
-      "cycle": "Cycle 8",
-      "etat": "inconnu",
+      "titreVO": "The War of the Worlds",
+      "type": "campagne",
+      "cycle": null,
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
-      "image": null,
+      "image": "img/thumbs/la-guerre-des-mondes.jpg",
       "liens": {
         "source": "https://discord.com/channels/443151671846109195/998284425177600042",
         "fichier": null
@@ -472,9 +472,10 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
+      "creator": "The Beard",
       "archive": null,
       "datePublication": "2020-10",
-      "sortKey": "guerre des mondes"
+      "sortKey": "Guerre des Mondes"
     },
     {
       "id": "investigateurs-fan-made",
