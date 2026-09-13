@@ -108,25 +108,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    color: var(--text-dim);
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: opacity 0.2s ease;
+    opacity: 0.7;
   }
 
   .discord-link:hover {
-    color: #5865f2;
-    border-color: rgba(88, 101, 242, 0.3);
-    background: rgba(88, 101, 242, 0.08);
+    opacity: 1;
   }
 
-  .discord-link svg {
-    width: 20px;
-    height: 20px;
+  .discord-link img {
+    width: 32px;
+    height: 32px;
   }
 
   /* Filter bar */
@@ -363,9 +356,7 @@
   <div class="header-right">
     <input class="search" type="text" placeholder="Rechercher..." id="searchInput">
     <a href="https://discord.com/invite/A23rum4" class="discord-link" title="Rejoindre la communauté Arkham JCE FR sur Discord" target="_blank" aria-label="Discord">
-      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20.317 4.37c-1.53-.73-3.144-1.223-4.785-1.5-.203-.04-.406-.074-.61-.11a.06.06 0 0 0-.064.027c-.278.5-.583 1.152-.797 1.67-.446-.067-.887-.156-1.322-.28-.04.01-.08.024-.12.032a.06.06 0 0 0-.036.06c.03.244.06.487.091.73-.36.042-.712.12-1.055.223-.05.017-.099.043-.146.067a.06.06 0 0 0-.022.076l1.125 4.106c.024.087.088.15.176.15.07 0 .134-.05.157-.127.232-.776.5-1.513.794-2.206.283.534.546 1.085.776 1.646.024.061.091.108.16.108h.017c.161 0 .294-.118.315-.283.242-2.202.4-3.968.477-5.05.077-1.08.157-2.298.24-3.78.013-.27-.182-.5-.454-.512-.271-.01-.504.19-.517.46a54.9 54.9 0 0 1-.148 2.43c-.02.34-.03.69-.036 1.05zm-5.447 3.526c-.28.014-.514.23-.514.51 0 .282.23.51.514.51s.513-.228.513-.51c0-.28-.23-.51-.513-.51zm3.256 0c-.282.014-.514.23-.514.51 0 .282.23.51.514.51.282 0 .514-.228.514-.51 0-.28-.232-.51-.514-.51z"/>
-      </svg>
+      <img src="img/discord.png" alt="Discord">
     </a>
   </div>
 </header>
