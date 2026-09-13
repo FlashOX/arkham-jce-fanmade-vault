@@ -26,6 +26,11 @@ Idées et chantiers pas encore planifiés. Rien d'urgent ici.
       de planche (celle-ci a été retirée), mais pourrait avoir un document
       montrant les cartes (galerie/imposé) pour faciliter la consultation avant
       impression. Pas encore fait à ce jour.
+- [ ] **La Maison Vaudou (FS08) : retrouver les images individuelles** — le
+      scénario n'a que guide + planche PDF imposée sur disque local, pas les
+      images PNG/JPG avec bleed. Vérifier si elles sont sur le Google Drive
+      (lien dans le .md de FS08), les télécharger si possible pour compléter
+      l'archive archive.org.
 - [ ] **Normaliser le format des images de cartes** (PNG vs JPG) : constaté que
       Shomm exporte tantôt en PNG (non compressé, ex. Matières Noires : 792
       cartes en PNG = 4,9 Go, vs Fondations/Alice en JPG = ~1,1 Go pour un

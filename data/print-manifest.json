@@ -180,6 +180,27 @@
       "imagesDir": "08 - Campagnes Fan-Made/FC03 - Alice au Pays des Merveilles (10-2020)",
       "imagesSuffix": "archive-complete",
       "creator": "Tyler Gotch (VO) ; Franck2655 et Chertref (trad.)"
+    },
+    "la-maison-vaudou": {
+      "source": "shomm",
+      "guide": "09 - Scénarios Fan-Made/FS08 - La Maison Vaudou (04-2023)/Guide/FS08 - Guide de Campagne (A4).pdf",
+      "planche": "09 - Scénarios Fan-Made/FS08 - La Maison Vaudou (04-2023)/Cartes/Cartes (Poker - 8.3 marge)/FS08 - Cartes (Poker - 8.3 marge).pdf",
+      "imagesDir": null,
+      "creator": "Fragarch et Mendax"
+    },
+    "au-coeur-des-tenebres": {
+      "source": "shomm",
+      "guide": "08 - Campagnes Fan-Made/FC09 - Au Coeur des Ténèbres (04-2023)/Guide",
+      "imagesDir": "08 - Campagnes Fan-Made/FC09 - Au Coeur des Ténèbres (04-2023)",
+      "imagesSuffix": "archive-complete",
+      "creator": "Vinn_Quest"
+    },
+    "les-disparus-de-killineq": {
+      "source": "shomm",
+      "guide": "08 - Campagnes Fan-Made/FC01 - Les Disparus de Killineq (05-2020)/Guide",
+      "imagesDir": "08 - Campagnes Fan-Made/FC01 - Les Disparus de Killineq (05-2020)",
+      "imagesSuffix": "archive-complete",
+      "creator": "Docteur Cheux"
     }
   }
 }
