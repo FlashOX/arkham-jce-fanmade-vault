@@ -226,6 +226,17 @@
   .card .thumb svg { width: 42px; height: 42px; opacity: 0.5; }
   .card .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+  .card.no-archive { opacity: 0.6; }
+  .card.no-archive .thumb::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
   .card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; position: relative; }
 
   .card h3 {
@@ -453,7 +464,7 @@ function render(list) {
     .map((it) => {
       const archive = it.archive;
       return `
-    <div class="card">
+    <div class="card${!archive ? ' no-archive' : ''}">
       <div class="thumb">
         ${it.image
           ? `<img src="${esc(it.image)}" alt="Illustration — ${esc(it.titre)}" loading="lazy" ${["pulsions-cynegetiques", "noel-a-arkham"].includes(it.id) ? 'style="object-position: top"' : ""}>`
