@@ -971,7 +971,7 @@
     {
       "id": "renouveau-conspiration-dinnsmouth",
       "titre": "Renouveau Conspiration d'Innsmouth",
-      "titreVO": null,
+      "titreVO": "Return to the Innsmouth Conspiracy",
       "type": "autre",
       "cycle": null,
       "etat": "inconnu",
@@ -988,6 +988,7 @@
       },
       "contactPanierPartage": null,
       "commentaire": "À classer — retraduction/refonte de l'extension officielle.",
+      "creator": "DerbK, Hauke",
       "archive": null,
       "datePublication": null,
       "sortKey": "Renouveau Conspiration d'Innsmouth"
