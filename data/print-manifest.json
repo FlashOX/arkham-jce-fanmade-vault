@@ -153,6 +153,33 @@
         "09 - Scénarios Fan-Made/FS06 - Les Dossiers d_Arkham 02 (03-2021)/FS06I - Investigateurs/Cartes Minis/Cartes Minis (Mini USA - 3.2 marge)"
       ],
       "creator": "Ligue des Joueurs Francophones d'Arkham JCE"
+    },
+    "matiere-noire": {
+      "source": "shomm",
+      "guide": null,
+      "planche": null,
+      "imagesDir": "08 - Campagnes Fan-Made/FC05 - Matières Noires (10-2020)",
+      "imagesSuffix": "archive-complete",
+      "creator": null,
+      "imagesExclude": [
+        "Guide/Guide de Campagne - Livre (US - UHD)"
+      ]
+    },
+    "fondations-cyclopeenes": {
+      "source": "shomm",
+      "guide": null,
+      "planche": null,
+      "imagesDir": "08 - Campagnes Fan-Made/FC06 - Fondations Cyclopéennes (05-2021)",
+      "imagesSuffix": "archive-complete",
+      "creator": null
+    },
+    "alice-au-pays-des-merveilles": {
+      "source": "shomm",
+      "guide": null,
+      "planche": null,
+      "imagesDir": "08 - Campagnes Fan-Made/FC03 - Alice au Pays des Merveilles (10-2020)",
+      "imagesSuffix": "archive-complete",
+      "creator": null
     }
   }
 }

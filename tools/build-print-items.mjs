@@ -122,15 +122,20 @@ for (const [id, it] of entries) {
 
   if (it.imagesDir) {
     // un seul dossier, ou une liste (ex. cartes taille normale + cartes minis)
-    // zippés ensemble dans un même zip.
+    // zippés ensemble dans un même zip. `imagesSuffix` permet de nommer le zip
+    // autrement que "cartes-avec/sans-bleed" (ex. campagnes : "archive-complete",
+    // le zip contenant alors tout le dossier source, pas que des images).
+    // `imagesExclude` : motifs 7-Zip (-x!) exclus du zip, ex. un sous-dossier trop
+    // lourd (scan UHD) qu'on ne veut pas embarquer.
     const imgDirs = Array.isArray(it.imagesDir) ? it.imagesDir : [it.imagesDir];
-    const suffix = it.imagesBleed === false ? "cartes-sans-bleed" : "cartes-avec-bleed";
+    const suffix = it.imagesSuffix || (it.imagesBleed === false ? "cartes-sans-bleed" : "cartes-avec-bleed");
+    const excludes = (it.imagesExclude || []).map((p) => `-x!${p}`);
     const zip = path.join(itemDir, `ahlcg-fr-${id}-${suffix}.zip`);
     let anyOk = false;
     for (const rel of imgDirs) {
       const imgSrc = path.resolve(root, rel);
       if (!existsSync(imgSrc)) { console.error(`! ${id} : dossier images absent ${rel}`); continue; }
-      sevenzip(["a", "-tzip", "-mx=0", "-bso0", "-bsp0", zip, "."], { cwd: imgSrc });
+      sevenzip(["a", "-tzip", "-mx=0", "-bso0", "-bsp0", "-r", zip, ".", ...excludes], { cwd: imgSrc });
       anyOk = true;
     }
     if (anyOk) files.push([path.basename(zip), statSync(zip).size]);
