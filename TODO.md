@@ -22,3 +22,13 @@ Idées et chantiers pas encore planifiés. Rien d'urgent ici.
 - [ ] **Crédits (traduction, test, illustration...)** : réfléchir à comment les
       matérialiser sur le site fiche par fiche (actuellement seulement
       `creator` dans les métadonnées archive.org, pas affiché sur la carte).
+- [ ] **Normaliser le format des images de cartes** (PNG vs JPG) : constaté que
+      Shomm exporte tantôt en PNG (non compressé, ex. Matières Noires : 792
+      cartes en PNG = 4,9 Go, vs Fondations/Alice en JPG = ~1,1 Go pour un
+      nombre de cartes comparable). Reconvertir l'existant en PNG ne rattrape
+      rien (la perte JPEG est déjà figée) — pas d'intérêt. Pour du contenu
+      qu'on préparerait nous-mêmes à l'avenir : envisager un défaut JPEG
+      qualité 90-95+ (standard accepté par les imprimeurs de cartes,
+      différence visuelle négligeable à taille carte) plutôt que PNG
+      systématique, sauf cas avec aplats/texte net où le PNG apporte un vrai
+      plus.
