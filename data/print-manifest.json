@@ -208,8 +208,9 @@
       "source": "shomm",
       "guide": "08 - Campagnes Fan-Made/FC12 - Circus Ex Mortis (08-2023)/Guide/FC12 - Guide de Campagne (US).pdf",
       "planche": null,
-      "imagesDir": ["08 - Campagnes Fan-Made/FC12 - Circus Ex Mortis (08-2023)/Cartes", "08 - Campagnes Fan-Made/FC12 - Circus Ex Mortis (08-2023)/Autres"],
+      "imagesDir": "08 - Campagnes Fan-Made/FC12 - Circus Ex Mortis (08-2023)/Cartes",
       "imagesSuffix": "archive-complete",
+      "note": "Cartes 600 dpi. Pion Lune ajouté manuellement à l'archive.",
       "creator": "The Beard (Tyler Gotch) (VO) ; JohnSG1 (trad.)"
     }
   }
