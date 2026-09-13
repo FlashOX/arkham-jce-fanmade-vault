@@ -17,6 +17,23 @@
     --accent: #7d6b9e;
     --accent-soft: rgba(125,107,158,0.16);
     --seal: #b3743f;
+
+    /* Couleurs par type (chips d'en-tête + tags de carte) : violet (campagne,
+       arcane), ambre (scénario, vieux papier), sarcelle (investigateurs,
+       vert-de-gris) et sauge (autres, mousse) — une famille de teintes
+       assourdies qui reste dans l'esprit de la DA. */
+    --type-campagne: var(--accent);
+    --type-campagne-soft: var(--accent-soft);
+    --type-campagne-text: #cabfe0;
+    --type-scenario: var(--seal);
+    --type-scenario-soft: rgba(179,116,63,0.18);
+    --type-scenario-text: #e3b98a;
+    --type-investigateurs: #4a8f95;
+    --type-investigateurs-soft: rgba(74,143,149,0.18);
+    --type-investigateurs-text: #a9d8da;
+    --type-autre: #7d8f5e;
+    --type-autre-soft: rgba(125,143,94,0.18);
+    --type-autre-text: #c3d1a8;
   }
 
   * { box-sizing: border-box; }
@@ -65,11 +82,8 @@
     color: var(--text-dim);
   }
 
-  nav a { text-decoration: none; color: var(--text-dim); font-size: 0.92rem; white-space: nowrap; }
-  nav a:hover { color: var(--text); }
-
   .header-right {
-    margin-left: auto;   /* recherche + « À propos », collés à droite */
+    margin-left: auto;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -122,12 +136,12 @@
     appearance: none;
     transition: filter 0.12s, background 0.12s, color 0.12s, border-color 0.12s;
   }
-  .type-chip:hover { border-color: var(--accent); color: var(--text); }
-  .type-chip.active {
-    background: var(--accent-soft);
-    color: #cabfe0;
-    border-color: transparent;
-  }
+  .type-chip:hover { border-color: var(--text-dim); color: var(--text); }
+  .type-chip[data-key="all"].active { background: rgba(231,230,227,0.12); color: var(--text); border-color: transparent; }
+  .type-chip.color-campagne.active { background: var(--type-campagne-soft); color: var(--type-campagne-text); border-color: transparent; }
+  .type-chip.color-scenario.active { background: var(--type-scenario-soft); color: var(--type-scenario-text); border-color: transparent; }
+  .type-chip.color-investigateurs.active { background: var(--type-investigateurs-soft); color: var(--type-investigateurs-text); border-color: transparent; }
+  .type-chip.color-autre.active { background: var(--type-autre-soft); color: var(--type-autre-text); border-color: transparent; }
 
   .filters .count {
     margin-left: auto;
@@ -252,6 +266,11 @@
   .tag:hover { filter: brightness(1.28); }
   .tag.active { box-shadow: inset 0 0 0 1px currentColor; }
   .tag.cycle { background: rgba(125,107,158,0.28); color: #d9cdf0; }
+  /* Couleur par type, en écho aux chips de filtrage de l'en-tête. */
+  .tag.color-campagne { background: var(--type-campagne-soft); color: var(--type-campagne-text); }
+  .tag.color-scenario { background: var(--type-scenario-soft); color: var(--type-scenario-text); }
+  .tag.color-investigateurs { background: var(--type-investigateurs-soft); color: var(--type-investigateurs-text); }
+  .tag.color-autre { background: var(--type-autre-soft); color: var(--type-autre-text); }
 
   footer {
     text-align: center;
@@ -286,8 +305,7 @@
     header { padding: 14px 18px; }
     .brand-text .tagline { display: none; }
     .header-right { width: 100%; }
-    .search { width: 100%; order: 2; }
-    .header-right nav { order: 1; }     /* « À propos » aligné à droite, puis recherche pleine largeur */
+    .search { width: 100%; }
     .grid, .filters { padding-left: 18px; padding-right: 18px; }
   }
 </style>
@@ -310,18 +328,17 @@
   </a>
   <div class="header-right">
     <input class="search" type="text" placeholder="Rechercher..." id="searchInput">
-    <nav><a href="#a-propos">À propos</a></nav>
   </div>
 </header>
 
 <div class="filters">
   <div class="type-chips" id="typeChips" role="group" aria-label="Filtrer par type">
-    <button type="button" class="type-chip" data-key="campagne">Campagne</button>
-    <button type="button" class="type-chip" data-key="scenario">Scénario indépendant</button>
-    <button type="button" class="type-chip" data-key="investigateurs">Investigateurs</button>
-    <button type="button" class="type-chip" data-key="autre">Autres</button>
+    <button type="button" class="type-chip" data-key="all">Tout</button>
+    <button type="button" class="type-chip color-campagne" data-key="campagne">Campagne</button>
+    <button type="button" class="type-chip color-scenario" data-key="scenario">Scénario indépendant</button>
+    <button type="button" class="type-chip color-investigateurs" data-key="investigateurs">Investigateurs</button>
+    <button type="button" class="type-chip color-autre" data-key="autre">Autres</button>
   </div>
-  <select id="filterCycle"><option value="">Tous les cycles</option></select>
   <span class="count" id="count"></span>
 </div>
 
@@ -372,6 +389,7 @@ const TYPE_CHIPS = [
 const CHIP_BY_KEY = Object.fromEntries(TYPE_CHIPS.map((c) => [c.key, c]));
 const chipKeyForType = (type) => TYPE_CHIPS.find((c) => c.types.includes(type))?.key || null;
 let activeChipKey = null;
+let activeCycle = null; // filtre cycle : plus de dropdown, piloté par le clic sur le tag « Cycle N » d'une carte
 const IA_DOWNLOAD = (id, f) =>
   `https://archive.org/download/${encodeURIComponent(id)}/${encodeURIComponent(f)}`;
 // zip généré à la volée par archive.org avec tous les fichiers de l'item
@@ -389,26 +407,10 @@ const esc = (s) =>
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
   }[c]));
 
-function cycleSortKey(c) {
-  if (!c) return Infinity;
-  const m = /(\d+)/.exec(c);
-  return m ? Number(m[1]) : 999;
-}
-
-function fillOptions(sel, values, labelFn) {
-  for (const v of values) {
-    const o = document.createElement("option");
-    o.value = v;
-    o.textContent = labelFn ? labelFn(v) : v;
-    sel.appendChild(o);
-  }
-}
-
 function render(list) {
-  const fCycle = document.getElementById("filterCycle").value;
   const chip = (fk, fv, label, cls) =>
     `<button type="button" class="tag${cls ? " " + cls : ""}${
-      { typeChip: activeChipKey, filterCycle: fCycle }[fk] === fv ? " active" : ""
+      { typeChip: activeChipKey, filterCycle: activeCycle }[fk] === fv ? " active" : ""
     }" data-fk="${fk}" data-fv="${esc(fv)}">${esc(label)}</button>`;
 
   emptyEl.classList.toggle("hidden", list.length > 0);
@@ -435,7 +437,7 @@ function render(list) {
           : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}</div>
         <div class="tags">
           ${it.cycle ? chip("filterCycle", it.cycle, it.cycle, "cycle") : ""}
-          ${chip("typeChip", chipKeyForType(it.type), TYPE_LABEL[it.type] || it.type)}
+          ${chip("typeChip", chipKeyForType(it.type), TYPE_LABEL[it.type] || it.type, `color-${chipKeyForType(it.type)}`)}
         </div>
       </div>
     </div>`;
@@ -455,22 +457,22 @@ function updateCycleInfo(cycle) {
 
 function updateTypeChipsUI() {
   document.querySelectorAll("#typeChips .type-chip").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.key === activeChipKey);
+    const isAll = btn.dataset.key === "all";
+    btn.classList.toggle("active", isAll ? activeChipKey === null : btn.dataset.key === activeChipKey);
   });
 }
 
 function applyFilters() {
   const chip = activeChipKey ? CHIP_BY_KEY[activeChipKey] : null;
-  const cycle = document.getElementById("filterCycle").value;
   const q = document.getElementById("searchInput").value.trim().toLowerCase();
 
-  updateCycleInfo(cycle);
+  updateCycleInfo(activeCycle);
   updateTypeChipsUI();
   render(
     items.filter(
       (it) =>
         (!chip || chip.types.includes(it.type)) &&
-        (!cycle || (cycle === "—" ? !it.cycle : it.cycle === cycle)) &&
+        (!activeCycle || (activeCycle === "—" ? !it.cycle : it.cycle === activeCycle)) &&
         (!q ||
           it.titre.toLowerCase().includes(q) ||
           (it.titreVO || "").toLowerCase().includes(q) ||
@@ -489,18 +491,7 @@ fetch("data/catalogue.json", { cache: "no-cache" })
     items = (data.items || []).filter((i) => i.publie !== false);
     cycles = data.cycles || {};
 
-    const cycleNames = [...new Set(items.map((i) => i.cycle).filter(Boolean))].sort(
-      (a, b) => cycleSortKey(a) - cycleSortKey(b),
-    );
-    fillOptions(document.getElementById("filterCycle"), cycleNames);
-    if (items.some((i) => !i.cycle)) {
-      const o = document.createElement("option");
-      o.value = "—";
-      o.textContent = "Hors cycle";
-      document.getElementById("filterCycle").appendChild(o);
-    }
-
-    render(items);
+    applyFilters();
   })
   .catch((err) => {
     grid.innerHTML = "";
@@ -508,14 +499,15 @@ fetch("data/catalogue.json", { cache: "no-cache" })
     emptyEl.textContent = `Impossible de charger le catalogue (${err.message}).`;
   });
 
-document.getElementById("filterCycle").addEventListener("change", applyFilters);
 document.getElementById("searchInput").addEventListener("input", applyFilters);
 
 // Chips de type dans l'en-tête -> un seul actif à la fois ; re-clic pour l'enlever.
+// « Tout » remet toujours à zéro (pas un toggle).
 document.getElementById("typeChips").addEventListener("click", (e) => {
   const btn = e.target.closest(".type-chip");
   if (!btn) return;
-  activeChipKey = activeChipKey === btn.dataset.key ? null : btn.dataset.key;
+  const key = btn.dataset.key;
+  activeChipKey = key === "all" ? null : activeChipKey === key ? null : key;
   applyFilters();
 });
 
@@ -527,11 +519,9 @@ grid.addEventListener("click", (e) => {
   const { fk, fv } = chip.dataset;
   if (fk === "typeChip") {
     activeChipKey = activeChipKey === fv ? null : fv;
-    document.getElementById("filterCycle").value = "";
+    activeCycle = null;
   } else {
-    const sel = document.getElementById(fk);
-    const wasActive = sel.value === fv;
-    sel.value = wasActive ? "" : fv;
+    activeCycle = activeCycle === fv ? null : fv;
     activeChipKey = null;
   }
   applyFilters();
@@ -541,7 +531,7 @@ grid.addEventListener("click", (e) => {
 document.querySelector(".brand").addEventListener("click", (e) => {
   e.preventDefault();
   activeChipKey = null;
-  document.getElementById("filterCycle").value = "";
+  activeCycle = null;
   document.getElementById("searchInput").value = "";
   applyFilters();
   window.scrollTo({ top: 0, behavior: "smooth" });
