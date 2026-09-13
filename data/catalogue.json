@@ -136,7 +136,7 @@
     },
     {
       "id": "cartes-joueurs-laureates-du-concours-2020",
-      "titre": "Cartes joueurs lauréates du concours 2020",
+      "titre": "Cartes Joueurs Lauréates du Concours 2020",
       "titreVO": null,
       "type": "cartes-joueur",
       "cycle": "Cycle 2",
@@ -156,7 +156,7 @@
       "commentaire": null,
       "archive": null,
       "datePublication": null,
-      "sortKey": "Cartes joueurs lauréates du concours 2020"
+      "sortKey": "Cartes Joueurs Lauréates du Concours 2020"
     },
     {
       "id": "les-chiens-de-tindalos",
@@ -454,7 +454,7 @@
     },
     {
       "id": "la-guerre-des-mondes",
-      "titre": "La guerre des mondes",
+      "titre": "La Guerre des Mondes",
       "titreVO": null,
       "type": "scenario",
       "cycle": "Cycle 8",
@@ -478,7 +478,7 @@
     },
     {
       "id": "investigateurs-fan-made",
-      "titre": "Investigateurs fan-made (Cycle 1)",
+      "titre": "Investigateurs Fan-Made (Cycle 1)",
       "titreVO": null,
       "type": "investigateurs",
       "cycle": "Cycle 1",
@@ -503,12 +503,12 @@
         "images": "ahlcg-fr-investigateurs-fan-made-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Investigateurs fan-made (Cycle 1)",
+      "sortKey": "Investigateurs Fan-Made (Cycle 1)",
       "creator": ""
     },
     {
       "id": "investigateurs-fan-made-cycle-2",
-      "titre": "Investigateurs fan-made (Cycle 2)",
+      "titre": "Investigateurs Fan-Made (Cycle 2)",
       "titreVO": null,
       "type": "investigateurs",
       "cycle": "Cycle 2",
@@ -533,7 +533,7 @@
         "images": "ahlcg-fr-investigateurs-fan-made-cycle-2-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "Investigateurs fan-made (Cycle 2)",
+      "sortKey": "Investigateurs Fan-Made (Cycle 2)",
       "creator": ""
     },
     {
