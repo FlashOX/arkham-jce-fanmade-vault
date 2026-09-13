@@ -333,31 +333,6 @@
       "creator": "Ian Martin, Scott Armstrong, Nicholas Kory et Sean Switajewski"
     },
     {
-      "id": "dimensions-etranges",
-      "titre": "Dimensions Étranges",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": "https://discord.com/channels/443151671846109195/837579876701438002",
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": "2023-05",
-      "sortKey": "Dimensions Étranges",
-      "creator": "Wywid"
-    },
-    {
       "id": "les-disparus-de-killineq",
       "titre": "Les Disparus de Killineq",
       "titreVO": null,
