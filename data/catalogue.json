@@ -267,7 +267,7 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
+      "commentaire": null,
       "archive": null,
       "datePublication": "2024-02",
       "sortKey": "Cité de l'Invisible"
@@ -591,7 +591,7 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
+      "commentaire": null,
       "archive": null,
       "datePublication": "2021-10",
       "sortKey": "L'Appel du Porte Peste"
@@ -705,7 +705,7 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
+      "commentaire": null,
       "archive": null,
       "datePublication": null,
       "sortKey": "L'ombre des Grands Anciens"
@@ -729,7 +729,7 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
+      "commentaire": null,
       "archive": null,
       "datePublication": "2020-10",
       "sortKey": "légende du cavalier sans tête"
@@ -812,7 +812,7 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
+      "commentaire": null,
       "archive": null,
       "datePublication": null,
       "sortKey": "Noël à Arkham"
@@ -836,7 +836,7 @@
         "bleed": false
       },
       "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
+      "commentaire": null,
       "archive": null,
       "datePublication": "2023-05",
       "sortKey": "Ombres de Yog Sothoth"
