@@ -592,7 +592,7 @@
     },
     {
       "id": "letrange-cas-du-docteur-jekyll-et-mr-hyde",
-      "titre": "L'étrange cas du docteur Jekyll et Mr Hyde",
+      "titre": "L'Etrange Cas du Docteur Jekyll et Mr Hyde",
       "titreVO": "The Strange Case of Dr. Jekyll and Mr. Hyde",
       "type": "scenario",
       "cycle": "Cycle 8",
@@ -612,7 +612,7 @@
       "commentaire": "Création originale FR.",
       "archive": null,
       "datePublication": "2021-03",
-      "sortKey": "L'étrange cas du docteur Jekyll et Mr Hyde"
+      "sortKey": "L'Etrange Cas du Docteur Jekyll et Mr Hyde"
     },
     {
       "id": "levenement-de-svalbard",
@@ -700,7 +700,7 @@
     },
     {
       "id": "la-legende-du-cavalier-sans-tete",
-      "titre": "La légende du cavalier sans tête",
+      "titre": "La Légende du Cavalier Sans Tête",
       "titreVO": null,
       "type": "scenario",
       "cycle": "Cycle 8",
@@ -783,7 +783,7 @@
     },
     {
       "id": "noel-a-arkham",
-      "titre": "Noel à Arkham",
+      "titre": "Noël à Arkham",
       "titreVO": null,
       "type": "scenario",
       "cycle": null,
@@ -803,7 +803,7 @@
       "commentaire": "Création originale FR.",
       "archive": null,
       "datePublication": null,
-      "sortKey": "Noel à Arkham"
+      "sortKey": "Noël à Arkham"
     },
     {
       "id": "les-ombres-de-yog-sothoth",
