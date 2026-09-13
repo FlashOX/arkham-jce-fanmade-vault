@@ -86,7 +86,7 @@ for (let idx = 0; idx < dirs.length; idx++) {
     `description:${fiche?.titre || id} — contenu fan-made pour «Horreur à Arkham : le JCE»${cycle ? ", " + cycle + " (Les Dossiers d'Arkham)" : ""}. ${
       man.planche
         ? "Planche d'impression A4 + images de cartes avec bleed + guide."
-        : "Archive complète (guide, cartes, planches) + guide au format PDF."
+        : "Archive complète (guide, cartes, planches d'impression) + le guide isolé en PDF."
     } Fiche : ${SITE}`,
   ].filter(Boolean);
 
