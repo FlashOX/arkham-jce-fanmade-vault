@@ -473,7 +473,12 @@
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
       "creator": "The Beard",
-      "archive": null,
+      "archive": {
+        "id": "ahlcg-fr-la-guerre-des-mondes",
+        "guide": "Guide de Campagne avec couverture (US).pdf",
+        "planche": null,
+        "images": "ahlcg-fr-la-guerre-des-mondes-archive-complete.zip"
+      },
       "datePublication": "2020-10",
       "sortKey": "Guerre des Mondes"
     },
