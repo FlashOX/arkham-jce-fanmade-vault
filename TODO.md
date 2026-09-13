@@ -22,6 +22,10 @@ Idées et chantiers pas encore planifiés. Rien d'urgent ici.
 - [ ] **Crédits (traduction, test, illustration...)** : réfléchir à comment les
       matérialiser sur le site fiche par fiche (actuellement seulement
       `creator` dans les métadonnées archive.org, pas affiché sur la carte).
+- [ ] **Pulsions Cynégétiques : préparer un PDF des images** — la fiche n'a pas
+      de planche (celle-ci a été retirée), mais pourrait avoir un document
+      montrant les cartes (galerie/imposé) pour faciliter la consultation avant
+      impression. Pas encore fait à ce jour.
 - [ ] **Normaliser le format des images de cartes** (PNG vs JPG) : constaté que
       Shomm exporte tantôt en PNG (non compressé, ex. Matières Noires : 792
       cartes en PNG = 4,9 Go, vs Fondations/Alice en JPG = ~1,1 Go pour un
