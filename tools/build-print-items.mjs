@@ -126,10 +126,13 @@ for (const [id, it] of entries) {
     // autrement que "cartes-avec/sans-bleed" (ex. campagnes : "archive-complete",
     // le zip contenant alors tout le dossier source, pas que des images).
     // `imagesExclude` : motifs 7-Zip (-x!) exclus du zip, ex. un sous-dossier trop
-    // lourd (scan UHD) qu'on ne veut pas embarquer.
+    // lourd (scan UHD) qu'on ne veut pas embarquer. Par défaut, on exclut toujours
+    // Pack OCTGN, Pack TTS et Sources EON (offline/online tools, pas pertinents pour l'archive).
+    const DEFAULT_EXCLUDE = ["Pack OCTGN", "Pack TTS", "Sources EON"];
     const imgDirs = Array.isArray(it.imagesDir) ? it.imagesDir : [it.imagesDir];
     const suffix = it.imagesSuffix || (it.imagesBleed === false ? "cartes-sans-bleed" : "cartes-avec-bleed");
-    const excludes = (it.imagesExclude || []).map((p) => `-x!${p}`);
+    const allExcludes = [...DEFAULT_EXCLUDE, ...(it.imagesExclude || [])];
+    const excludes = allExcludes.map((p) => `-x!${p}`);
     const zip = path.join(itemDir, `ahlcg-fr-${id}-${suffix}.zip`);
     let anyOk = false;
     for (const rel of imgDirs) {
