@@ -34,6 +34,9 @@
     --type-autre: #7d8f5e;
     --type-autre-soft: rgba(125,143,94,0.18);
     --type-autre-text: #c3d1a8;
+    /* Neutre : chip « Tous », et tags Cycle sur les cartes (même famille). */
+    --type-all-soft: rgba(231,230,227,0.12);
+    --type-all-text: var(--text);
   }
 
   * { box-sizing: border-box; }
@@ -128,20 +131,21 @@
     font-family: 'Work Sans', sans-serif;
     font-size: 0.82rem;
     padding: 7px 14px;
-    border: 1px solid var(--border);
+    border: 0;
     border-radius: 999px;
-    background: transparent;
-    color: var(--text-dim);
     cursor: pointer;
     appearance: none;
-    transition: filter 0.12s, background 0.12s, color 0.12s, border-color 0.12s;
+    transition: filter 0.12s;
   }
-  .type-chip:hover { border-color: var(--text-dim); color: var(--text); }
-  .type-chip[data-key="all"].active { background: rgba(231,230,227,0.12); color: var(--text); border-color: transparent; }
-  .type-chip.color-campagne.active { background: var(--type-campagne-soft); color: var(--type-campagne-text); border-color: transparent; }
-  .type-chip.color-scenario.active { background: var(--type-scenario-soft); color: var(--type-scenario-text); border-color: transparent; }
-  .type-chip.color-investigateurs.active { background: var(--type-investigateurs-soft); color: var(--type-investigateurs-text); border-color: transparent; }
-  .type-chip.color-autre.active { background: var(--type-autre-soft); color: var(--type-autre-text); border-color: transparent; }
+  .type-chip:hover { filter: brightness(1.25); }
+  .type-chip.active { box-shadow: inset 0 0 0 1px currentColor; }
+  /* Même couleur qu'au repos qu'active — l'anneau ci-dessus indique la sélection,
+     à l'image des tags de type sur les fiches (cohérence visuelle voulue). */
+  .type-chip[data-key="all"] { background: var(--type-all-soft); color: var(--type-all-text); }
+  .type-chip.color-campagne { background: var(--type-campagne-soft); color: var(--type-campagne-text); }
+  .type-chip.color-scenario { background: var(--type-scenario-soft); color: var(--type-scenario-text); }
+  .type-chip.color-investigateurs { background: var(--type-investigateurs-soft); color: var(--type-investigateurs-text); }
+  .type-chip.color-autre { background: var(--type-autre-soft); color: var(--type-autre-text); }
 
   .filters .count {
     margin-left: auto;
@@ -265,7 +269,7 @@
   }
   .tag:hover { filter: brightness(1.28); }
   .tag.active { box-shadow: inset 0 0 0 1px currentColor; }
-  .tag.cycle { background: rgba(125,107,158,0.28); color: #d9cdf0; }
+  .tag.cycle { background: var(--type-all-soft); color: var(--type-all-text); }
   /* Couleur par type, en écho aux chips de filtrage de l'en-tête. */
   .tag.color-campagne { background: var(--type-campagne-soft); color: var(--type-campagne-text); }
   .tag.color-scenario { background: var(--type-scenario-soft); color: var(--type-scenario-text); }
@@ -333,9 +337,9 @@
 
 <div class="filters">
   <div class="type-chips" id="typeChips" role="group" aria-label="Filtrer par type">
-    <button type="button" class="type-chip" data-key="all">Tout</button>
-    <button type="button" class="type-chip color-campagne" data-key="campagne">Campagne</button>
-    <button type="button" class="type-chip color-scenario" data-key="scenario">Scénario indépendant</button>
+    <button type="button" class="type-chip" data-key="all">Tous</button>
+    <button type="button" class="type-chip color-campagne" data-key="campagne">Campagnes</button>
+    <button type="button" class="type-chip color-scenario" data-key="scenario">Scénarios indépendants</button>
     <button type="button" class="type-chip color-investigateurs" data-key="investigateurs">Investigateurs</button>
     <button type="button" class="type-chip color-autre" data-key="autre">Autres</button>
   </div>
@@ -375,14 +379,16 @@
 const TYPE_LABEL = {
   scenario: "Scénario",
   campagne: "Campagne",
-  investigateurs: "Enquêteurs",
+  investigateurs: "Investigateurs",
   "cartes-joueur": "Cartes joueur",
   autre: "Autre",
 };
-// Chips d'en-tête : regroupent les types de la donnée en 4 catégories affichées.
+// Chips d'en-tête : regroupent les types de la donnée en 4 catégories affichées
+// (libellés au pluriel, ce sont des filtres — pas la même chose que le tag
+// singulier affiché sur une fiche).
 const TYPE_CHIPS = [
-  { key: "campagne", types: ["campagne"], label: "Campagne" },
-  { key: "scenario", types: ["scenario"], label: "Scénario indépendant" },
+  { key: "campagne", types: ["campagne"], label: "Campagnes" },
+  { key: "scenario", types: ["scenario"], label: "Scénarios indépendants" },
   { key: "investigateurs", types: ["investigateurs"], label: "Investigateurs" },
   { key: "autre", types: ["cartes-joueur", "autre"], label: "Autres" },
 ];
@@ -436,8 +442,8 @@ function render(list) {
           ? archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}">Guide (PDF) ↓</a>` : ""
           : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}</div>
         <div class="tags">
-          ${it.cycle ? chip("filterCycle", it.cycle, it.cycle, "cycle") : ""}
           ${chip("typeChip", chipKeyForType(it.type), TYPE_LABEL[it.type] || it.type, `color-${chipKeyForType(it.type)}`)}
+          ${it.cycle ? chip("filterCycle", it.cycle, it.cycle, "cycle") : ""}
         </div>
       </div>
     </div>`;
