@@ -47,7 +47,7 @@
     {
       "id": "alice-au-pays-des-merveilles",
       "titre": "Alice au Pays des Merveilles",
-      "titreVO": null,
+      "titreVO": "Alice in Wonderland",
       "type": "campagne",
       "cycle": null,
       "etat": "disponible",
@@ -191,7 +191,7 @@
     {
       "id": "circus-ex-mortis",
       "titre": "Circus Ex Mortis",
-      "titreVO": null,
+      "titreVO": "Circus Ex Mortis",
       "type": "campagne",
       "cycle": null,
       "etat": "disponible",
@@ -450,7 +450,7 @@
     {
       "id": "fondations-cyclopeenes",
       "titre": "Fondations Cyclopéennes",
-      "titreVO": null,
+      "titreVO": "Cyclopean Foundations",
       "type": "campagne",
       "cycle": null,
       "etat": "disponible",
@@ -618,7 +618,7 @@
     {
       "id": "letrange-cas-du-docteur-jekyll-et-mr-hyde",
       "titre": "L'étrange cas du docteur Jekyll et Mr Hyde",
-      "titreVO": null,
+      "titreVO": "The Strange Case of Dr. Jekyll and Mr. Hyde",
       "type": "scenario",
       "cycle": "Cycle 8",
       "etat": "inconnu",
@@ -779,7 +779,7 @@
     {
       "id": "matiere-noire",
       "titre": "Matière Noire",
-      "titreVO": null,
+      "titreVO": "Dark Matter",
       "type": "campagne",
       "cycle": null,
       "etat": "disponible",
