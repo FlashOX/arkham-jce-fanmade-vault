@@ -190,16 +190,18 @@
     },
     "au-coeur-des-tenebres": {
       "source": "shomm",
-      "guide": "08 - Campagnes Fan-Made/FC09 - Au Coeur des Ténèbres (04-2023)/Guide",
+      "guide": "08 - Campagnes Fan-Made/FC09 - Au Coeur des Ténèbres (04-2023)/Guide/FC09 - Guide de Campagne (A4).pdf",
       "imagesDir": "08 - Campagnes Fan-Made/FC09 - Au Coeur des Ténèbres (04-2023)",
       "imagesSuffix": "archive-complete",
+      "imagesExclude": ["FC09 - Au Coeur des Ténèbres (04-2023).md"],
       "creator": "Vinn_Quest"
     },
     "les-disparus-de-killineq": {
       "source": "shomm",
-      "guide": "08 - Campagnes Fan-Made/FC01 - Les Disparus de Killineq (05-2020)/Guide",
+      "guide": "08 - Campagnes Fan-Made/FC01 - Les Disparus de Killineq (05-2020)/Guide/FC01 - Guide de Campagne (A4).pdf",
       "imagesDir": "08 - Campagnes Fan-Made/FC01 - Les Disparus de Killineq (05-2020)",
       "imagesSuffix": "archive-complete",
+      "imagesExclude": ["FC01 - Les Disparus de Killineq (05-2020).md"],
       "creator": "Docteur Cheux"
     }
   }
