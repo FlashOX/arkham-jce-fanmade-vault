@@ -45,7 +45,9 @@
         "guide": "ahlcg-fr-face-au-wendigo-guide.pdf",
         "planche": "ahlcg-fr-face-au-wendigo-planche-a4.pdf",
         "images": "ahlcg-fr-face-au-wendigo-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Face au Wendigo"
     },
     {
       "id": "jouet-dune-illusion",
@@ -72,7 +74,9 @@
         "guide": "ahlcg-fr-jouet-dune-illusion-guide.pdf",
         "planche": "ahlcg-fr-jouet-dune-illusion-planche-a4.pdf",
         "images": "ahlcg-fr-jouet-dune-illusion-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Jouet d'une Illusion"
     },
     {
       "id": "le-festival",
@@ -99,7 +103,9 @@
         "guide": "ahlcg-fr-le-festival-guide.pdf",
         "planche": "ahlcg-fr-le-festival-planche-a4.pdf",
         "images": "ahlcg-fr-le-festival-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Festival"
     },
     {
       "id": "le-palais-du-rire",
@@ -126,7 +132,9 @@
         "guide": "ahlcg-fr-le-palais-du-rire-guide.pdf",
         "planche": "ahlcg-fr-le-palais-du-rire-planche-a4.pdf",
         "images": "ahlcg-fr-le-palais-du-rire-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Palais du Rire"
     },
     {
       "id": "le-pont-des-soupirs",
@@ -153,7 +161,9 @@
         "guide": "ahlcg-fr-le-pont-des-soupirs-guide.pdf",
         "planche": "ahlcg-fr-le-pont-des-soupirs-planche-a4.pdf",
         "images": "ahlcg-fr-le-pont-des-soupirs-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Pont des Soupirs"
     },
     {
       "id": "le-wyrm-de-pensher",
@@ -180,7 +190,9 @@
         "guide": "ahlcg-fr-le-wyrm-de-pensher-guide.pdf",
         "planche": "ahlcg-fr-le-wyrm-de-pensher-planche-a4.pdf",
         "images": "ahlcg-fr-le-wyrm-de-pensher-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Wyrm de Pensher"
     },
     {
       "id": "les-seuils-de-la-croyance",
@@ -207,7 +219,9 @@
         "guide": "ahlcg-fr-les-seuils-de-la-croyance-guide.pdf",
         "planche": "ahlcg-fr-les-seuils-de-la-croyance-planche-a4.pdf",
         "images": "ahlcg-fr-les-seuils-de-la-croyance-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Seuils de la Croyance"
     },
     {
       "id": "pulsions-cynegetiques",
@@ -234,7 +248,9 @@
         "guide": "ahlcg-fr-pulsions-cynegetiques-guide.pdf",
         "planche": null,
         "images": "ahlcg-fr-pulsions-cynegetiques-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Pulsions Cynégétiques"
     },
     {
       "id": "investigateurs-fan-made",
@@ -261,7 +277,9 @@
         "guide": null,
         "planche": "ahlcg-fr-investigateurs-fan-made-planche-a4.pdf",
         "images": "ahlcg-fr-investigateurs-fan-made-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2019-04",
+      "sortKey": "Investigateurs fan-made (Cycle 1)"
     },
     {
       "id": "desolation-a-bord-du-constellation",
@@ -288,7 +306,9 @@
         "guide": "ahlcg-fr-desolation-a-bord-du-constellation-guide.pdf",
         "planche": "ahlcg-fr-desolation-a-bord-du-constellation-planche-a4.pdf",
         "images": "ahlcg-fr-desolation-a-bord-du-constellation-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Désolation à Bord du Constellation"
     },
     {
       "id": "la-symphonie-derich-zann",
@@ -315,7 +335,9 @@
         "guide": "ahlcg-fr-la-symphonie-derich-zann-guide.pdf",
         "planche": "ahlcg-fr-la-symphonie-derich-zann-planche-a4.pdf",
         "images": "ahlcg-fr-la-symphonie-derich-zann-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Symphonie d'Erich Zann"
     },
     {
       "id": "les-chiens-de-tindalos",
@@ -342,7 +364,9 @@
         "guide": "ahlcg-fr-les-chiens-de-tindalos-guide.pdf",
         "planche": "ahlcg-fr-les-chiens-de-tindalos-planche-a4.pdf",
         "images": "ahlcg-fr-les-chiens-de-tindalos-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Chiens de Tindalos"
     },
     {
       "id": "au-bord-du-gouffre",
@@ -369,7 +393,9 @@
         "guide": "ahlcg-fr-au-bord-du-gouffre-guide.pdf",
         "planche": "ahlcg-fr-au-bord-du-gouffre-planche-a4.pdf",
         "images": "ahlcg-fr-au-bord-du-gouffre-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Au Bord du Gouffre"
     },
     {
       "id": "sang-verse-a-salem",
@@ -396,7 +422,9 @@
         "guide": "ahlcg-fr-sang-verse-a-salem-guide.pdf",
         "planche": "ahlcg-fr-sang-verse-a-salem-planche-a4.pdf",
         "images": "ahlcg-fr-sang-verse-a-salem-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Sang Versé à Salem"
     },
     {
       "id": "la-couleur-tombee-du-ciel",
@@ -423,7 +451,9 @@
         "guide": "ahlcg-fr-la-couleur-tombee-du-ciel-guide.pdf",
         "planche": "ahlcg-fr-la-couleur-tombee-du-ciel-planche-a4.pdf",
         "images": "ahlcg-fr-la-couleur-tombee-du-ciel-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Couleur Tombée du Ciel"
     },
     {
       "id": "levenement-de-svalbard",
@@ -450,7 +480,9 @@
         "guide": "ahlcg-fr-levenement-de-svalbard-guide.pdf",
         "planche": "ahlcg-fr-levenement-de-svalbard-planche-a4.pdf",
         "images": "ahlcg-fr-levenement-de-svalbard-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2021-03",
+      "sortKey": "L'Évènement de Svalbard"
     },
     {
       "id": "lhotel-du-grand-chene",
@@ -477,7 +509,9 @@
         "guide": "ahlcg-fr-lhotel-du-grand-chene-guide.pdf",
         "planche": "ahlcg-fr-lhotel-du-grand-chene-planche-a4.pdf",
         "images": "ahlcg-fr-lhotel-du-grand-chene-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2021-03",
+      "sortKey": "L'Hôtel du Grand Chêne"
     },
     {
       "id": "investigateurs-fan-made-cycle-2",
@@ -504,7 +538,9 @@
         "guide": null,
         "planche": "ahlcg-fr-investigateurs-fan-made-cycle-2-planche-a4.pdf",
         "images": "ahlcg-fr-investigateurs-fan-made-cycle-2-cartes-avec-bleed.zip"
-      }
+      },
+      "datePublication": "2021-03",
+      "sortKey": "Investigateurs fan-made (Cycle 2)"
     },
     {
       "id": "cartes-joueurs-laureates-du-concours-2020",
@@ -526,7 +562,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Cartes joueurs lauréates du concours 2020"
     },
     {
       "id": "au-coeur-des-tenebres",
@@ -553,7 +591,9 @@
         "guide": "ahlcg-fr-au-coeur-des-tenebres-guide.pdf",
         "planche": null,
         "images": "ahlcg-fr-au-coeur-des-tenebres-archive-complete.zip"
-      }
+      },
+      "datePublication": "2023-04",
+      "sortKey": "Au Coeur des Ténèbres"
     },
     {
       "id": "la-maison-voodoo",
@@ -580,7 +620,9 @@
         "guide": "ahlcg-fr-la-maison-vaudou-guide.pdf",
         "planche": "ahlcg-fr-la-maison-vaudou-planche-a4.pdf",
         "images": null
-      }
+      },
+      "datePublication": "2023-04",
+      "sortKey": "Maison Vaudou"
     },
     {
       "id": "les-disparus-de-killineq",
@@ -607,7 +649,9 @@
         "guide": "ahlcg-fr-les-disparus-de-killineq-guide.pdf",
         "planche": null,
         "images": "ahlcg-fr-les-disparus-de-killineq-archive-complete.zip"
-      }
+      },
+      "datePublication": "2020-05",
+      "sortKey": "Disparus de Killineq"
     },
     {
       "id": "matiere-noire",
@@ -634,7 +678,9 @@
         "guide": "ahlcg-fr-matiere-noire-guide.pdf",
         "planche": null,
         "images": "ahlcg-fr-matiere-noire-archive-complete.zip"
-      }
+      },
+      "datePublication": "2020-10",
+      "sortKey": "Matière Noire"
     },
     {
       "id": "dimensions-etranges",
@@ -656,7 +702,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": "2023-05",
+      "sortKey": "Dimensions Étranges"
     },
     {
       "id": "lappel-du-porte-peste",
@@ -678,7 +726,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": "2021-10",
+      "sortKey": "L'Appel du Porte Peste"
     },
     {
       "id": "fondations-cyclopeenes",
@@ -705,7 +755,9 @@
         "guide": "ahlcg-fr-fondations-cyclopeenes-guide.pdf",
         "planche": null,
         "images": "ahlcg-fr-fondations-cyclopeenes-archive-complete.zip"
-      }
+      },
+      "datePublication": "2021-05",
+      "sortKey": "Fondations Cyclopéennes"
     },
     {
       "id": "la-guerre-des-mondes",
@@ -727,7 +779,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": "2020-10",
+      "sortKey": "guerre des mondes"
     },
     {
       "id": "la-legende-du-cavalier-sans-tete",
@@ -749,7 +803,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": "2020-10",
+      "sortKey": "légende du cavalier sans tête"
     },
     {
       "id": "letrange-cas-du-docteur-jekyll-et-mr-hyde",
@@ -771,7 +827,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": "2021-03",
+      "sortKey": "L'étrange cas du docteur Jekyll et Mr Hyde"
     },
     {
       "id": "alice-au-pays-des-merveilles",
@@ -798,7 +856,9 @@
         "guide": "ahlcg-fr-alice-au-pays-des-merveilles-guide.pdf",
         "planche": null,
         "images": "ahlcg-fr-alice-au-pays-des-merveilles-archive-complete.zip"
-      }
+      },
+      "datePublication": "2020-10",
+      "sortKey": "Alice au Pays des Merveilles"
     },
     {
       "id": "les-ombres-de-yog-sothoth",
@@ -820,7 +880,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": "2023-05",
+      "sortKey": "Ombres de Yog Sothoth"
     },
     {
       "id": "renouveau-conspiration-dinnsmouth",
@@ -842,7 +904,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "À classer — retraduction/refonte de l'extension officielle.",
-      "archive": null
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Renouveau Conspiration d'Innsmouth"
     },
     {
       "id": "renouveau-devoreurs-des-reves",
@@ -864,7 +928,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "À classer — retraduction/refonte de l'extension officielle.",
-      "archive": null
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Renouveau Dévoreurs des Rêves"
     },
     {
       "id": "quete-onirique-etendue",
@@ -886,7 +952,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "À classer — vraisemblablement une campagne (Dream-Quest étendue).",
-      "archive": null
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Quête Onirique Étendue"
     },
     {
       "id": "noel-a-arkham",
@@ -908,7 +976,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Noel à Arkham"
     },
     {
       "id": "la-cite-de-linvisible",
@@ -930,7 +1000,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": "2024-02",
+      "sortKey": "Cité de l'Invisible"
     },
     {
       "id": "circus-ex-mortis",
@@ -952,7 +1024,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": "2023-08",
+      "sortKey": "Circus Ex Mortis"
     },
     {
       "id": "lombre-des-grands-anciens",
@@ -974,7 +1048,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "Création originale FR.",
-      "archive": null
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "L'ombre des Grands Anciens"
     },
     {
       "id": "ages-unwound",
@@ -996,7 +1072,9 @@
       },
       "contactPanierPartage": null,
       "commentaire": "VO anglaise — statut de traduction FR à préciser.",
-      "archive": null
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Ages Unwound"
     },
     {
       "id": "circus-ex-mortis",
@@ -1023,7 +1101,9 @@
         "guide": "ahlcg-fr-circus-ex-mortis-guide.pdf",
         "planche": null,
         "images": "ahlcg-fr-circus-ex-mortis-archive-complete.zip"
-      }
+      },
+      "datePublication": "2023-08",
+      "sortKey": "Circus Ex Mortis"
     }
   ]
 }
