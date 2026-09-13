@@ -445,7 +445,7 @@ function render(list) {
         ${it.creator ? `<p class="creator">Par ${esc(it.creator)}</p>` : ""}
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
         <div class="links">${archive
-          ? archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}">Guide (PDF) ↓</a>` : ""
+          ? archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}" target="_blank">Guide (PDF) ↓</a>` : ""
           : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}</div>
         <div class="tags">
           ${chip("typeChip", chipKeyForType(it.type), TYPE_LABEL[it.type] || it.type, `color-${chipKeyForType(it.type)}`)}
