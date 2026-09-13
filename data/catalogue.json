@@ -190,30 +190,6 @@
       "titreVO": null,
       "type": "campagne",
       "cycle": null,
-      "etat": "inconnu",
-      "langue": "fr",
-      "publie": true,
-      "image": null,
-      "liens": {
-        "source": null,
-        "fichier": null
-      },
-      "images": {
-        "noBleed": false,
-        "bleed": false
-      },
-      "contactPanierPartage": null,
-      "commentaire": "Création originale FR.",
-      "archive": null,
-      "datePublication": "2023-08",
-      "sortKey": "Circus Ex Mortis"
-    },
-    {
-      "id": "circus-ex-mortis",
-      "titre": "Circus Ex Mortis",
-      "titreVO": null,
-      "type": "campagne",
-      "cycle": null,
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
