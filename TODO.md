@@ -4,9 +4,9 @@ Idées et chantiers pas encore planifiés. Rien d'urgent ici.
 
 ## Site
 
-- [ ] **Filtres par chips d'en-tête** plutôt que les listes déroulantes
-      (Type / Cycle). Boutons cliquables, état actif visible, multi-sélection
-      éventuelle.
+- [x] **Filtres par chips d'en-tête** pour le Type (Campagne / Scénario
+      indépendant / Investigateurs / Autres), à la place du dropdown. Le
+      filtre Cycle reste un dropdown pour l'instant.
 - [ ] **Lien Discord** de la communauté FR dans l'en-tête (à côté de « À propos »).
 
 ## Contenu
