@@ -239,6 +239,11 @@
     font-style: italic;
     margin: 0 0 8px;
   }
+  .card .creator {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin: 0 0 8px;
+  }
   .card h3:last-child { margin-bottom: 8px; }
 
   .card .note {
@@ -437,6 +442,7 @@ function render(list) {
           : ""}
         <h3>${esc(it.titre)}</h3>
         ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
+        ${it.creator ? `<p class="creator">Par ${esc(it.creator)}</p>` : ""}
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
         <div class="links">${archive
           ? archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}">Guide (PDF) ↓</a>` : ""

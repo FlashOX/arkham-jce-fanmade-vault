@@ -71,7 +71,8 @@
         "images": "ahlcg-fr-alice-au-pays-des-merveilles-archive-complete.zip"
       },
       "datePublication": "2020-10",
-      "sortKey": "Alice au Pays des Merveilles"
+      "sortKey": "Alice au Pays des Merveilles",
+      "creator": "The Beard (Tyler Gotch) (VO) ; Franck2655 et Chertref (trad.)"
     },
     {
       "id": "au-bord-du-gouffre",
@@ -100,7 +101,8 @@
         "images": "ahlcg-fr-au-bord-du-gouffre-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "Au Bord du Gouffre"
+      "sortKey": "Au Bord du Gouffre",
+      "creator": "Bewise (Alexandre Lesage)"
     },
     {
       "id": "au-coeur-des-tenebres",
@@ -129,7 +131,8 @@
         "images": "ahlcg-fr-au-coeur-des-tenebres-archive-complete.zip"
       },
       "datePublication": "2023-04",
-      "sortKey": "Au Coeur des Ténèbres"
+      "sortKey": "Au Coeur des Ténèbres",
+      "creator": "Vinn_Quest"
     },
     {
       "id": "cartes-joueurs-laureates-du-concours-2020",
@@ -182,7 +185,8 @@
         "images": "ahlcg-fr-les-chiens-de-tindalos-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "Chiens de Tindalos"
+      "sortKey": "Chiens de Tindalos",
+      "creator": "StonePenguin (Mikael Fransson) (VO) ; Mitch (trad.)"
     },
     {
       "id": "circus-ex-mortis",
@@ -211,7 +215,8 @@
         "images": "ahlcg-fr-circus-ex-mortis-archive-complete.zip"
       },
       "datePublication": "2023-08",
-      "sortKey": "Circus Ex Mortis"
+      "sortKey": "Circus Ex Mortis",
+      "creator": "The Beard (Tyler Gotch) (VO) ; JohnSG1 (trad.)"
     },
     {
       "id": "dimensions-etranges",
@@ -240,7 +245,8 @@
         "images": "ahlcg-fr-dimensions-etranges-archive-complete.zip"
       },
       "datePublication": "2023-05",
-      "sortKey": "Dimensions Étranges"
+      "sortKey": "Dimensions Étranges",
+      "creator": "Wywid"
     },
     {
       "id": "la-cite-de-linvisible",
@@ -293,7 +299,8 @@
         "images": "ahlcg-fr-la-couleur-tombee-du-ciel-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "Couleur Tombée du Ciel"
+      "sortKey": "Couleur Tombée du Ciel",
+      "creator": "Joe Ehret (VO) ; Vinn Quest (trad.)"
     },
     {
       "id": "desolation-a-bord-du-constellation",
@@ -322,7 +329,8 @@
         "images": "ahlcg-fr-desolation-a-bord-du-constellation-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "Désolation à Bord du Constellation"
+      "sortKey": "Désolation à Bord du Constellation",
+      "creator": "Ian Martin, Scott Armstrong, Nicholas Kory et Sean Switajewski (VO) ; Vinn Quest (trad.)"
     },
     {
       "id": "dimensions-etranges",
@@ -346,7 +354,8 @@
       "commentaire": "Création originale FR.",
       "archive": null,
       "datePublication": "2023-05",
-      "sortKey": "Dimensions Étranges"
+      "sortKey": "Dimensions Étranges",
+      "creator": "Wywid"
     },
     {
       "id": "les-disparus-de-killineq",
@@ -375,7 +384,8 @@
         "images": "ahlcg-fr-les-disparus-de-killineq-archive-complete.zip"
       },
       "datePublication": "2020-05",
-      "sortKey": "Disparus de Killineq"
+      "sortKey": "Disparus de Killineq",
+      "creator": "Docteur Cheux"
     },
     {
       "id": "face-au-wendigo",
@@ -404,7 +414,8 @@
         "images": "ahlcg-fr-face-au-wendigo-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Face au Wendigo"
+      "sortKey": "Face au Wendigo",
+      "creator": "vinn_quest"
     },
     {
       "id": "le-festival",
@@ -433,7 +444,8 @@
         "images": "ahlcg-fr-le-festival-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Festival"
+      "sortKey": "Festival",
+      "creator": "Matthew Heiti (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     {
       "id": "fondations-cyclopeenes",
@@ -462,7 +474,8 @@
         "images": "ahlcg-fr-fondations-cyclopeenes-archive-complete.zip"
       },
       "datePublication": "2021-05",
-      "sortKey": "Fondations Cyclopéennes"
+      "sortKey": "Fondations Cyclopéennes",
+      "creator": "The Beard (Tyler Gotch) (VO) ; Franck2655 et Renaud Flavigny (trad.)"
     },
     {
       "id": "la-guerre-des-mondes",
@@ -515,7 +528,8 @@
         "images": "ahlcg-fr-investigateurs-fan-made-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Investigateurs fan-made (Cycle 1)"
+      "sortKey": "Investigateurs fan-made (Cycle 1)",
+      "creator": "Ligue des Joueurs Francophones d'Arkham JCE"
     },
     {
       "id": "investigateurs-fan-made-cycle-2",
@@ -544,7 +558,8 @@
         "images": "ahlcg-fr-investigateurs-fan-made-cycle-2-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "Investigateurs fan-made (Cycle 2)"
+      "sortKey": "Investigateurs fan-made (Cycle 2)",
+      "creator": "Ligue des Joueurs Francophones d'Arkham JCE"
     },
     {
       "id": "jouet-dune-illusion",
@@ -573,7 +588,8 @@
         "images": "ahlcg-fr-jouet-dune-illusion-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Jouet d'une Illusion"
+      "sortKey": "Jouet d'une Illusion",
+      "creator": "Keith Owens (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     {
       "id": "lappel-du-porte-peste",
@@ -650,7 +666,8 @@
         "images": "ahlcg-fr-levenement-de-svalbard-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "L'Évènement de Svalbard"
+      "sortKey": "L'Évènement de Svalbard",
+      "creator": "StonePenguin (Mikael Fransson) (VO) ; Mitch (trad.)"
     },
     {
       "id": "lhotel-du-grand-chene",
@@ -679,7 +696,8 @@
         "images": "ahlcg-fr-lhotel-du-grand-chene-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "L'Hôtel du Grand Chêne"
+      "sortKey": "L'Hôtel du Grand Chêne",
+      "creator": "Argus The Cat (VO) ; Baron Mundus et Mitch (trad.)"
     },
     {
       "id": "lombre-des-grands-anciens",
@@ -785,7 +803,8 @@
         "images": "ahlcg-fr-matiere-noire-archive-complete.zip"
       },
       "datePublication": "2020-10",
-      "sortKey": "Matière Noire"
+      "sortKey": "Matière Noire",
+      "creator": "Axolotl (VO) ; Chertref (trad.)"
     },
     {
       "id": "noel-a-arkham",
@@ -862,7 +881,8 @@
         "images": "ahlcg-fr-le-palais-du-rire-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Palais du Rire"
+      "sortKey": "Palais du Rire",
+      "creator": "Nathan Sauter (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     {
       "id": "le-pont-des-soupirs",
@@ -891,7 +911,8 @@
         "images": "ahlcg-fr-le-pont-des-soupirs-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Pont des Soupirs"
+      "sortKey": "Pont des Soupirs",
+      "creator": "Ben Cort (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     {
       "id": "pulsions-cynegetiques",
@@ -920,7 +941,8 @@
         "images": "ahlcg-fr-pulsions-cynegetiques-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Pulsions Cynégétiques"
+      "sortKey": "Pulsions Cynégétiques",
+      "creator": "Docteur Cheux"
     },
     {
       "id": "quete-onirique-etendue",
@@ -1021,7 +1043,8 @@
         "images": "ahlcg-fr-sang-verse-a-salem-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "Sang Versé à Salem"
+      "sortKey": "Sang Versé à Salem",
+      "creator": "Shiver02 (Colin Towle) (VO) ; Baron Mundus (trad.)"
     },
     {
       "id": "les-seuils-de-la-croyance",
@@ -1050,7 +1073,8 @@
         "images": "ahlcg-fr-les-seuils-de-la-croyance-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Seuils de la Croyance"
+      "sortKey": "Seuils de la Croyance",
+      "creator": "Dee Noaloha (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     },
     {
       "id": "la-symphonie-derich-zann",
@@ -1079,7 +1103,8 @@
         "images": "ahlcg-fr-la-symphonie-derich-zann-cartes-avec-bleed.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "Symphonie d'Erich Zann"
+      "sortKey": "Symphonie d'Erich Zann",
+      "creator": "Axolotl (VO) ; Vinn Quest (trad.)"
     },
     {
       "id": "le-wyrm-de-pensher",
@@ -1108,7 +1133,8 @@
         "images": "ahlcg-fr-le-wyrm-de-pensher-cartes-avec-bleed.zip"
       },
       "datePublication": "2019-04",
-      "sortKey": "Wyrm de Pensher"
+      "sortKey": "Wyrm de Pensher",
+      "creator": "Ben Clapperton (VO) ; Ligue des Joueurs Francophones d'Arkham JCE (trad.)"
     }
   ]
 }
