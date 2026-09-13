@@ -8,6 +8,9 @@ Idées et chantiers pas encore planifiés. Rien d'urgent ici.
       indépendant / Investigateurs / Autres), à la place du dropdown. Le
       filtre Cycle reste un dropdown pour l'instant.
 - [ ] **Lien Discord** de la communauté FR dans l'en-tête (à côté de « À propos »).
+- [ ] **Page « Archives »** : référencer l'ensemble des liens archive.org pour
+      accès direct aux téléchargements (une ligne par item avec titre, type,
+      lien direct archive.org).
 
 ## Contenu
 
