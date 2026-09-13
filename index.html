@@ -109,6 +109,26 @@
     font-size: 0.85rem;
   }
 
+  .type-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .type-chip {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.82rem;
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-dim);
+    cursor: pointer;
+    appearance: none;
+    transition: filter 0.12s, background 0.12s, color 0.12s, border-color 0.12s;
+  }
+  .type-chip:hover { border-color: var(--accent); color: var(--text); }
+  .type-chip.active {
+    background: var(--accent-soft);
+    color: #cabfe0;
+    border-color: transparent;
+  }
+
   .filters .count {
     margin-left: auto;
     font-size: 0.8rem;
@@ -295,7 +315,12 @@
 </header>
 
 <div class="filters">
-  <select id="filterType"><option value="">Tous les types</option></select>
+  <div class="type-chips" id="typeChips" role="group" aria-label="Filtrer par type">
+    <button type="button" class="type-chip" data-key="campagne">Campagne</button>
+    <button type="button" class="type-chip" data-key="scenario">Scénario indépendant</button>
+    <button type="button" class="type-chip" data-key="investigateurs">Investigateurs</button>
+    <button type="button" class="type-chip" data-key="autre">Autres</button>
+  </div>
   <select id="filterCycle"><option value="">Tous les cycles</option></select>
   <span class="count" id="count"></span>
 </div>
@@ -337,6 +362,16 @@ const TYPE_LABEL = {
   "cartes-joueur": "Cartes joueur",
   autre: "Autre",
 };
+// Chips d'en-tête : regroupent les types de la donnée en 4 catégories affichées.
+const TYPE_CHIPS = [
+  { key: "campagne", types: ["campagne"], label: "Campagne" },
+  { key: "scenario", types: ["scenario"], label: "Scénario indépendant" },
+  { key: "investigateurs", types: ["investigateurs"], label: "Investigateurs" },
+  { key: "autre", types: ["cartes-joueur", "autre"], label: "Autres" },
+];
+const CHIP_BY_KEY = Object.fromEntries(TYPE_CHIPS.map((c) => [c.key, c]));
+const chipKeyForType = (type) => TYPE_CHIPS.find((c) => c.types.includes(type))?.key || null;
+let activeChipKey = null;
 const IA_DOWNLOAD = (id, f) =>
   `https://archive.org/download/${encodeURIComponent(id)}/${encodeURIComponent(f)}`;
 // zip généré à la volée par archive.org avec tous les fichiers de l'item
@@ -370,11 +405,10 @@ function fillOptions(sel, values, labelFn) {
 }
 
 function render(list) {
-  const fType = document.getElementById("filterType").value;
   const fCycle = document.getElementById("filterCycle").value;
   const chip = (fk, fv, label, cls) =>
     `<button type="button" class="tag${cls ? " " + cls : ""}${
-      { filterType: fType, filterCycle: fCycle }[fk] === fv ? " active" : ""
+      { typeChip: activeChipKey, filterCycle: fCycle }[fk] === fv ? " active" : ""
     }" data-fk="${fk}" data-fv="${esc(fv)}">${esc(label)}</button>`;
 
   emptyEl.classList.toggle("hidden", list.length > 0);
@@ -401,7 +435,7 @@ function render(list) {
           : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}</div>
         <div class="tags">
           ${it.cycle ? chip("filterCycle", it.cycle, it.cycle, "cycle") : ""}
-          ${chip("filterType", it.type, TYPE_LABEL[it.type] || it.type)}
+          ${chip("typeChip", chipKeyForType(it.type), TYPE_LABEL[it.type] || it.type)}
         </div>
       </div>
     </div>`;
@@ -419,16 +453,23 @@ function updateCycleInfo(cycle) {
   cycleInfoEl.innerHTML = `<strong>${esc(cycle)}</strong> — ${esc(c.description || "")}`;
 }
 
+function updateTypeChipsUI() {
+  document.querySelectorAll("#typeChips .type-chip").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.key === activeChipKey);
+  });
+}
+
 function applyFilters() {
-  const type = document.getElementById("filterType").value;
+  const chip = activeChipKey ? CHIP_BY_KEY[activeChipKey] : null;
   const cycle = document.getElementById("filterCycle").value;
   const q = document.getElementById("searchInput").value.trim().toLowerCase();
 
   updateCycleInfo(cycle);
+  updateTypeChipsUI();
   render(
     items.filter(
       (it) =>
-        (!type || it.type === type) &&
+        (!chip || chip.types.includes(it.type)) &&
         (!cycle || (cycle === "—" ? !it.cycle : it.cycle === cycle)) &&
         (!q ||
           it.titre.toLowerCase().includes(q) ||
@@ -448,13 +489,9 @@ fetch("data/catalogue.json", { cache: "no-cache" })
     items = (data.items || []).filter((i) => i.publie !== false);
     cycles = data.cycles || {};
 
-    const types = [...new Set(items.map((i) => i.type))].sort(
-      (a, b) => (TYPE_LABEL[a] || a).localeCompare(TYPE_LABEL[b] || b),
-    );
     const cycleNames = [...new Set(items.map((i) => i.cycle).filter(Boolean))].sort(
       (a, b) => cycleSortKey(a) - cycleSortKey(b),
     );
-    fillOptions(document.getElementById("filterType"), types, (t) => TYPE_LABEL[t] || t);
     fillOptions(document.getElementById("filterCycle"), cycleNames);
     if (items.some((i) => !i.cycle)) {
       const o = document.createElement("option");
@@ -471,10 +508,16 @@ fetch("data/catalogue.json", { cache: "no-cache" })
     emptyEl.textContent = `Impossible de charger le catalogue (${err.message}).`;
   });
 
-["filterType", "filterCycle"].forEach((id) =>
-  document.getElementById(id).addEventListener("change", applyFilters),
-);
+document.getElementById("filterCycle").addEventListener("change", applyFilters);
 document.getElementById("searchInput").addEventListener("input", applyFilters);
+
+// Chips de type dans l'en-tête -> un seul actif à la fois ; re-clic pour l'enlever.
+document.getElementById("typeChips").addEventListener("click", (e) => {
+  const btn = e.target.closest(".type-chip");
+  if (!btn) return;
+  activeChipKey = activeChipKey === btn.dataset.key ? null : btn.dataset.key;
+  applyFilters();
+});
 
 // Clic sur une chip d'une carte -> ce seul critère (pas de combinatoire) ;
 // re-clic sur la même valeur -> on l'enlève.
@@ -482,19 +525,22 @@ grid.addEventListener("click", (e) => {
   const chip = e.target.closest(".tag[data-fk]");
   if (!chip) return;
   const { fk, fv } = chip.dataset;
-  const sel = document.getElementById(fk);
-  const wasActive = sel.value === fv;
-  ["filterType", "filterCycle"].forEach((id) => {
-    if (id !== fk) document.getElementById(id).value = "";
-  });
-  sel.value = wasActive ? "" : fv;
+  if (fk === "typeChip") {
+    activeChipKey = activeChipKey === fv ? null : fv;
+    document.getElementById("filterCycle").value = "";
+  } else {
+    const sel = document.getElementById(fk);
+    const wasActive = sel.value === fv;
+    sel.value = wasActive ? "" : fv;
+    activeChipKey = null;
+  }
   applyFilters();
 });
 
 // Titre / logo -> retour à l'accueil : listing complet, sans filtre ni recherche
 document.querySelector(".brand").addEventListener("click", (e) => {
   e.preventDefault();
-  document.getElementById("filterType").value = "";
+  activeChipKey = null;
   document.getElementById("filterCycle").value = "";
   document.getElementById("searchInput").value = "";
   applyFilters();
