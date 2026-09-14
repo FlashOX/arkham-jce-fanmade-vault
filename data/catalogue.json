@@ -937,7 +937,7 @@
       "titreVO": null,
       "type": "autre",
       "cycle": null,
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/quete-onirique-etendue.jpg",
@@ -947,12 +947,17 @@
       },
       "images": {
         "noBleed": false,
-        "bleed": false
+        "bleed": true
       },
       "contactPanierPartage": null,
       "commentaire": null,
       "creator": "Jeff et Stefanie Abbot",
-      "archive": null,
+      "archive": {
+        "id": "ahlcg-fr-quete-onirique-etendue",
+        "guide": "ahlcg-fr-quete-onirique-etendue-guide.pdf",
+        "planche": "ahlcg-fr-quete-onirique-etendue-planche-a4.zip",
+        "images": "ahlcg-fr-quete-onirique-etendue-cartes-avec-bleed.zip"
+      },
       "datePublication": null,
       "sortKey": "Quête Onirique Étendue"
     },
