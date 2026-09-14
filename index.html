@@ -573,7 +573,12 @@ document.getElementById("typeChips").addEventListener("click", (e) => {
   const btn = e.target.closest(".type-chip");
   if (!btn) return;
   const key = btn.dataset.key;
-  activeChipKey = key === "all" ? null : activeChipKey === key ? null : key;
+  if (key === "all") {
+    activeChipKey = null;
+    activeCycle = null;
+  } else {
+    activeChipKey = activeChipKey === key ? null : key;
+  }
   applyFilters();
   window.scrollTo(0, 0);
 });
