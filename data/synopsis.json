@@ -1,6 +1,10 @@
 {
   "_doc": "Résumés no-spoil + illustrations de mise en avant, par id de fiche (catalogue.json). Consommé par item.html. Un item absent de ce fichier n'a pas de page détail ni de lien « En savoir plus ».",
   "items": {
+    "renouveau-conspiration-dinnsmouth": {
+      "resume": "Renouveau – Conspiration d'Innsmouth est une extension fan-made qui modifie et développe la campagne officielle La Conspiration d'Innsmouth : cinq sets de rencontre entièrement nouveaux remplacent ceux de la campagne d'origine (plus un sixième, combinable avec l'original), accompagnés de nouvelles cartes Scénario et Joueur pour personnaliser vos decks Investigateur. Elle se joue par-dessus une campagne La Conspiration d'Innsmouth existante (ou un scénario indépendant du cycle), en remplaçant simplement les instructions de mise en place standard par celles fournies pour chaque scénario renouvelé.\n\nCette extension nécessite de posséder la campagne officielle La Conspiration d'Innsmouth pour être jouée.",
+      "illustrations": []
+    },
     "la-legende-du-cavalier-sans-tete": {
       "resume": "Le shérif Engle vous tend une lettre, visiblement peu convaincu : « La police de New York classe l'affaire faute de preuves, et maintenant ce Van Brunt s'imagine avoir affaire à un croque-mitaine local ? Foutaises, si vous voulez mon avis. Mais il a demandé que vous vous en occupiez personnellement. À vous de voir si vous voulez perdre votre temps à errer dans les bois. »\n\nFrederic Van Brunt, riche propriétaire terrien d'origine néerlandaise, réclame votre aide contre un spectre que l'on surnomme le Cavalier Sans Tête. Il tient ce fantôme pour responsable de la disparition de quatre personnes en autant de semaines dans la vallée du Val Dormant. La police reste sceptique, mais Van Brunt n'en démord pas et propose une généreuse récompense pour vos services. Menace fantomatique ou non, l'affaire mérite bien qu'on y regarde de plus près.",
       "illustrations": []

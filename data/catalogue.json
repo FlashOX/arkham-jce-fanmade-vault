@@ -1033,7 +1033,7 @@
       "titreVO": "Return to the Innsmouth Conspiracy",
       "type": "autre",
       "cycle": "Cycle 5",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/renouveau-conspiration-dinnsmouth.jpg",
@@ -1043,14 +1043,20 @@
       },
       "images": {
         "noBleed": false,
-        "bleed": false
+        "bleed": true
       },
       "contactPanierPartage": null,
       "commentaire": null,
       "creator": "DerbK, Hauke",
-      "archive": null,
+      "archive": {
+        "id": "ahlcg-fr-renouveau-conspiration-innsmouth",
+        "guide": "ahlcg-fr-renouveau-conspiration-innsmouth-guide.pdf",
+        "planche": "ahlcg-fr-renouveau-conspiration-innsmouth-planche-a4.zip",
+        "images": "ahlcg-fr-renouveau-conspiration-innsmouth-cartes-avec-bleed.zip"
+      },
       "datePublication": null,
-      "sortKey": "Renouveau Conspiration d'Innsmouth"
+      "sortKey": "Renouveau Conspiration d'Innsmouth",
+      "traducteur": "Akodo Phocéa, Chertref, Franck2655, Youbouze"
     },
     {
       "id": "renouveau-devoreurs-des-reves",
