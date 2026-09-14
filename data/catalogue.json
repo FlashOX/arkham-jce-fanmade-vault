@@ -18,8 +18,8 @@
     "Cycle 5": {
       "description": "Cinquième lot de scénarios fan-made. Détails sur le Discord de la communauté."
     },
-    "Cycle 8": {
-      "description": "Lot de scénarios fan-made numéroté « Cycle 8 ». Détails sur le Discord de la communauté."
+    "Cycle 4": {
+      "description": "Lot de scénarios fan-made numéroté « Cycle 4 ». Détails sur le Discord de la communauté."
     }
   },
   "items": [
@@ -638,7 +638,7 @@
       "titre": "L'Étrange Cas du Dr. Jekyll et Mr Hyde",
       "titreVO": "The Strange Case of Dr. Jekyll and Mr. Hyde",
       "type": "scenario",
-      "cycle": "Cycle 8",
+      "cycle": "Cycle 4",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -755,7 +755,7 @@
       "titre": "La Légende du Cavalier Sans Tête",
       "titreVO": null,
       "type": "scenario",
-      "cycle": "Cycle 8",
+      "cycle": "Cycle 4",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -1156,7 +1156,7 @@
       "titre": "La Sororité des Secrets",
       "titreVO": null,
       "type": "scenario",
-      "cycle": "Cycle 8",
+      "cycle": "Cycle 4",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
