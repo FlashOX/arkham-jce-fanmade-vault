@@ -59,12 +59,8 @@
     text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   }
 
-  .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 6px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 22px; }
   .meta .vo { color: var(--text-dim); font-style: italic; font-size: 0.9rem; }
-
-  .byline { font-size: 1.02rem; margin-bottom: 22px; }
-  .byline .label { color: var(--text-dim); }
-  .byline strong { color: #cabfe0; font-weight: 600; }
 
   .dl-btn {
     display: inline-flex;
@@ -146,17 +142,16 @@
     <div class="cover-title"><h1 id="titre"></h1></div>
   </div>
   <div class="meta" id="meta"></div>
-  <div class="byline" id="byline"></div>
   <div id="dlWrap"></div>
-  <div class="resume" id="resume"></div>
-  <div class="box" id="filesBox" hidden>
-    <h2>Fichiers disponibles</h2>
-    <ul id="filesList"></ul>
-  </div>
   <div class="box" id="creditsBox" hidden>
     <h2>Crédits</h2>
     <ul id="creditsList"></ul>
   </div>
+  <div class="box" id="filesBox" hidden>
+    <h2>Fichiers disponibles</h2>
+    <ul id="filesList"></ul>
+  </div>
+  <div class="resume" id="resume"></div>
   <div class="gallery" id="gallery"></div>
 </main>
 <p id="status">Chargement…</p>
@@ -192,11 +187,6 @@ Promise.all([
 
     const meta = document.getElementById("meta");
     meta.innerHTML = it.titreVO ? `<span class="vo">VO : ${esc(it.titreVO)}</span>` : "";
-
-    const byline = document.getElementById("byline");
-    byline.innerHTML = it.creator
-      ? `<span class="label">Par</span> <strong>${esc(it.creator)}</strong>`
-      : "";
 
     const dlWrap = document.getElementById("dlWrap");
     dlWrap.innerHTML = it.archive
