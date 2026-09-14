@@ -561,7 +561,7 @@
       "cycle": null,
       "etat": "inconnu",
       "langue": "fr",
-      "publie": true,
+      "publie": false,
       "image": "img/thumbs/investigateurs-paralleles-ffg.jpg",
       "liens": {
         "source": null,
