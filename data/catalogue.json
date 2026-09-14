@@ -546,6 +546,31 @@
       "creator": ""
     },
     {
+      "id": "investigateurs-paralleles-ffg",
+      "titre": "Investigateurs Parallèles FFG",
+      "titreVO": null,
+      "type": "investigateurs",
+      "cycle": null,
+      "etat": "inconnu",
+      "langue": "fr",
+      "publie": true,
+      "image": null,
+      "liens": {
+        "source": null,
+        "fichier": null
+      },
+      "images": {
+        "noBleed": false,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "creator": "Fantasy Flight Games",
+      "archive": null,
+      "datePublication": null,
+      "sortKey": "Investigateurs Parallèles FFG"
+    },
+    {
       "id": "jouet-dune-illusion",
       "titre": "Jouet d'une Illusion",
       "titreVO": "The Nephew Calls",
