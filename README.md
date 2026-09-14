@@ -3,7 +3,7 @@
 Catalogue communautaire de contenu **fan-made** francophone pour *Horreur à Arkham :
 le Jeu de Cartes* (scénarios indépendants, campagnes, enquêteurs).
 
-➡️ **https://flashox.github.io/arkham-jce-fanmade-vault/**
+➡️ **https://flashox.github.io/miskat-arkiv/**
 
 ## Pourquoi ce projet
 
