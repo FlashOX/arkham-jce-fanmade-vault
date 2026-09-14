@@ -62,13 +62,6 @@
   .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 24px; }
   .meta .vo { color: var(--text-dim); font-style: italic; font-size: 0.9rem; }
   .meta .creator { color: var(--text-dim); font-size: 0.9rem; }
-  .tag {
-    font-size: 0.7rem;
-    padding: 3px 10px;
-    border-radius: 999px;
-    background: var(--accent-soft);
-    color: #cabfe0;
-  }
 
   .dl-btn {
     display: inline-flex;
@@ -159,13 +152,6 @@
 <p id="status">Chargement…</p>
 
 <script>
-const TYPE_LABEL = {
-  scenario: "Scénario",
-  campagne: "Campagne",
-  investigateurs: "Investigateurs",
-  "cartes-joueur": "Cartes joueur",
-  autre: "Autre",
-};
 const IA_ARCHIVE = (id) => `https://archive.org/compress/${encodeURIComponent(id)}`;
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -196,8 +182,6 @@ Promise.all([
 
     const meta = document.getElementById("meta");
     meta.innerHTML = `
-      <span class="tag">${esc(TYPE_LABEL[it.type] || it.type)}</span>
-      ${it.cycle ? `<span class="tag">${esc(it.cycle)}</span>` : ""}
       ${it.titreVO ? `<span class="vo">VO : ${esc(it.titreVO)}</span>` : ""}
       ${it.creator ? `<span class="creator">Par ${esc(it.creator)}</span>` : ""}
     `;
