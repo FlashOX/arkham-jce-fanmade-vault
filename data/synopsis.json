@@ -1,6 +1,10 @@
 {
   "_doc": "Résumés no-spoil + illustrations de mise en avant, par id de fiche (catalogue.json). Consommé par item.html. Un item absent de ce fichier n'a pas de page détail ni de lien « En savoir plus ».",
   "items": {
+    "matiere-noire": {
+      "resume": "Une représentation unique de « Le Roi en Jaune » au Théâtre Ward d'Arkham, mise en scène par le mystérieux Nigel Engram — voilà qui a fait courir toute la ville. Mais la pièce n'est pas la seule chose qui inquiète : un machiniste a disparu avant la première, un musicien a été retrouvé mort deux semaines plus tôt, et un homme a été interné à l'asile après avoir divagué sur « le retour du Roi ».\n\nLe premier acte se révèle d'un ennui pénible — jusqu'à ce que les lumières s'éteignent sur vous pour de bon. Vous vous réveillez ailleurs : une capsule de sommeil cryogénique, l'année 2147, à bord d'un vaisseau à la dérive quelque part près de Neptune. Ce que la pièce a réellement déclenché reste entièrement à découvrir.",
+      "illustrations": []
+    },
     "face-au-wendigo": {
       "resume": "Septembre 1926. Le procès du Dr Nadelmann vient de s'achever : rentré seul d'une expédition scientifique dans la vallée sauvage de la Nord-Hanninah, au Nord-Ouest canadien, l'anthropologue de Miskatonic a été acquitté de l'homicide de ses deux compagnons disparus — mais ses propos incohérents sur des « monstres mangeurs d'hommes » ont eu raison de sa santé mentale, et il est aujourd'hui interné à l'asile d'Arkham.\n\nSes proches, tout comme vous, ne se satisfont pas de cette version des faits. Sur les traces de la précédente expédition, vous embarquez à votre tour vers ce territoire hostile et mal cartographié, alors que l'hiver referme déjà son emprise sur la région. Ce que Nadelmann a vraiment vu dans la Nord-Hanninah reste à découvrir — et la vallée, elle, n'a pas fini de livrer ses secrets.",
       "illustrations": []
