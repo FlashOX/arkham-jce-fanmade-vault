@@ -49,12 +49,16 @@
 
   a { color: inherit; }
 
-  /* Sticky header + filter bar */
+  /* Sticky header + filter bar (desktop/tablette uniquement : sur mobile,
+     l'en-tête prend trop de place à l'écran pour rester fixe au scroll). */
   .site-top {
     position: sticky;
     top: 0;
     z-index: 50;
     background: var(--bg);
+  }
+  @media (max-width: 640px) {
+    .site-top { position: static; }
   }
 
   /* Header */
