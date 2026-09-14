@@ -89,6 +89,36 @@
 
   .resume { font-size: 0.98rem; line-height: 1.7; white-space: pre-line; margin-bottom: 32px; }
 
+  .files {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+  .files h2 {
+    font-family: 'Spectral', serif;
+    font-size: 0.95rem;
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+  }
+  .files ul { list-style: none; margin: 0; padding: 0; }
+  .files li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+  }
+  .files li:last-child { border-bottom: none; }
+  .files .fname { color: var(--text); }
+  .files .fsize { color: var(--text-dim); font-size: 0.8rem; white-space: nowrap; }
+  .files a.fdl { color: var(--accent); text-decoration: none; white-space: nowrap; }
+  .files a.fdl:hover { text-decoration: underline; }
+
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -116,6 +146,10 @@
   </div>
   <div class="meta" id="meta"></div>
   <div id="dlWrap"></div>
+  <div class="files" id="filesBox" hidden>
+    <h2>Fichiers disponibles</h2>
+    <ul id="filesList"></ul>
+  </div>
   <div class="resume" id="resume"></div>
   <div class="gallery" id="gallery"></div>
 </main>
@@ -179,10 +213,47 @@ Promise.all([
 
     document.getElementById("status").hidden = true;
     document.getElementById("main").hidden = false;
+
+    if (it.archive) loadFiles(it.archive.id);
   })
   .catch((e) => {
     document.getElementById("status").textContent = "Impossible de charger la fiche (" + e.message + ").";
   });
+
+// Liste des fichiers individuels de l'item archive.org, en complément du
+// bouton "archive complète". Chargé à part et silencieusement ignoré en
+// cas d'échec (l'API archive.org peut être lente ou temporairement down).
+const FILE_LABELS = [
+  [/guide/i, "Guide"],
+  [/planche/i, "Planche d'impression"],
+  [/cartes|images/i, "Cartes (images)"],
+];
+const labelFor = (name) => (FILE_LABELS.find(([re]) => re.test(name)) || [null, name])[1];
+const formatSize = (bytes) => {
+  const mb = bytes / 1048576;
+  return mb >= 1 ? mb.toFixed(1) + " Mo" : (bytes / 1024).toFixed(0) + " Ko";
+};
+
+function loadFiles(archiveId) {
+  fetch(`https://archive.org/metadata/${encodeURIComponent(archiveId)}`)
+    .then((r) => r.json())
+    .then((meta) => {
+      const files = (meta.files || []).filter(
+        (f) => !f.name.includes("/") && /\.(pdf|zip)$/i.test(f.name),
+      );
+      if (!files.length) return;
+      document.getElementById("filesList").innerHTML = files
+        .map(
+          (f) => `<li>
+            <span class="fname">${esc(labelFor(f.name))}${f.size ? ` <span class="fsize">(${esc(formatSize(Number(f.size)))})</span>` : ""}</span>
+            <a class="fdl" href="https://archive.org/download/${esc(archiveId)}/${esc(f.name)}" target="_blank">Télécharger ↓</a>
+          </li>`,
+        )
+        .join("");
+      document.getElementById("filesBox").hidden = false;
+    })
+    .catch(() => {});
+}
 </script>
 
 </body>
