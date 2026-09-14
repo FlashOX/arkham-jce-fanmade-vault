@@ -226,8 +226,15 @@ const FILE_LABELS = [
   [/guide/i, "Guide"],
   [/planche/i, "Planche d'impression"],
   [/cartes|images/i, "Cartes (images)"],
+  [/archive.?complete/i, "Archive complète"],
 ];
-const labelFor = (name) => (FILE_LABELS.find(([re]) => re.test(name)) || [null, name])[1];
+const labelFor = (name) => {
+  const match = FILE_LABELS.find(([re]) => re.test(name));
+  if (match) return match[1];
+  // Certaines campagnes n'ont qu'un seul zip fourre-tout, sans suffixe distinctif.
+  if (/\.zip$/i.test(name)) return "Archive complète";
+  return name;
+};
 const formatSize = (bytes) => {
   const mb = bytes / 1048576;
   return mb >= 1 ? mb.toFixed(1) + " Mo" : (bytes / 1024).toFixed(0) + " Ko";
