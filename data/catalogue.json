@@ -634,7 +634,7 @@
     },
     {
       "id": "letrange-cas-du-docteur-jekyll-et-mr-hyde",
-      "titre": "L'Étrange Cas du Docteur Jekyll et Mr Hyde",
+      "titre": "L'Étrange Cas du Dr. Jekyll et Mr Hyde",
       "titreVO": "The Strange Case of Dr. Jekyll and Mr. Hyde",
       "type": "scenario",
       "cycle": "Cycle 8",
@@ -659,7 +659,7 @@
         "images": "ahlcg-fr-letrange-cas-du-docteur-jekyll-et-mr-hyde.zip"
       },
       "datePublication": "2021-03",
-      "sortKey": "L'Étrange Cas du Docteur Jekyll et Mr Hyde",
+      "sortKey": "L'Étrange Cas du Dr. Jekyll et Mr Hyde",
       "creator": "The Beard"
     },
     {
