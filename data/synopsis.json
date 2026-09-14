@@ -3,11 +3,7 @@
   "items": {
     "face-au-wendigo": {
       "resume": "Septembre 1926. Le procès du Dr Nadelmann vient de s'achever : rentré seul d'une expédition scientifique dans la vallée sauvage de la Nord-Hanninah, au Nord-Ouest canadien, l'anthropologue de Miskatonic a été acquitté de l'homicide de ses deux compagnons disparus — mais ses propos incohérents sur des « monstres mangeurs d'hommes » ont eu raison de sa santé mentale, et il est aujourd'hui interné à l'asile d'Arkham.\n\nSes proches, tout comme vous, ne se satisfont pas de cette version des faits. Sur les traces de la précédente expédition, vous embarquez à votre tour vers ce territoire hostile et mal cartographié, alors que l'hiver referme déjà son emprise sur la région. Ce que Nadelmann a vraiment vu dans la Nord-Hanninah reste à découvrir — et la vallée, elle, n'a pas fini de livrer ses secrets.",
-      "illustrations": [
-        "img/synopsis/face-au-wendigo/taiga-sinistre.jpg",
-        "img/synopsis/face-au-wendigo/intrigue-1a.jpg",
-        "img/synopsis/face-au-wendigo/acte-1a.jpg"
-      ]
+      "illustrations": []
     }
   }
 }
