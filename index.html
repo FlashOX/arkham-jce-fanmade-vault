@@ -224,7 +224,7 @@
 
   .card .thumb {
     position: relative;
-    height: 120px;
+    height: 138px;
     background: linear-gradient(135deg, var(--accent-soft), #14151a 70%);
     display: flex;
     align-items: center;
@@ -254,7 +254,7 @@
     bottom: 0;
     z-index: 2;
     padding: 10px 14px;
-    background: rgba(10, 10, 14, 0.72);
+    background: rgba(10, 10, 14, 0.5);
   }
 
   .card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; position: relative; }
@@ -476,6 +476,7 @@ const countEl = document.getElementById("count");
 const cycleInfoEl = document.getElementById("cycleInfo");
 let items = [];
 let cycles = {};
+let synopsisIds = new Set();
 
 const esc = (s) =>
   String(s ?? "").replace(/[&<>"']/g, (c) => ({
@@ -508,9 +509,10 @@ function render(list) {
         ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
         ${it.creator ? `<p class="creator">Par ${esc(it.creator)}</p>` : ""}
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
-        <div class="links">${!archive
-          ? `<span class="disabled" title="Pas encore hébergé">À venir</span>`
-          : ""}</div>
+        <div class="links">
+          ${synopsisIds.has(it.id) ? `<a href="item.html?id=${esc(it.id)}">En savoir plus →</a>` : ""}
+          ${!archive ? `<span class="disabled" title="Pas encore hébergé">À venir</span>` : ""}
+        </div>
         <div class="tags">
           ${chip("typeChip", chipKeyForType(it.type), TYPE_LABEL[it.type] || it.type, `color-${chipKeyForType(it.type)}`)}
           ${it.cycle ? chip("filterCycle", it.cycle, it.cycle, "cycle") : ""}
@@ -557,15 +559,18 @@ function applyFilters() {
   );
 }
 
-fetch("data/catalogue.json", { cache: "no-cache" })
-  .then((r) => {
+Promise.all([
+  fetch("data/catalogue.json", { cache: "no-cache" }).then((r) => {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return r.json();
-  })
-  .then((data) => {
+  }),
+  fetch("data/synopsis.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : { items: {} })),
+])
+  .then(([data, syn]) => {
     // Seules les fiches publiées apparaissent dans le catalogue.
     items = (data.items || []).filter((i) => i.publie !== false);
     cycles = data.cycles || {};
+    synopsisIds = new Set(Object.keys(syn.items || {}));
 
     applyFilters();
   })
