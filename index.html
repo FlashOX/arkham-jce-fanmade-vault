@@ -49,6 +49,14 @@
 
   a { color: inherit; }
 
+  /* Sticky header + filter bar */
+  .site-top {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--bg);
+  }
+
   /* Header */
   header {
     position: relative;
@@ -352,6 +360,7 @@
 </head>
 <body>
 
+<div class="site-top">
 <header>
   <a class="brand" href="./" aria-label="Les Archives Miskatoniques — accueil">
     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Les Archives Miskatoniques">
@@ -383,6 +392,7 @@
     <button type="button" class="type-chip color-autre" data-key="autre">Autres</button>
   </div>
   <span class="count" id="count"></span>
+</div>
 </div>
 
 <div class="cycle-info hidden" id="cycleInfo"></div>
