@@ -429,7 +429,7 @@
       "datePublication": "2019-04",
       "sortKey": "Festival",
       "creator": "Matthew Heiti",
-      "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
+      "traducteur": "Dandy Meeple, Michel Le Roy"
     },
     {
       "id": "fondations-cyclopeenes",
@@ -490,7 +490,8 @@
         "images": "ahlcg-fr-la-guerre-des-mondes-archive-complete.zip"
       },
       "datePublication": "2020-10",
-      "sortKey": "Guerre des Mondes"
+      "sortKey": "Guerre des Mondes",
+      "traducteur": "Mitch, Chertref"
     },
     {
       "id": "investigateurs-fan-made",
@@ -893,7 +894,8 @@
         "images": "ahlcg-fr-les-ombres-de-yog-sothoth-cartes.zip"
       },
       "datePublication": "2023-05",
-      "sortKey": "Ombres de Yog Sothoth"
+      "sortKey": "Ombres de Yog Sothoth",
+      "traducteur": "Fuhraih"
     },
     {
       "id": "le-palais-du-rire",
@@ -924,7 +926,7 @@
       "datePublication": "2019-04",
       "sortKey": "Palais du Rire",
       "creator": "Nathan Sauter",
-      "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
+      "traducteur": "Vinn Quest"
     },
     {
       "id": "le-pont-des-soupirs",
@@ -955,7 +957,7 @@
       "datePublication": "2019-04",
       "sortKey": "Pont des Soupirs",
       "creator": "Gelband",
-      "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
+      "traducteur": "The Flying fun"
     },
     {
       "id": "pulsions-cynegetiques",
@@ -1015,7 +1017,8 @@
         "images": "ahlcg-fr-quete-onirique-etendue-cartes-avec-bleed.zip"
       },
       "datePublication": null,
-      "sortKey": "Quête Onirique Étendue"
+      "sortKey": "Quête Onirique Étendue",
+      "traducteur": "blobe"
     },
     {
       "id": "renouveau-conspiration-dinnsmouth",
@@ -1070,7 +1073,8 @@
         "images": "ahlcg-fr-renouveau-devoreurs-des-reves-cartes-avec-bleed.zip"
       },
       "datePublication": null,
-      "sortKey": "Renouveau Dévoreurs des Rêves"
+      "sortKey": "Renouveau Dévoreurs des Rêves",
+      "traducteur": "Franck2655, Mendax"
     },
     {
       "id": "sang-verse-a-salem",
