@@ -289,13 +289,6 @@
   }
   .dl-btn:hover { background: var(--accent); color: var(--bg); }
   .dl-btn svg { width: 17px; height: 17px; }
-
-  .card .vo {
-    font-size: 0.78rem;
-    color: var(--text-dim);
-    font-style: italic;
-    margin: 0 0 8px;
-  }
   .card .creator {
     font-size: 0.78rem;
     color: var(--text-dim);
@@ -513,7 +506,6 @@ function render(list) {
         ${archive
           ? `<a class="dl-btn" href="${esc(IA_ARCHIVE(archive.id))}" title="${esc(it.titre)} - Archive complète" aria-label="${esc(it.titre)} - Archive complète"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
           : ""}
-        ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
         ${it.creator ? `<p class="creator">Par ${esc(it.creator)}</p>` : ""}
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
         <div class="links">
