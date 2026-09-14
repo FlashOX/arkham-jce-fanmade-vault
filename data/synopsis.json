@@ -2,7 +2,7 @@
   "_doc": "Résumés no-spoil + illustrations de mise en avant, par id de fiche (catalogue.json). Consommé par item.html. Un item absent de ce fichier n'a pas de page détail ni de lien « En savoir plus ».",
   "items": {
     "matiere-noire": {
-      "resume": "Une représentation unique de « Le Roi en Jaune » au Théâtre Ward d'Arkham, mise en scène par le mystérieux Nigel Engram — voilà qui a fait courir toute la ville. Mais la pièce n'est pas la seule chose qui inquiète : un machiniste a disparu avant la première, un musicien a été retrouvé mort deux semaines plus tôt, et un homme a été interné à l'asile après avoir divagué sur « le retour du Roi ».\n\nLe premier acte se révèle d'un ennui pénible — jusqu'à ce que les lumières s'éteignent sur vous pour de bon. Vous vous réveillez ailleurs : une capsule de sommeil cryogénique, l'année 2147, à bord d'un vaisseau à la dérive quelque part près de Neptune. Ce que la pièce a réellement déclenché reste entièrement à découvrir.",
+      "resume": "Matière Noire prend directement la suite de La Route de Carcosa : au sortir de la représentation du Roi en Jaune qui concluait cette campagne, vos investigateurs sombrent dans un sommeil profond... et se réveillent ailleurs.\n\nVous émergez d'une capsule de sommeil cryogénique à bord d'un vaisseau à la dérive, L'Épouvantail. Le panneau de contrôle affiche la date : 4 avril 2147, calendrier stellaire. Par le hublot, une sphère bleutée emplit le ciel : Neptune. Comment — et surtout pourquoi — vous voilà ici, à des décennies-lumière de tout ce que vous connaissiez, reste entièrement à découvrir.",
       "illustrations": []
     },
     "face-au-wendigo": {
