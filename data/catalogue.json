@@ -799,7 +799,7 @@
       "titreVO": null,
       "type": "scenario",
       "cycle": null,
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/noel-a-arkham.jpg",
@@ -809,12 +809,18 @@
       },
       "images": {
         "noBleed": false,
-        "bleed": false
+        "bleed": true
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null,
-      "datePublication": null,
+      "creator": "Frying Tonight",
+      "archive": {
+        "id": "ahlcg-fr-noel-a-arkham",
+        "guide": "ahlcg-fr-noel-a-arkham-guide.pdf",
+        "planche": "ahlcg-fr-noel-a-arkham-planche-a4.zip",
+        "images": "ahlcg-fr-noel-a-arkham-cartes-avec-bleed.zip"
+      },
+      "datePublication": "2025-10",
       "sortKey": "Noël à Arkham"
     },
     {
