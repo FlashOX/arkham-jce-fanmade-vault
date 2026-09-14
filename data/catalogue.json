@@ -1139,6 +1139,36 @@
       "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
     },
     {
+      "id": "la-sororite-des-secrets",
+      "titre": "La Sororité des Secrets",
+      "titreVO": null,
+      "type": "scenario",
+      "cycle": "Cycle 8",
+      "etat": "disponible",
+      "langue": "fr",
+      "publie": true,
+      "image": "img/thumbs/la-sororite-des-secrets.jpg",
+      "liens": {
+        "source": null,
+        "fichier": null
+      },
+      "images": {
+        "noBleed": true,
+        "bleed": false
+      },
+      "contactPanierPartage": null,
+      "commentaire": null,
+      "creator": "Live Moore",
+      "archive": {
+        "id": "ahlcg-fr-la-sororite-des-secrets",
+        "guide": "ahlcg-fr-la-sororite-des-secrets-guide.pdf",
+        "planche": null,
+        "images": "ahlcg-fr-la-sororite-des-secrets-cartes-sans-bleed.zip"
+      },
+      "datePublication": null,
+      "sortKey": "Sororité des Secrets"
+    },
+    {
       "id": "la-symphonie-derich-zann",
       "titre": "La Symphonie d'Erich Zann",
       "titreVO": "The Symphony of Erich Zann",
