@@ -15,6 +15,9 @@
     "Cycle 3": {
       "description": "Troisième lot de scénarios fan-made. Détails sur le Discord de la communauté."
     },
+    "Cycle 5": {
+      "description": "Cinquième lot de scénarios fan-made. Détails sur le Discord de la communauté."
+    },
     "Cycle 8": {
       "description": "Lot de scénarios fan-made numéroté « Cycle 8 ». Détails sur le Discord de la communauté."
     }
@@ -109,7 +112,7 @@
       "titre": "Au Coeur des Ténèbres",
       "titreVO": null,
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 3",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -337,7 +340,7 @@
       "titre": "Les Disparus de Killineq",
       "titreVO": null,
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 3",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -948,7 +951,7 @@
       "titre": "Quête Onirique Étendue",
       "titreVO": null,
       "type": "autre",
-      "cycle": null,
+      "cycle": "Cycle 5",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -978,7 +981,7 @@
       "titre": "Renouveau Conspiration d'Innsmouth",
       "titreVO": "Return to the Innsmouth Conspiracy",
       "type": "autre",
-      "cycle": null,
+      "cycle": "Cycle 5",
       "etat": "inconnu",
       "langue": "fr",
       "publie": true,
@@ -1003,7 +1006,7 @@
       "titre": "Renouveau Dévoreurs des Rêves",
       "titreVO": null,
       "type": "autre",
-      "cycle": null,
+      "cycle": "Cycle 5",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
