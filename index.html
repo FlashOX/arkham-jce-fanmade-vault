@@ -296,7 +296,17 @@
   .card .links:empty { display: none; }
   .card .links a { font-size: 0.82rem; color: var(--accent); text-decoration: none; }
   .card .links a:hover { text-decoration: underline; }
-  .card .links .disabled { color: var(--text-dim); cursor: not-allowed; }
+  .card .links .disabled {
+    color: var(--type-scenario-text);
+    background: var(--type-scenario-soft);
+    cursor: not-allowed;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
 
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
   .tag {
@@ -490,7 +500,7 @@ function render(list) {
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
         <div class="links">${archive
           ? archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}" target="_blank">Guide (PDF) ↓</a>` : ""
-          : `<span class="disabled" title="Pas encore hébergé">Fichier à venir</span>`}</div>
+          : `<span class="disabled" title="Pas encore hébergé">À venir</span>`}</div>
         <div class="tags">
           ${chip("typeChip", chipKeyForType(it.type), TYPE_LABEL[it.type] || it.type, `color-${chipKeyForType(it.type)}`)}
           ${it.cycle ? chip("filterCycle", it.cycle, it.cycle, "cycle") : ""}
