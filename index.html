@@ -575,6 +575,7 @@ document.getElementById("typeChips").addEventListener("click", (e) => {
   const key = btn.dataset.key;
   activeChipKey = key === "all" ? null : activeChipKey === key ? null : key;
   applyFilters();
+  window.scrollTo(0, 0);
 });
 
 // Clic sur une chip d'une carte -> ce seul critère (pas de combinatoire) ;
@@ -591,6 +592,7 @@ grid.addEventListener("click", (e) => {
     activeChipKey = null;
   }
   applyFilters();
+  window.scrollTo(0, 0);
 });
 
 // Titre / logo -> retour à l'accueil : listing complet, sans filtre ni recherche
@@ -600,7 +602,7 @@ document.querySelector(".brand").addEventListener("click", (e) => {
   activeCycle = null;
   document.getElementById("searchInput").value = "";
   applyFilters();
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo(0, 0);
 });
 </script>
 
