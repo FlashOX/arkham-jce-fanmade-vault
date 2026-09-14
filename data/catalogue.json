@@ -756,7 +756,7 @@
       "titreVO": null,
       "type": "scenario",
       "cycle": "Cycle 8",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/la-legende-du-cavalier-sans-tete.jpg",
@@ -766,13 +766,20 @@
       },
       "images": {
         "noBleed": false,
-        "bleed": false
+        "bleed": true
       },
       "contactPanierPartage": null,
       "commentaire": null,
-      "archive": null,
+      "archive": {
+        "id": "ahlcg-fr-la-legende-du-cavalier-sans-tete",
+        "guide": "ahlcg-fr-la-legende-du-cavalier-sans-tete-guide.pdf",
+        "planche": "ahlcg-fr-la-legende-du-cavalier-sans-tete-planche-a4.pdf",
+        "images": "ahlcg-fr-la-legende-du-cavalier-sans-tete-cartes-avec-bleed.zip"
+      },
       "datePublication": "2020-10",
-      "sortKey": "légende du cavalier sans tête"
+      "sortKey": "légende du cavalier sans tête",
+      "creator": "The Beard",
+      "traducteur": "Fuhraih"
     },
     {
       "id": "la-maison-voodoo",

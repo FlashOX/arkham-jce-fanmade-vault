@@ -1,6 +1,10 @@
 {
   "_doc": "Résumés no-spoil + illustrations de mise en avant, par id de fiche (catalogue.json). Consommé par item.html. Un item absent de ce fichier n'a pas de page détail ni de lien « En savoir plus ».",
   "items": {
+    "la-legende-du-cavalier-sans-tete": {
+      "resume": "Le shérif Engle vous tend une lettre, visiblement peu convaincu : « La police de New York classe l'affaire faute de preuves, et maintenant ce Van Brunt s'imagine avoir affaire à un croque-mitaine local ? Foutaises, si vous voulez mon avis. Mais il a demandé que vous vous en occupiez personnellement. À vous de voir si vous voulez perdre votre temps à errer dans les bois. »\n\nFrederic Van Brunt, riche propriétaire terrien d'origine néerlandaise, réclame votre aide contre un spectre que l'on surnomme le Cavalier Sans Tête. Il tient ce fantôme pour responsable de la disparition de quatre personnes en autant de semaines dans la vallée du Val Dormant. La police reste sceptique, mais Van Brunt n'en démord pas et propose une généreuse récompense pour vos services. Menace fantomatique ou non, l'affaire mérite bien qu'on y regarde de plus près.",
+      "illustrations": []
+    },
     "la-sororite-des-secrets": {
       "resume": "Samedi 25 juin 1927, Arkham. Vous recevez une invitation à la soirée Phi organisée par la famille Rowe — une ancienne sororité de l'Université Miskatonic. Étrange, car vous ne faisiez pas partie de ce cercle... jusqu'à ce que vous compreniez qu'il s'agit en réalité d'une proposition de travail : Mary Rowe, matriarche de la famille, requiert vos talents d'investigateurs pour cette réception, soupçonnant certaines de ses protégées de s'adonner à un culte interdit.\n\nLa sororité Phi, fondée pour aider les femmes d'Arkham dans leur vie professionnelle comme personnelle, est surveillée depuis quelque temps par Mary elle-même : de sombres rumeurs d'initiations immorales lui sont parvenues, et elle les prend très au sérieux. Vous revêtez vos plus beaux atours et vous rendez au manoir Rowe, bien décidés à démêler le vrai du faux.",
       "illustrations": []
