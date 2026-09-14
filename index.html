@@ -506,12 +506,11 @@ function render(list) {
       })()}
       <div class="card-body">
         ${archive
-          ? `<a class="dl-btn" href="${esc(IA_ARCHIVE(archive.id))}" title="${esc(it.titre)} - Archive complète" aria-label="${esc(it.titre)} - Archive complète"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
+          ? `<a class="dl-btn" href="${synopsisIds.has(it.id) ? `item.html?id=${esc(it.id)}` : esc(IA_ARCHIVE(archive.id))}" title="${esc(it.titre)}" aria-label="${esc(it.titre)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
           : ""}
         ${it.creator ? `<p class="creator">Par ${esc(it.creator)}</p>` : ""}
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
         <div class="links">
-          ${synopsisIds.has(it.id) ? `<a href="item.html?id=${esc(it.id)}">En savoir plus →</a>` : ""}
           ${!archive ? `<span class="disabled" title="Pas encore hébergé">À venir</span>` : ""}
         </div>
         <div class="tags">
