@@ -500,12 +500,15 @@ function render(list) {
       const archive = it.archive;
       return `
     <div class="card${!archive ? ' no-archive' : ''}">
-      <div class="thumb">
-        ${it.image
+      ${(() => {
+        const thumbInner = `${it.image
           ? `<img src="${esc(it.image)}" alt="Illustration — ${esc(it.titre)}" loading="lazy" ${["pulsions-cynegetiques", "noel-a-arkham"].includes(it.id) ? 'style="object-position: top"' : ""}>`
           : `<svg viewBox="0 0 24 24" fill="none" stroke="#e7e6e3" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M4 15l4-4 4 4 4-6 4 6"/></svg>`}
-        <div class="thumb-title"><h3>${esc(it.titre)}</h3></div>
-      </div>
+        <div class="thumb-title"><h3>${esc(it.titre)}</h3></div>`;
+        return synopsisIds.has(it.id)
+          ? `<a class="thumb" href="item.html?id=${esc(it.id)}" aria-label="En savoir plus — ${esc(it.titre)}">${thumbInner}</a>`
+          : `<div class="thumb">${thumbInner}</div>`;
+      })()}
       <div class="card-body">
         ${archive
           ? `<a class="dl-btn" href="${esc(IA_ARCHIVE(archive.id))}" title="${esc(it.titre)} - Archive complète" aria-label="${esc(it.titre)} - Archive complète"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
