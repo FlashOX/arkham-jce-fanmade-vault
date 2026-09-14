@@ -27,9 +27,15 @@ Idées et chantiers pas encore planifiés. Rien d'urgent ici.
       les séparateurs (intercalaires) et le guide au format cycle complet
       (non découpé par scénario) — ce dernier contient les crédits et
       remerciements globaux, absents des guides par scénario.
-- [ ] **Crédits (traduction, test, illustration...)** : réfléchir à comment les
-      matérialiser sur le site fiche par fiche (actuellement seulement
-      `creator` dans les métadonnées archive.org, pas affiché sur la carte).
+- [x] **Crédits (traduction, test, illustration...)** : section « Crédits »
+      ajoutée sur la page détail (item.html), avec auteur original et
+      traducteur (champ `traducteur` dans catalogue.json).
+- [ ] **Vérifier auteurs/traducteurs de tout le catalogue** : plusieurs erreurs
+      trouvées (La Guerre des Mondes marquée à tort « Création originale FR. »,
+      La Maison Vaudou sans creator à cause d'un id différent entre
+      catalogue.json et print-manifest.json — corrigés). Repasser sur
+      l'ensemble des fiches pour vérifier creator/traducteur, notamment les
+      items sans traducteur renseigné (peut-être manquant plutôt qu'absent).
 - [ ] **Pulsions Cynégétiques : préparer un PDF des images** — la fiche n'a pas
       de planche (celle-ci a été retirée), mais pourrait avoir un document
       montrant les cartes (galerie/imposé) pour faciliter la consultation avant
