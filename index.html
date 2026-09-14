@@ -245,13 +245,26 @@
     background: rgba(0, 0, 0, 0.4);
   }
 
+  /* Cartouche foncé translucide sous le titre, pour rester lisible quelle
+     que soit l'image de fond (claire, sombre, contrastée...). */
+  .thumb-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 10px 14px;
+    background: rgba(10, 10, 14, 0.72);
+  }
+
   .card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; position: relative; }
 
   .card h3 {
     font-family: 'Spectral', serif;
     font-size: 1.15rem;
-    margin: 0 0 2px;
-    padding-right: 42px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   }
 
   .dl-btn {
@@ -284,7 +297,6 @@
     color: var(--text-dim);
     margin: 0 0 8px;
   }
-  .card h3:last-child { margin-bottom: 8px; }
 
   .card .note {
     font-size: 0.8rem;
@@ -487,12 +499,12 @@ function render(list) {
         ${it.image
           ? `<img src="${esc(it.image)}" alt="Illustration — ${esc(it.titre)}" loading="lazy" ${["pulsions-cynegetiques", "noel-a-arkham"].includes(it.id) ? 'style="object-position: top"' : ""}>`
           : `<svg viewBox="0 0 24 24" fill="none" stroke="#e7e6e3" stroke-width="1.4"><path d="M4 4h16v16H4z"/><path d="M4 15l4-4 4 4 4-6 4 6"/></svg>`}
+        <div class="thumb-title"><h3>${esc(it.titre)}</h3></div>
       </div>
       <div class="card-body">
         ${archive
           ? `<a class="dl-btn" href="${esc(IA_ARCHIVE(archive.id))}" title="${esc(it.titre)} - Archive complète" aria-label="${esc(it.titre)} - Archive complète"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg></a>`
           : ""}
-        <h3>${esc(it.titre)}</h3>
         ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
         ${it.creator ? `<p class="creator">Par ${esc(it.creator)}</p>` : ""}
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
