@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://flashox.github.io/arkham-jce-fanmade-vault/data/catalogue.schema.json",
+  "$id": "https://arkhamjcefanmade.github.io/miskat-arkiv/data/catalogue.schema.json",
   "title": "Catalogue de contenu fan-made Arkham JCE",
   "type": "object",
   "required": ["meta", "items"],

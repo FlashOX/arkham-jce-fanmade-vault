@@ -59,7 +59,7 @@ créé. `npm run validate` vérifie que `archive.id` respecte la convention.
      --metadata="subject:français" \
      --metadata="subject:Cycle 1" \
      --metadata="date:2024" \
-     --metadata="description:Scénario indépendant fan-made pour «Horreur à Arkham : le JCE». Cycle 1 de la Ligue des Joueurs Francophones. Source : https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made — Fiche : https://flashox.github.io/arkham-jce-fanmade-vault/" \
+     --metadata="description:Scénario indépendant fan-made pour «Horreur à Arkham : le JCE». Cycle 1 de la Ligue des Joueurs Francophones. Source : https://arkhamhorrorfr.forumactif.com/t2401-cycle-1-de-scenarios-fan-made — Fiche : https://arkhamjcefanmade.github.io/miskat-arkiv/" \
      --retries 5
    ```
 
@@ -92,7 +92,7 @@ ia upload ahlcg-fr-matiere-noire \
   --metadata="language:fre" \
   --metadata="creator:..." \
   --metadata="subject:Arkham Horror LCG" --metadata="subject:fan-made" --metadata="subject:campagne" \
-  --metadata="description:Campagne fan-made complète pour «Horreur à Arkham : le JCE». Source : Discord de la communauté. Fiche : https://flashox.github.io/arkham-jce-fanmade-vault/" \
+  --metadata="description:Campagne fan-made complète pour «Horreur à Arkham : le JCE». Source : Discord de la communauté. Fiche : https://arkhamjcefanmade.github.io/miskat-arkiv/" \
   --no-derive --retries 8
 ```
 

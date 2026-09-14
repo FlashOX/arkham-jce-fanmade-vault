@@ -12,7 +12,7 @@ import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const STAGE = path.join(ROOT, "dist", "print");
-const SITE = "https://flashox.github.io/arkham-jce-fanmade-vault/";
+const SITE = "https://arkhamjcefanmade.github.io/miskat-arkiv/";
 
 const args = process.argv.slice(2);
 const run = args.includes("--run");
