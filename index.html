@@ -263,13 +263,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
     border-radius: 7px;
-    color: var(--text-dim);
+    color: #cabfe0;
     text-decoration: none;
-    transition: color 0.15s, border-color 0.15s;
+    transition: background 0.15s, color 0.15s;
   }
-  .dl-btn:hover { color: var(--text); border-color: var(--accent); }
+  .dl-btn:hover { background: var(--accent); color: var(--bg); }
   .dl-btn svg { width: 17px; height: 17px; }
 
   .card .vo {
@@ -317,11 +318,9 @@
     border-radius: 999px;
     background: var(--accent-soft);
     color: #cabfe0;
-    cursor: pointer;
+    cursor: default;
     appearance: none;
-    transition: filter 0.12s;
   }
-  .tag:hover { filter: brightness(1.28); }
   .tag.active { box-shadow: inset 0 0 0 1px currentColor; }
   .tag.cycle { background: var(--type-all-soft); color: var(--type-all-text); }
   /* Couleur par type, en écho aux chips de filtrage de l'en-tête. */
@@ -455,9 +454,7 @@ const TYPE_CHIPS = [
 const CHIP_BY_KEY = Object.fromEntries(TYPE_CHIPS.map((c) => [c.key, c]));
 const chipKeyForType = (type) => TYPE_CHIPS.find((c) => c.types.includes(type))?.key || null;
 let activeChipKey = null;
-let activeCycle = null; // filtre cycle : plus de dropdown, piloté par le clic sur le tag « Cycle N » d'une carte
-const IA_DOWNLOAD = (id, f) =>
-  `https://archive.org/download/${encodeURIComponent(id)}/${encodeURIComponent(f)}`;
+let activeCycle = null; // filtre cycle : conservé pour usage futur, plus déclenchable depuis l'UI (tags non cliquables)
 // zip généré à la volée par archive.org avec tous les fichiers de l'item
 const IA_ARCHIVE = (id) => `https://archive.org/compress/${encodeURIComponent(id)}`;
 
@@ -475,9 +472,9 @@ const esc = (s) =>
 
 function render(list) {
   const chip = (fk, fv, label, cls) =>
-    `<button type="button" class="tag${cls ? " " + cls : ""}${
+    `<span class="tag${cls ? " " + cls : ""}${
       { typeChip: activeChipKey, filterCycle: activeCycle }[fk] === fv ? " active" : ""
-    }" data-fk="${fk}" data-fv="${esc(fv)}">${esc(label)}</button>`;
+    }">${esc(label)}</span>`;
 
   emptyEl.classList.toggle("hidden", list.length > 0);
   countEl.textContent = `${list.length} / ${items.length} fiche${items.length > 1 ? "s" : ""}`;
@@ -499,9 +496,9 @@ function render(list) {
         ${it.titreVO ? `<p class="vo">VO : ${esc(it.titreVO)}</p>` : ""}
         ${it.creator ? `<p class="creator">Par ${esc(it.creator)}</p>` : ""}
         ${it.commentaire ? `<p class="note">${esc(it.commentaire)}</p>` : ""}
-        <div class="links">${archive
-          ? archive.guide ? `<a href="${esc(IA_DOWNLOAD(archive.id, archive.guide))}" target="_blank">Guide (PDF) ↓</a>` : ""
-          : `<span class="disabled" title="Pas encore hébergé">À venir</span>`}</div>
+        <div class="links">${!archive
+          ? `<span class="disabled" title="Pas encore hébergé">À venir</span>`
+          : ""}</div>
         <div class="tags">
           ${chip("typeChip", chipKeyForType(it.type), TYPE_LABEL[it.type] || it.type, `color-${chipKeyForType(it.type)}`)}
           ${it.cycle ? chip("filterCycle", it.cycle, it.cycle, "cycle") : ""}
@@ -579,23 +576,6 @@ document.getElementById("typeChips").addEventListener("click", (e) => {
     activeCycle = null;
   } else {
     activeChipKey = activeChipKey === key ? null : key;
-  }
-  applyFilters();
-  window.scrollTo(0, 0);
-});
-
-// Clic sur une chip d'une carte -> ce seul critère (pas de combinatoire) ;
-// re-clic sur la même valeur -> on l'enlève.
-grid.addEventListener("click", (e) => {
-  const chip = e.target.closest(".tag[data-fk]");
-  if (!chip) return;
-  const { fk, fv } = chip.dataset;
-  if (fk === "typeChip") {
-    activeChipKey = activeChipKey === fv ? null : fv;
-    activeCycle = null;
-  } else {
-    activeCycle = activeCycle === fv ? null : fv;
-    activeChipKey = null;
   }
   applyFilters();
   window.scrollTo(0, 0);
