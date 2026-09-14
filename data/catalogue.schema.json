@@ -56,19 +56,19 @@
         },
         "planche": {
           "type": ["string", "null"],
-          "pattern": "\\.pdf$",
-          "description": "Nom du fichier planche d'impression A4 (PDF imposé, traits de coupe, fond perdu), ou null si pas encore disponible."
+          "pattern": "\\.(pdf|zip)$",
+          "description": "Nom du fichier planche d'impression A4 (PDF imposé, ou zip de plusieurs planches), ou null si pas encore disponible."
         },
         "images": {
-          "type": "string",
+          "type": ["string", "null"],
           "pattern": "\\.zip$",
-          "description": "Nom du zip des images de cartes (une par face, avec fond perdu)."
+          "description": "Nom du zip des images de cartes (une par face, avec fond perdu), ou null si pas fourni séparément."
         }
       }
     },
     "item": {
       "type": "object",
-      "required": ["id", "titre", "type", "cycle", "etat", "langue", "publie", "liens"],
+      "required": ["id", "titre", "type", "cycle", "etat", "langue", "publie", "liens", "sortKey", "datePublication"],
       "additionalProperties": false,
       "properties": {
         "id": {
@@ -141,7 +141,20 @@
           }
         },
         "contactPanierPartage": { "type": ["string", "null"] },
-        "commentaire": { "type": ["string", "null"] }
+        "commentaire": { "type": ["string", "null"] },
+        "creator": {
+          "type": "string",
+          "description": "Créateur / traducteur du contenu. Champ optionnel (absent si inconnu)."
+        },
+        "datePublication": {
+          "type": ["string", "null"],
+          "description": "Date de publication du contenu (format 'AAAA-MM'), ou null si inconnue.",
+          "pattern": "^\\d{4}-\\d{2}$"
+        },
+        "sortKey": {
+          "type": "string",
+          "description": "Clé de tri alphabétique (titre sans article initial 'Le/La/Les/L''), utilisée pour l'ordre d'affichage."
+        }
       }
     }
   }
