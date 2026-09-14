@@ -31,11 +31,12 @@ const q = (s) => (/[^\w@%+=:,./-]/.test(s) ? `"${s.replace(/(["$`\\])/g, "\\$1")
 const mo = (n) => (n / 1048576).toFixed(0) + " Mo";
 
 // résout `ia` (PATH, sinon shim scoop)
+const HOME = process.env.USERPROFILE || process.env.HOME || "";
 const IA_CANDIDATES = [
   process.env.IA_BIN, "ia",
-  "C:/Users/nasso/scoop/shims/ia.exe",
-  "C:/Users/nasso/scoop/shims/ia.cmd",
-  "C:/Users/nasso/scoop/persist/python/Scripts/ia.exe",
+  HOME && path.join(HOME, "scoop/shims/ia.exe"),
+  HOME && path.join(HOME, "scoop/shims/ia.cmd"),
+  HOME && path.join(HOME, "scoop/persist/python/Scripts/ia.exe"),
 ].filter(Boolean);
 function resolveIa() {
   for (const bin of IA_CANDIDATES) {

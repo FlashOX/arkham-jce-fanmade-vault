@@ -21,10 +21,11 @@ const ROOT = path.resolve(import.meta.dirname, "..");
 const OUT = path.join(ROOT, "dist", "print");
 const MANIFEST = path.join(ROOT, "data", "print-manifest.json");
 
+const HOME = process.env.USERPROFILE || process.env.HOME || "";
 const SEVENZIP_CANDIDATES = [
   process.env.SEVENZIP,
   "7z",
-  "C:/Users/nasso/scoop/shims/7z.exe",
+  HOME && path.join(HOME, "scoop/shims/7z.exe"),
   "C:/Program Files/7-Zip/7z.exe",
 ].filter(Boolean);
 
@@ -41,7 +42,7 @@ function runFrom(candidates, args, opts) {
 const sevenzip = (args, opts) => runFrom(SEVENZIP_CANDIDATES, args, opts);
 const pdfunite = (args, opts) =>
   runFrom(
-    [process.env.PDFUNITE, "pdfunite", "C:/Users/nasso/scoop/shims/pdfunite.exe"],
+    [process.env.PDFUNITE, "pdfunite", HOME && path.join(HOME, "scoop/shims/pdfunite.exe")],
     args,
     opts,
   );
@@ -54,6 +55,11 @@ const dirSize = (d) =>
   }, 0);
 
 const manifest = JSON.parse(readFileSync(MANIFEST, "utf8"));
+const LOCAL_MANIFEST = path.join(ROOT, "data", "print-manifest.local.json");
+if (existsSync(LOCAL_MANIFEST)) {
+  const local = JSON.parse(readFileSync(LOCAL_MANIFEST, "utf8"));
+  Object.assign(manifest.roots, local.roots);
+}
 const only = process.argv.slice(2);
 const entries = Object.entries(manifest.items).filter(([id]) => !only.length || only.includes(id));
 if (!entries.length) {

@@ -1,8 +1,8 @@
 {
-  "_doc": "Mapping fiche du catalogue -> fichiers sources pour les items archive.org. Chemins relatifs à roots[<source>]. Consommé par tools/build-print-items.mjs. NON versionné en dur : à ajuster selon l'emplacement local des dossiers.",
+  "_doc": "Mapping fiche du catalogue -> fichiers sources pour les items archive.org. Chemins relatifs à roots[<source>]. Consommé par tools/build-print-items.mjs. Les valeurs ci-dessous sont des placeholders : chaque contributeur définit ses vrais chemins locaux dans data/print-manifest.local.json (non versionné, voir .gitignore).",
   "roots": {
-    "shomm": "C:/Users/nasso/Documents/HaA/Fan-made/Contenu de Shomm",
-    "mysthrestis": "C:/Users/nasso/Documents/HaA/Fan-made/Contenu de Mysthrestis"
+    "shomm": "<chemin local vers le dossier « Contenu de Shomm »>",
+    "mysthrestis": "<chemin local vers le dossier « Contenu de Mysthrestis »>"
   },
   "items": {
     "face-au-wendigo": {

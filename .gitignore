@@ -15,3 +15,6 @@ credentials*
 
 # staging local (upload archive.org)
 dist/
+
+# chemins locaux (nom de machine/dossiers perso) — voir print-manifest.json
+data/print-manifest.local.json
