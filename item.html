@@ -16,6 +16,17 @@
     --text-dim: #9a9aa2;
     --accent: #7d6b9e;
     --accent-soft: rgba(125,107,158,0.16);
+
+    --type-campagne-soft: var(--accent-soft);
+    --type-campagne-text: #cabfe0;
+    --type-scenario-soft: rgba(179,116,63,0.18);
+    --type-scenario-text: #e3b98a;
+    --type-investigateurs-soft: rgba(74,143,149,0.18);
+    --type-investigateurs-text: #a9d8da;
+    --type-autre-soft: rgba(125,143,94,0.18);
+    --type-autre-text: #c3d1a8;
+    --type-all-soft: rgba(231,230,227,0.12);
+    --type-all-text: var(--text);
   }
   * { box-sizing: border-box; }
   body {
@@ -51,6 +62,11 @@
     background: var(--accent-soft);
     color: #cabfe0;
   }
+  .tag.color-campagne { background: var(--type-campagne-soft); color: var(--type-campagne-text); }
+  .tag.color-scenario { background: var(--type-scenario-soft); color: var(--type-scenario-text); }
+  .tag.color-investigateurs { background: var(--type-investigateurs-soft); color: var(--type-investigateurs-text); }
+  .tag.color-autre { background: var(--type-autre-soft); color: var(--type-autre-text); }
+  .tag.cycle { background: var(--type-all-soft); color: var(--type-all-text); }
 
   .dl-btn {
     display: inline-flex;
@@ -152,6 +168,7 @@ const TYPE_LABEL = {
   "cartes-joueur": "Cartes joueur",
   autre: "Autre",
 };
+const chipKeyForType = (type) => (["campagne", "scenario", "investigateurs"].includes(type) ? type : "autre");
 const IA_ARCHIVE = (id) => `https://archive.org/compress/${encodeURIComponent(id)}`;
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -174,8 +191,8 @@ Promise.all([
 
     const meta = document.getElementById("meta");
     meta.innerHTML = `
-      <span class="tag">${esc(TYPE_LABEL[it.type] || it.type)}</span>
-      ${it.cycle ? `<span class="tag">${esc(it.cycle)}</span>` : ""}
+      <span class="tag color-${chipKeyForType(it.type)}">${esc(TYPE_LABEL[it.type] || it.type)}</span>
+      ${it.cycle ? `<span class="tag cycle">${esc(it.cycle)}</span>` : ""}
       ${it.titreVO ? `<span class="vo">VO : ${esc(it.titreVO)}</span>` : ""}
     `;
 
