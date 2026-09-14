@@ -660,7 +660,8 @@
       },
       "datePublication": "2021-03",
       "sortKey": "L'Étrange Cas du Dr. Jekyll et Mr Hyde",
-      "creator": "The Beard"
+      "creator": "The Beard",
+      "traducteur": "gsevin"
     },
     {
       "id": "levenement-de-svalbard",
@@ -861,7 +862,8 @@
         "images": "ahlcg-fr-noel-a-arkham-cartes-avec-bleed.zip"
       },
       "datePublication": "2025-10",
-      "sortKey": "Noël à Arkham"
+      "sortKey": "Noël à Arkham",
+      "traducteur": "YOubouze"
     },
     {
       "id": "les-ombres-de-yog-sothoth",
