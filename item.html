@@ -59,9 +59,12 @@
     text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   }
 
-  .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 24px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 6px; }
   .meta .vo { color: var(--text-dim); font-style: italic; font-size: 0.9rem; }
-  .meta .creator { color: var(--text-dim); font-size: 0.9rem; }
+
+  .byline { font-size: 1.02rem; margin-bottom: 22px; }
+  .byline .label { color: var(--text-dim); }
+  .byline strong { color: #cabfe0; font-weight: 600; }
 
   .dl-btn {
     display: inline-flex;
@@ -82,13 +85,13 @@
 
   .resume { font-size: 0.98rem; line-height: 1.7; white-space: pre-line; margin-bottom: 32px; }
 
-  .files {
+  .box {
     border: 1px solid var(--border);
     border-radius: 8px;
     margin-bottom: 32px;
     overflow: hidden;
   }
-  .files h2 {
+  .box h2 {
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -99,8 +102,8 @@
     background: var(--bg-elevated);
     border-bottom: 1px solid var(--border);
   }
-  .files ul { list-style: none; margin: 0; padding: 0; }
-  .files li {
+  .box ul { list-style: none; margin: 0; padding: 0; }
+  .box li {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -109,11 +112,13 @@
     border-bottom: 1px solid var(--border);
     font-size: 0.88rem;
   }
-  .files li:last-child { border-bottom: none; }
-  .files .fname { color: var(--text); }
-  .files .fsize { color: var(--text-dim); font-size: 0.8rem; white-space: nowrap; }
-  .files a.fdl { color: var(--accent); text-decoration: none; white-space: nowrap; }
-  .files a.fdl:hover { text-decoration: underline; }
+  .box li:last-child { border-bottom: none; }
+  .box .fname { color: var(--text); }
+  .box .fsize { color: var(--text-dim); font-size: 0.8rem; white-space: nowrap; }
+  .box a.fdl { color: var(--accent); text-decoration: none; white-space: nowrap; }
+  .box a.fdl:hover { text-decoration: underline; }
+  .box .clabel { color: var(--text-dim); }
+  .box .cvalue { color: var(--text); text-align: right; }
 
   .gallery {
     display: grid;
@@ -141,12 +146,17 @@
     <div class="cover-title"><h1 id="titre"></h1></div>
   </div>
   <div class="meta" id="meta"></div>
+  <div class="byline" id="byline"></div>
   <div id="dlWrap"></div>
-  <div class="files" id="filesBox" hidden>
+  <div class="resume" id="resume"></div>
+  <div class="box" id="filesBox" hidden>
     <h2>Fichiers disponibles</h2>
     <ul id="filesList"></ul>
   </div>
-  <div class="resume" id="resume"></div>
+  <div class="box" id="creditsBox" hidden>
+    <h2>Crédits</h2>
+    <ul id="creditsList"></ul>
+  </div>
   <div class="gallery" id="gallery"></div>
 </main>
 <p id="status">Chargement…</p>
@@ -181,10 +191,12 @@ Promise.all([
     }
 
     const meta = document.getElementById("meta");
-    meta.innerHTML = `
-      ${it.titreVO ? `<span class="vo">VO : ${esc(it.titreVO)}</span>` : ""}
-      ${it.creator ? `<span class="creator">Par ${esc(it.creator)}</span>` : ""}
-    `;
+    meta.innerHTML = it.titreVO ? `<span class="vo">VO : ${esc(it.titreVO)}</span>` : "";
+
+    const byline = document.getElementById("byline");
+    byline.innerHTML = it.creator
+      ? `<span class="label">Par</span> <strong>${esc(it.creator)}</strong>`
+      : "";
 
     const dlWrap = document.getElementById("dlWrap");
     dlWrap.innerHTML = it.archive
@@ -192,6 +204,16 @@ Promise.all([
       : `<span style="color:var(--text-dim); font-size:0.88rem;">Pas encore hébergé — bientôt disponible.</span>`;
 
     document.getElementById("resume").textContent = s.resume;
+
+    const creditRows = [];
+    if (it.creator) creditRows.push(["Auteur original", it.creator]);
+    if (it.traducteur) creditRows.push(["Traduction", it.traducteur]);
+    if (creditRows.length) {
+      document.getElementById("creditsList").innerHTML = creditRows
+        .map(([label, value]) => `<li><span class="clabel">${esc(label)}</span><span class="cvalue">${esc(value)}</span></li>`)
+        .join("");
+      document.getElementById("creditsBox").hidden = false;
+    }
 
     const gallery = document.getElementById("gallery");
     gallery.innerHTML = (s.illustrations || [])

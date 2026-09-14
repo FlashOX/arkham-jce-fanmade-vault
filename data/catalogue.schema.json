@@ -144,7 +144,11 @@
         "commentaire": { "type": ["string", "null"] },
         "creator": {
           "type": "string",
-          "description": "Créateur / traducteur du contenu. Champ optionnel (absent si inconnu)."
+          "description": "Auteur original (VO) du contenu. Champ optionnel (absent si inconnu)."
+        },
+        "traducteur": {
+          "type": "string",
+          "description": "Traducteur/adaptateur FR du contenu. Absent si création originale française ou traducteur inconnu."
         },
         "datePublication": {
           "type": ["string", "null"],

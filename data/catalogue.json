@@ -75,7 +75,8 @@
       },
       "datePublication": "2020-10",
       "sortKey": "Alice au Pays des Merveilles",
-      "creator": "The Beard"
+      "creator": "The Beard",
+      "traducteur": "Franck2655 et Chertref"
     },
     {
       "id": "au-bord-du-gouffre",
@@ -189,7 +190,8 @@
       },
       "datePublication": "2021-03",
       "sortKey": "Chiens de Tindalos",
-      "creator": "StonePenguin"
+      "creator": "StonePenguin",
+      "traducteur": "Mitch"
     },
     {
       "id": "circus-ex-mortis",
@@ -219,7 +221,8 @@
       },
       "datePublication": "2023-08",
       "sortKey": "Circus Ex Mortis",
-      "creator": "The Beard"
+      "creator": "The Beard",
+      "traducteur": "JohnSG1"
     },
     {
       "id": "dimensions-etranges",
@@ -303,7 +306,8 @@
       },
       "datePublication": "2021-03",
       "sortKey": "Couleur Tombée du Ciel",
-      "creator": "Joe Ehret"
+      "creator": "Joe Ehret",
+      "traducteur": "Vinn Quest"
     },
     {
       "id": "desolation-a-bord-du-constellation",
@@ -333,7 +337,8 @@
       },
       "datePublication": "2021-03",
       "sortKey": "Désolation à Bord du Constellation",
-      "creator": "Ian Martin, Scott Armstrong, Nicholas Kory et Sean Switajewski"
+      "creator": "Ian Martin, Scott Armstrong, Nicholas Kory et Sean Switajewski",
+      "traducteur": "Vinn Quest"
     },
     {
       "id": "les-disparus-de-killineq",
@@ -423,7 +428,8 @@
       },
       "datePublication": "2019-04",
       "sortKey": "Festival",
-      "creator": "Matthew Heiti"
+      "creator": "Matthew Heiti",
+      "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
     },
     {
       "id": "fondations-cyclopeenes",
@@ -453,7 +459,8 @@
       },
       "datePublication": "2021-05",
       "sortKey": "Fondations Cyclopéennes",
-      "creator": "The Beard"
+      "creator": "The Beard",
+      "traducteur": "Franck2655 et Renaud Flavigny"
     },
     {
       "id": "la-guerre-des-mondes",
@@ -598,7 +605,8 @@
       },
       "datePublication": "2019-04",
       "sortKey": "Jouet d'une Illusion",
-      "creator": "Keith Owens"
+      "creator": "Keith Owens",
+      "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
     },
     {
       "id": "lappel-du-porte-peste",
@@ -682,7 +690,8 @@
       },
       "datePublication": "2021-03",
       "sortKey": "L'Évènement de Svalbard",
-      "creator": "StonePenguin"
+      "creator": "StonePenguin",
+      "traducteur": "Mitch"
     },
     {
       "id": "lhotel-du-grand-chene",
@@ -712,7 +721,8 @@
       },
       "datePublication": "2021-03",
       "sortKey": "L'Hôtel du Grand Chêne",
-      "creator": "Argus The Cat"
+      "creator": "Argus The Cat",
+      "traducteur": "Baron Mundus et Mitch"
     },
     {
       "id": "lombre-des-grands-anciens",
@@ -819,7 +829,8 @@
       },
       "datePublication": "2020-10",
       "sortKey": "Matière Noire",
-      "creator": "Axolotl"
+      "creator": "Axolotl",
+      "traducteur": "Chertref"
     },
     {
       "id": "noel-a-arkham",
@@ -909,7 +920,8 @@
       },
       "datePublication": "2019-04",
       "sortKey": "Palais du Rire",
-      "creator": "Nathan Sauter"
+      "creator": "Nathan Sauter",
+      "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
     },
     {
       "id": "le-pont-des-soupirs",
@@ -939,7 +951,8 @@
       },
       "datePublication": "2019-04",
       "sortKey": "Pont des Soupirs",
-      "creator": "Gelband"
+      "creator": "Gelband",
+      "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
     },
     {
       "id": "pulsions-cynegetiques",
@@ -1084,7 +1097,8 @@
       },
       "datePublication": "2021-03",
       "sortKey": "Sang Versé à Salem",
-      "creator": "Shiver02"
+      "creator": "Shiver02",
+      "traducteur": "Baron Mundus"
     },
     {
       "id": "les-seuils-de-la-croyance",
@@ -1114,7 +1128,8 @@
       },
       "datePublication": "2019-04",
       "sortKey": "Seuils de la Croyance",
-      "creator": "Dee Noaloha"
+      "creator": "Dee Noaloha",
+      "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
     },
     {
       "id": "la-symphonie-derich-zann",
@@ -1144,7 +1159,8 @@
       },
       "datePublication": "2021-03",
       "sortKey": "Symphonie d'Erich Zann",
-      "creator": "Axolotl"
+      "creator": "Axolotl",
+      "traducteur": "Vinn Quest"
     },
     {
       "id": "le-wyrm-de-pensher",
@@ -1174,7 +1190,8 @@
       },
       "datePublication": "2019-04",
       "sortKey": "Wyrm de Pensher",
-      "creator": "redben"
+      "creator": "redben",
+      "traducteur": "Ligue des Joueurs Francophones d'Arkham JCE"
     }
   ]
 }
