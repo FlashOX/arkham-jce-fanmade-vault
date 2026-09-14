@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liste complète — Internet Archive | Les Archives Miskatoniques</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Spectral:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #17181c;
+    --bg-elevated: #1f2025;
+    --border: #2c2d34;
+    --text: #e7e6e3;
+    --text-dim: #9a9aa2;
+    --accent: #7d6b9e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Work Sans', sans-serif;
+  }
+  a { color: var(--accent); }
+  header {
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+  }
+  header a.back { font-size: 0.85rem; color: var(--text-dim); text-decoration: none; }
+  header a.back:hover { color: var(--text); }
+  h1 {
+    font-family: 'Spectral', serif;
+    font-size: 1.4rem;
+    margin: 10px 0 0;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 32px 60px;
+  }
+  p.intro { color: var(--text-dim); font-size: 0.9rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { color: var(--text-dim); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  td.pending { color: var(--text-dim); font-style: italic; }
+  #status { color: var(--text-dim); padding: 24px 32px; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="./">← Retour au catalogue</a>
+  <h1>Liste complète — Internet Archive</h1>
+</header>
+
+<main id="main" hidden>
+  <p class="intro">Une ligne par fiche publiée, avec le lien vers sa page Internet Archive et le zip complet (guide, planche et cartes) généré à la volée par archive.org.</p>
+  <table>
+    <thead>
+      <tr><th>Titre</th><th>Type</th><th>Page Internet Archive</th><th>Zip complet</th></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+</main>
+<p id="status">Chargement…</p>
+
+<script>
+const TYPE_LABEL = {
+  scenario: "Scénario",
+  campagne: "Campagne",
+  investigateurs: "Investigateurs",
+  "cartes-joueur": "Cartes joueur",
+  autre: "Autre",
+};
+const IA_DETAILS = (id) => `https://archive.org/details/${encodeURIComponent(id)}`;
+const IA_ARCHIVE = (id) => `https://archive.org/compress/${encodeURIComponent(id)}`;
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+fetch("data/catalogue.json", { cache: "no-cache" })
+  .then((r) => r.json())
+  .then((cat) => {
+    const items = cat.items
+      .filter((it) => it.publie)
+      .sort((a, b) => a.sortKey.localeCompare(b.sortKey, "fr"));
+
+    document.getElementById("rows").innerHTML = items
+      .map((it) => {
+        const type = TYPE_LABEL[it.type] || it.type;
+        if (!it.archive) {
+          return `<tr><td>${esc(it.titre)}</td><td>${esc(type)}</td><td class="pending" colspan="2">Pas encore hébergé</td></tr>`;
+        }
+        return `<tr>
+          <td>${esc(it.titre)}</td>
+          <td>${esc(type)}</td>
+          <td><a href="${esc(IA_DETAILS(it.archive.id))}" target="_blank" rel="noopener">${esc(it.archive.id)}</a></td>
+          <td><a href="${esc(IA_ARCHIVE(it.archive.id))}" target="_blank" rel="noopener">Télécharger ↓</a></td>
+        </tr>`;
+      })
+      .join("");
+
+    document.getElementById("status").hidden = true;
+    document.getElementById("main").hidden = false;
+  })
+  .catch((e) => {
+    document.getElementById("status").textContent = "Impossible de charger le catalogue (" + e.message + ").";
+  });
+</script>
+
+</body>
+</html>
