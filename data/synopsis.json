@@ -2,7 +2,7 @@
   "_doc": "Résumés no-spoil + illustrations de mise en avant, par id de fiche (catalogue.json). Consommé par item.html. Un item absent de ce fichier n'a pas de page détail ni de lien « En savoir plus ».",
   "items": {
     "renouveau-conspiration-dinnsmouth": {
-      "resume": "Renouveau – Conspiration d'Innsmouth est une extension fan-made qui modifie et développe la campagne officielle La Conspiration d'Innsmouth : cinq sets de rencontre entièrement nouveaux remplacent ceux de la campagne d'origine (plus un sixième, combinable avec l'original), accompagnés de nouvelles cartes Scénario et Joueur pour personnaliser vos decks Investigateur. Elle se joue par-dessus une campagne La Conspiration d'Innsmouth existante (ou un scénario indépendant du cycle), en remplaçant simplement les instructions de mise en place standard par celles fournies pour chaque scénario renouvelé.\n\nCette extension nécessite de posséder la campagne officielle La Conspiration d'Innsmouth pour être jouée.",
+      "resume": "Renouveau – Conspiration d'Innsmouth est une extension non officielle, entièrement fan-made, qui modifie et développe la campagne officielle FFG La Conspiration d'Innsmouth : cinq sets de rencontre entièrement nouveaux remplacent ceux de la campagne d'origine (plus un sixième, combinable avec l'original), accompagnés de nouvelles cartes Scénario et Joueur pour personnaliser vos decks Investigateur. Elle se joue par-dessus une campagne La Conspiration d'Innsmouth existante (ou un scénario indépendant du cycle), en remplaçant simplement les instructions de mise en place standard par celles fournies pour chaque scénario renouvelé.\n\nCette extension nécessite de posséder la campagne officielle La Conspiration d'Innsmouth pour être jouée.",
       "illustrations": []
     },
     "la-legende-du-cavalier-sans-tete": {
@@ -106,7 +106,7 @@
       "illustrations": []
     },
     "renouveau-devoreurs-des-reves": {
-      "resume": "Renouveau – Les Dévoreurs de Rêves est une extension fan-made qui modifie et développe la campagne officielle Les Dévoreurs de Rêves : six sets de rencontre entièrement nouveaux remplacent ceux de la campagne d'origine, accompagnés de nouvelles cartes Joueur pour personnaliser vos decks Investigateur. Elle se joue par-dessus une campagne Les Dévoreurs de Rêves existante (ou un scénario indépendant du cycle), en remplaçant simplement les instructions de mise en place standard par celles fournies pour chaque scénario renouvelé.\n\nCette extension nécessite de posséder la campagne officielle Les Dévoreurs de Rêves pour être jouée.",
+      "resume": "Renouveau – Les Dévoreurs de Rêves est une extension non officielle, entièrement fan-made, qui modifie et développe la campagne officielle FFG Les Dévoreurs de Rêves : six sets de rencontre entièrement nouveaux remplacent ceux de la campagne d'origine, accompagnés de nouvelles cartes Joueur pour personnaliser vos decks Investigateur. Elle se joue par-dessus une campagne Les Dévoreurs de Rêves existante (ou un scénario indépendant du cycle), en remplaçant simplement les instructions de mise en place standard par celles fournies pour chaque scénario renouvelé.\n\nCette extension nécessite de posséder la campagne officielle Les Dévoreurs de Rêves pour être jouée.",
       "illustrations": []
     },
     "sang-verse-a-salem": {
