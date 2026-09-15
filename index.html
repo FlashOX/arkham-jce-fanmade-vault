@@ -467,7 +467,12 @@ function updateCycleInfo(cycle) {
 function updateTypeChipsUI() {
   document.querySelectorAll("#typeChips .type-chip").forEach((btn) => {
     const isAll = btn.dataset.key === "all";
-    btn.classList.toggle("active", isAll ? activeChipKey === null : btn.dataset.key === activeChipKey);
+    // "Tous" ne s'allume que si aucun filtre (type ni cycle) n'est actif,
+    // sinon on laisse croire à tort que toutes les fiches sont affichées.
+    btn.classList.toggle(
+      "active",
+      isAll ? activeChipKey === null && activeCycle === null : btn.dataset.key === activeChipKey,
+    );
   });
 }
 
