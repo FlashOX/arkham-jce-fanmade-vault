@@ -95,9 +95,7 @@
     z-index: 10;
   }
   .info-badge .tooltip a { color: var(--accent); }
-  .info-badge:hover .tooltip,
-  .info-badge:focus .tooltip,
-  .info-badge:focus-within .tooltip { display: block; }
+  .info-badge .tooltip.open { display: block; }
 
   .resume { font-size: 0.98rem; line-height: 1.7; white-space: pre-line; margin-bottom: 32px; }
 
@@ -178,6 +176,29 @@
 <script>
 const id = new URLSearchParams(location.search).get("id");
 
+// La bulle d'info est séparée visuellement du badge (petit espace en dessous),
+// donc un simple :hover CSS se referme dès que la souris traverse cet espace.
+// On relie badge + bulle avec un petit délai de fermeture pour laisser le
+// temps à la souris d'atteindre la bulle (et donc de cliquer le lien MPC).
+function setupInfoBadge(badge) {
+  const tooltip = badge.querySelector(".tooltip");
+  let closeTimer = null;
+  const open = () => {
+    clearTimeout(closeTimer);
+    tooltip.classList.add("open");
+  };
+  const scheduleClose = () => {
+    clearTimeout(closeTimer);
+    closeTimer = setTimeout(() => tooltip.classList.remove("open"), 200);
+  };
+  badge.addEventListener("mouseenter", open);
+  badge.addEventListener("mouseleave", scheduleClose);
+  badge.addEventListener("focus", open);
+  badge.addEventListener("blur", scheduleClose);
+  tooltip.addEventListener("mouseenter", open);
+  tooltip.addEventListener("mouseleave", scheduleClose);
+}
+
 Promise.all([
   fetch("data/catalogue.json", { cache: "no-cache" }).then((r) => r.json()),
   fetch("data/synopsis.json", { cache: "no-cache" }).then((r) => r.json()),
@@ -212,6 +233,7 @@ Promise.all([
         </span>`
       : "";
     dlWrap.innerHTML = dlHtml + mpcHtml;
+    if (it.contactPanierPartage) setupInfoBadge(dlWrap.querySelector(".info-badge"));
 
     document.getElementById("resume").textContent = s.resume;
 
