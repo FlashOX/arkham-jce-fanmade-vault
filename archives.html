@@ -6,22 +6,8 @@
 <title>Liste complète — Internet Archive | Les Archives Miskatoniques</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Spectral:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
 <style>
-  :root {
-    --bg: #17181c;
-    --bg-elevated: #1f2025;
-    --border: #2c2d34;
-    --text: #e7e6e3;
-    --text-dim: #9a9aa2;
-    --accent: #7d6b9e;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Work Sans', sans-serif;
-  }
   a { color: var(--accent); }
   header {
     background: var(--bg-elevated);
@@ -72,18 +58,8 @@
 </main>
 <p id="status">Chargement…</p>
 
+<script src="js/common.js"></script>
 <script>
-const TYPE_LABEL = {
-  scenario: "Scénario",
-  campagne: "Campagne",
-  investigateurs: "Investigateurs",
-  "cartes-joueur": "Cartes joueur",
-  autre: "Autre",
-};
-const IA_DETAILS = (id) => `https://archive.org/details/${encodeURIComponent(id)}`;
-const IA_ARCHIVE = (id) => `https://archive.org/compress/${encodeURIComponent(id)}`;
-const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-
 fetch("data/catalogue.json", { cache: "no-cache" })
   .then((r) => r.json())
   .then((cat) => {

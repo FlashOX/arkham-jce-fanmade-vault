@@ -1,0 +1,71 @@
+/* Tokens et styles communs aux 3 pages (index, item, archives). Une page
+   peut définir ses propres règles par-dessus (mise en page, variantes) mais
+   les couleurs et composants partagés (tags, bouton de téléchargement)
+   vivent ici pour éviter la dérive entre pages. */
+
+:root {
+  --bg: #17181c;
+  --bg-elevated: #1f2025;
+  --card: #212228;
+  --border: #2c2d34;
+  --text: #e7e6e3;
+  --text-dim: #9a9aa2;
+  --accent: #7d6b9e;
+  --accent-soft: rgba(125,107,158,0.16);
+  --seal: #b3743f;
+
+  /* Couleurs par type (chips d'en-tête + tags de carte) : violet (campagne,
+     arcane), ambre (scénario, vieux papier), sarcelle (investigateurs,
+     vert-de-gris) et sauge (autres, mousse) — une famille de teintes
+     assourdies qui reste dans l'esprit de la DA. */
+  --type-campagne: var(--accent);
+  --type-campagne-soft: var(--accent-soft);
+  --type-campagne-text: #cabfe0;
+  --type-scenario: var(--seal);
+  --type-scenario-soft: rgba(179,116,63,0.18);
+  --type-scenario-text: #e3b98a;
+  --type-investigateurs: #4a8f95;
+  --type-investigateurs-soft: rgba(74,143,149,0.18);
+  --type-investigateurs-text: #a9d8da;
+  --type-autre: #7d8f5e;
+  --type-autre-soft: rgba(125,143,94,0.18);
+  --type-autre-text: #c3d1a8;
+  /* Neutre : chip « Tous », et tags Cycle sur les cartes (même famille). */
+  --type-all-soft: rgba(231,230,227,0.12);
+  --type-all-text: var(--text);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Bouton de téléchargement : fond/bordure/couleur communs aux variantes
+   icône (listing) et texte (fiche détail) ; la mise en page (taille,
+   position, padding) reste définie par chaque page. */
+.dl-btn {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 7px;
+  color: #cabfe0;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.dl-btn:hover { background: var(--accent); color: var(--bg); }
+
+/* Tag (type/cycle) : socle commun au listing et à la fiche détail. */
+.tag {
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #cabfe0;
+}
+.tag.cycle { background: var(--type-all-soft); color: var(--type-all-text); }
+.tag.color-campagne { background: var(--type-campagne-soft); color: var(--type-campagne-text); }
+.tag.color-scenario { background: var(--type-scenario-soft); color: var(--type-scenario-text); }
+.tag.color-investigateurs { background: var(--type-investigateurs-soft); color: var(--type-investigateurs-text); }
+.tag.color-autre { background: var(--type-autre-soft); color: var(--type-autre-text); }

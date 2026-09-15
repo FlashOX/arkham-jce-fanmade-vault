@@ -6,47 +6,8 @@
 <title>Les Archives Miskatoniques — contenu fan-made AHLCG</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Spectral:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
 <style>
-  :root {
-    --bg: #17181c;
-    --bg-elevated: #1f2025;
-    --card: #212228;
-    --border: #2c2d34;
-    --text: #e7e6e3;
-    --text-dim: #9a9aa2;
-    --accent: #7d6b9e;
-    --accent-soft: rgba(125,107,158,0.16);
-    --seal: #b3743f;
-
-    /* Couleurs par type (chips d'en-tête + tags de carte) : violet (campagne,
-       arcane), ambre (scénario, vieux papier), sarcelle (investigateurs,
-       vert-de-gris) et sauge (autres, mousse) — une famille de teintes
-       assourdies qui reste dans l'esprit de la DA. */
-    --type-campagne: var(--accent);
-    --type-campagne-soft: var(--accent-soft);
-    --type-campagne-text: #cabfe0;
-    --type-scenario: var(--seal);
-    --type-scenario-soft: rgba(179,116,63,0.18);
-    --type-scenario-text: #e3b98a;
-    --type-investigateurs: #4a8f95;
-    --type-investigateurs-soft: rgba(74,143,149,0.18);
-    --type-investigateurs-text: #a9d8da;
-    --type-autre: #7d8f5e;
-    --type-autre-soft: rgba(125,143,94,0.18);
-    --type-autre-text: #c3d1a8;
-    /* Neutre : chip « Tous », et tags Cycle sur les cartes (même famille). */
-    --type-all-soft: rgba(231,230,227,0.12);
-    --type-all-text: var(--text);
-  }
-
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Work Sans', sans-serif;
-  }
-
   a { color: inherit; }
 
   /* Sticky header + filter bar (desktop/tablette uniquement : sur mobile,
@@ -280,14 +241,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--accent-soft);
-    border: 1px solid var(--accent);
-    border-radius: 7px;
-    color: #cabfe0;
-    text-decoration: none;
-    transition: background 0.15s, color 0.15s;
   }
-  .dl-btn:hover { background: var(--accent); color: var(--bg); }
   .dl-btn svg { width: 17px; height: 17px; }
   .card .creator {
     font-size: 0.78rem;
@@ -320,24 +274,14 @@
   }
 
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+  /* Tag de carte : cliquable visuellement (écho des chips de filtrage). */
   .tag {
     font-family: inherit;
-    font-size: 0.7rem;
-    padding: 3px 10px;
     border: 0;
-    border-radius: 999px;
-    background: var(--accent-soft);
-    color: #cabfe0;
     cursor: default;
     appearance: none;
   }
   .tag.active { box-shadow: inset 0 0 0 1px currentColor; }
-  .tag.cycle { background: var(--type-all-soft); color: var(--type-all-text); }
-  /* Couleur par type, en écho aux chips de filtrage de l'en-tête. */
-  .tag.color-campagne { background: var(--type-campagne-soft); color: var(--type-campagne-text); }
-  .tag.color-scenario { background: var(--type-scenario-soft); color: var(--type-scenario-text); }
-  .tag.color-investigateurs { background: var(--type-investigateurs-soft); color: var(--type-investigateurs-text); }
-  .tag.color-autre { background: var(--type-autre-soft); color: var(--type-autre-text); }
 
   footer {
     text-align: center;
@@ -446,17 +390,12 @@
   Liste complète des items Internet Archive <a href="archives.html">ici</a>.
 </footer>
 
+<script src="js/common.js"></script>
 <script>
-const TYPE_LABEL = {
-  scenario: "Scénario",
-  campagne: "Campagne",
-  investigateurs: "Investigateurs",
-  "cartes-joueur": "Cartes joueur",
-  autre: "Autre",
-};
 // Chips d'en-tête : regroupent les types de la donnée en 4 catégories affichées
 // (libellés au pluriel, ce sont des filtres — pas la même chose que le tag
-// singulier affiché sur une fiche).
+// singulier affiché sur une fiche). Doit rester cohérent avec chipKeyForType
+// (js/common.js), qui fait le même regroupement pour colorer les tags.
 const TYPE_CHIPS = [
   { key: "campagne", types: ["campagne"], label: "Campagnes" },
   { key: "scenario", types: ["scenario"], label: "Scénarios indépendants" },
@@ -464,11 +403,8 @@ const TYPE_CHIPS = [
   { key: "autre", types: ["cartes-joueur", "autre"], label: "Autres" },
 ];
 const CHIP_BY_KEY = Object.fromEntries(TYPE_CHIPS.map((c) => [c.key, c]));
-const chipKeyForType = (type) => TYPE_CHIPS.find((c) => c.types.includes(type))?.key || null;
 let activeChipKey = null;
 let activeCycle = null; // filtre cycle : conservé pour usage futur, plus déclenchable depuis l'UI (tags non cliquables)
-// zip généré à la volée par archive.org avec tous les fichiers de l'item
-const IA_ARCHIVE = (id) => `https://archive.org/compress/${encodeURIComponent(id)}`;
 
 const grid = document.getElementById("grid");
 const emptyEl = document.getElementById("empty");
@@ -477,11 +413,6 @@ const cycleInfoEl = document.getElementById("cycleInfo");
 let items = [];
 let cycles = {};
 let synopsisIds = new Set();
-
-const esc = (s) =>
-  String(s ?? "").replace(/[&<>"']/g, (c) => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
-  }[c]));
 
 function render(list) {
   const chip = (fk, fv, label, cls) =>
