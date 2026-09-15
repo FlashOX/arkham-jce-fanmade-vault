@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos | Les Archives Miskatoniques</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Spectral:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<style>
+  a { color: var(--accent); }
+  header {
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+  }
+  header a.back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #cabfe0;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  header a.back:hover { color: var(--text); text-decoration: underline; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 32px 32px 60px; }
+
+  main h1 {
+    font-family: 'Spectral', serif;
+    font-size: 1.8rem;
+    margin: 0 0 18px;
+    color: var(--text);
+  }
+
+  .lede {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--text);
+    margin: 0 0 14px;
+  }
+  main p { line-height: 1.7; color: var(--text-dim); margin: 0 0 14px; }
+  main strong { color: var(--text); }
+
+  /* Inventaire : une carte par type, calculée depuis le catalogue */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+    margin: 24px 0 28px;
+  }
+  .stat {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 10px;
+    text-align: center;
+    border-top: 2px solid var(--accent);
+  }
+  .stat.color-campagne { border-top-color: var(--type-campagne); }
+  .stat.color-scenario { border-top-color: var(--type-scenario); }
+  .stat.color-investigateurs { border-top-color: var(--type-investigateurs); }
+  .stat.color-autre { border-top-color: var(--type-autre); }
+  .stat .n {
+    display: block;
+    font-family: 'Spectral', serif;
+    font-size: 1.7rem;
+    color: var(--text);
+  }
+  .stat .l {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .stats-note { font-size: 0.8rem; color: var(--text-dim); text-align: center; margin: -18px 0 28px; }
+
+  .box {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 28px;
+    overflow: hidden;
+  }
+  .box h2 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-dim);
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+  }
+  .box ol { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+  .box li {
+    display: flex;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .box li:last-child { border-bottom: none; }
+  .box li::before {
+    counter-increment: step;
+    content: counter(step);
+    flex: none;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: #cabfe0;
+    font-family: 'Spectral', serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box li strong { display: block; color: var(--text); font-size: 0.95rem; margin-bottom: 3px; }
+  .box li p { margin: 0; font-size: 0.88rem; line-height: 1.55; }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 28px;
+  }
+  .callout p { color: var(--text); margin: 0; font-size: 0.92rem; line-height: 1.6; }
+  .callout a { color: #cabfe0; font-weight: 600; }
+
+  main h2.section {
+    font-family: 'Spectral', serif;
+    font-size: 1.2rem;
+    color: var(--text);
+    margin: 0 0 12px;
+  }
+
+  .disclaimer {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back" href="./">← Retour aux Archives Miskatoniques</a>
+</header>
+
+<main>
+  <h1>À propos</h1>
+
+  <p class="lede">
+    Le contenu fan-made francophone pour <em>Horreur à Arkham : le Jeu de Cartes</em>
+    circule depuis des années — sur Discord, sur des Drive personnels, dans des posts
+    de forum. Beaucoup de bonnes créations, mais dispersées, difficiles à retrouver,
+    et parfois perdues quand un lien expire ou qu'un auteur quitte la communauté.
+  </p>
+  <p>
+    <strong>Les Archives Miskatoniques</strong> centralisent tout ça dans un catalogue
+    unique : créations originales de la communauté et traductions de contenus
+    anglophones (guides, planches d'impression, images de cartes). Les fichiers sont
+    hébergés durablement sur Internet Archive, indépendamment de qui que ce soit.
+    Projet bénévole et non commercial, librement inspiré du travail d'
+    <a href="https://inexorablefate.com" target="_blank" rel="noopener">Inexorable Fate</a>
+    pour la communauté anglophone.
+  </p>
+
+  <div class="stats" id="stats"></div>
+  <p class="stats-note" id="statsNote"></p>
+
+  <div class="box">
+    <h2>Comment ça marche</h2>
+    <ol>
+      <li>
+        <div>
+          <strong>Parcourir</strong>
+          <p>Filtrez par type (campagne, scénario, investigateurs…) ou par cycle de traduction depuis la page d'accueil, ou cherchez directement un titre.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Ouvrir une fiche</strong>
+          <p>Résumé sans spoil, crédits (auteur original et traducteur), et la liste des fichiers disponibles pour ce contenu.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Télécharger</strong>
+          <p>Un bouton récupère l'archive complète (guide, planches d'impression, images de cartes) en un clic. Quand la communauté partage un panier d'impression MakePlayingCards prêt à l'emploi, un contact dédié est indiqué sur la fiche.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="callout">
+    <p>
+      <strong>Une création à proposer ?</strong> Passez par le
+      <a href="https://discord.com/invite/A23rum4" target="_blank" rel="noopener">Discord de la communauté Arkham JCE FR</a>
+      pour la partager — elle pourra rejoindre le catalogue.
+    </p>
+  </div>
+
+  <p class="disclaimer">
+    Ce projet est indépendant. Il n'est ni affilié, ni soutenu, ni approuvé par
+    Fantasy Flight Games, Asmodée ou Edge. « Horreur à Arkham : le Jeu de Cartes »,
+    « Arkham Horror: The Card Game », ainsi que les marques, logos et illustrations
+    officiels, demeurent la propriété de leurs détenteurs respectifs. Le contenu
+    recensé ici est produit et partagé gratuitement par la communauté et nécessite le
+    jeu de base officiel pour être utilisé.
+  </p>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-links">
+    <a href="archives.html">Catalogue complet</a>
+    <a href="apropos.html">À propos</a>
+    <a href="https://archive.org/details/@arkhamjcefanmade" target="_blank" rel="noopener">Archive.org</a>
+    <a href="https://discord.com/invite/A23rum4" target="_blank" rel="noopener">Discord de la communauté</a>
+  </div>
+  <p class="site-footer-note">Fichiers conservés sur <a href="https://archive.org" target="_blank" rel="noopener">Internet Archive</a>, bibliothèque numérique à but non lucratif vouée à la préservation du patrimoine culturel.</p>
+</footer>
+
+<script src="js/common.js"></script>
+<script>
+const STAT_LABEL = { campagne: "Campagnes", scenario: "Scénarios", investigateurs: "Investigateurs", autre: "Autres" };
+
+fetch("data/catalogue.json", { cache: "no-cache" })
+  .then((r) => r.json())
+  .then((cat) => {
+    const items = cat.items.filter((it) => it.publie);
+    const counts = { campagne: 0, scenario: 0, investigateurs: 0, autre: 0 };
+    for (const it of items) counts[chipKeyForType(it.type)]++;
+
+    document.getElementById("stats").innerHTML = Object.keys(STAT_LABEL)
+      .map((key) => `
+        <div class="stat color-${key}">
+          <span class="n">${counts[key]}</span>
+          <span class="l">${STAT_LABEL[key]}</span>
+        </div>`)
+      .join("");
+
+    document.getElementById("statsNote").textContent =
+      `${items.length} fiches dans les archives à ce jour.`;
+  })
+  .catch(() => {
+    document.getElementById("statsNote").textContent = "";
+  });
+</script>
+
+</body>
+</html>

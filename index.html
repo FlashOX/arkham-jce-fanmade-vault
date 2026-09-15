@@ -285,33 +285,6 @@
   }
   .tag.active { box-shadow: inset 0 0 0 1px currentColor; }
 
-  footer {
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 0.8rem;
-    padding: 24px 32px 40px;
-    border-top: 1px solid var(--border);
-  }
-
-  .about {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 32px;
-    border-top: 1px solid var(--border);
-  }
-  .about h2 {
-    font-family: 'Spectral', serif;
-    font-size: 1.3rem;
-    margin: 0 0 12px;
-  }
-  .about p {
-    color: var(--text-dim);
-    line-height: 1.6;
-    max-width: 760px;
-    margin: 0 0 14px;
-  }
-  .about .disclaimer { font-size: 0.85rem; }
-
   .hidden { display: none !important; }
 
   @media (max-width: 640px) {
@@ -367,31 +340,14 @@
 <div class="grid" id="grid"></div>
 <div class="empty hidden" id="empty">Aucune fiche ne correspond à ces filtres.</div>
 
-<section class="about" id="a-propos">
-  <h2>À propos</h2>
-  <p>
-    <strong>Les Archives Miskatoniques</strong> recensent et hébergent durablement le
-    contenu fan-made francophone pour <em>Horreur à Arkham : le Jeu de Cartes</em> :
-    créations originales de la communauté et traductions de contenus anglophones
-    (guides, planches d'impression, images de cartes). Les fichiers sont conservés sur
-    Internet Archive afin de rester accessibles indépendamment de leurs auteurs. Projet
-    bénévole, non commercial, librement inspiré du travail de
-    <a href="https://inexorablefate.com" target="_blank" rel="noopener">Inexorable Fate</a>
-    pour la communauté anglophone.
-  </p>
-  <p class="disclaimer">
-    Ce projet est indépendant. Il n'est ni affilié, ni soutenu, ni approuvé par
-    Fantasy Flight Games, Asmodée ou Edge. « Horreur à Arkham : le Jeu de Cartes »,
-    « Arkham Horror: The Card Game », ainsi que les marques, logos et illustrations
-    officiels, demeurent la propriété de leurs détenteurs respectifs. Le contenu
-    recensé ici est produit et partagé gratuitement par la communauté et nécessite le
-    jeu de base officiel pour être utilisé.
-  </p>
-</section>
-
-<footer>
-  Fichiers conservés sur <a href="https://archive.org" target="_blank" rel="noopener">Internet Archive</a>, bibliothèque numérique à but non lucratif vouée à la préservation du patrimoine culturel.
-  Liste complète des items Internet Archive <a href="archives.html">ici</a>.
+<footer class="site-footer">
+  <div class="site-footer-links">
+    <a href="archives.html">Catalogue complet</a>
+    <a href="apropos.html">À propos</a>
+    <a href="https://archive.org/details/@arkhamjcefanmade" target="_blank" rel="noopener">Archive.org</a>
+    <a href="https://discord.com/invite/A23rum4" target="_blank" rel="noopener">Discord de la communauté</a>
+  </div>
+  <p class="site-footer-note">Fichiers conservés sur <a href="https://archive.org" target="_blank" rel="noopener">Internet Archive</a>, bibliothèque numérique à but non lucratif vouée à la préservation du patrimoine culturel.</p>
 </footer>
 
 <script src="js/common.js"></script>
