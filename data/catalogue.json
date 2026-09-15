@@ -15,11 +15,44 @@
     "Cycle 3": {
       "description": "Troisième lot de scénarios fan-made. Détails sur le Discord de la communauté."
     },
-    "Cycle 5": {
-      "description": "Cinquième lot de scénarios fan-made. Détails sur le Discord de la communauté."
-    },
     "Cycle 4": {
-      "description": "Lot de scénarios fan-made numéroté « Cycle 4 ». Détails sur le Discord de la communauté."
+      "description": "Quatrième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 5": {
+      "description": "Cinquième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 6": {
+      "description": "Sixième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 7": {
+      "description": "Septième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 8": {
+      "description": "Huitième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 9": {
+      "description": "Neuvième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 10": {
+      "description": "Dixième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 11": {
+      "description": "Onzième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 12": {
+      "description": "Douzième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 13": {
+      "description": "Treizième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 14": {
+      "description": "Quatorzième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 15": {
+      "description": "Quinzième lot de contenu fan-made. Détails sur le Discord de la communauté."
+    },
+    "Cycle 16": {
+      "description": "Seizième lot de contenu fan-made. Détails sur le Discord de la communauté."
     }
   },
   "items": [
@@ -28,7 +61,7 @@
       "titre": "Ages Unwound",
       "titreVO": null,
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 16",
       "etat": "inconnu",
       "langue": "fr",
       "publie": false,
@@ -52,7 +85,7 @@
       "titre": "Alice au Pays des Merveilles",
       "titreVO": "Alice in Wonderland",
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 9",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -198,7 +231,7 @@
       "titre": "Circus Ex Mortis",
       "titreVO": "Circus Ex Mortis",
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 14",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -229,7 +262,7 @@
       "titre": "Dimensions Étranges",
       "titreVO": null,
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 5",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -259,7 +292,7 @@
       "titre": "La Cité de l'Invisible",
       "titreVO": null,
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 13",
       "etat": "inconnu",
       "langue": "fr",
       "publie": false,
@@ -436,7 +469,7 @@
       "titre": "Fondations Cyclopéennes",
       "titreVO": "Cyclopean Foundations",
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 7",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -467,7 +500,7 @@
       "titre": "La Guerre des Mondes",
       "titreVO": "The War of the Worlds",
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 8",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -614,7 +647,7 @@
       "titre": "L'Appel du Porte Peste",
       "titreVO": null,
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 6",
       "etat": "inconnu",
       "langue": "fr",
       "publie": false,
@@ -638,7 +671,7 @@
       "titre": "L'Étrange Cas du Dr. Jekyll et Mr Hyde",
       "titreVO": "The Strange Case of Dr. Jekyll and Mr. Hyde",
       "type": "scenario",
-      "cycle": "Cycle 4",
+      "cycle": "Cycle 8",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -731,7 +764,7 @@
       "titre": "L'ombre des Grands Anciens",
       "titreVO": null,
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 15",
       "etat": "inconnu",
       "langue": "fr",
       "publie": true,
@@ -755,7 +788,7 @@
       "titre": "La Légende du Cavalier Sans Tête",
       "titreVO": null,
       "type": "scenario",
-      "cycle": "Cycle 4",
+      "cycle": "Cycle 8",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -816,7 +849,7 @@
       "titre": "Matière Noire",
       "titreVO": "Dark Matter",
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 4",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -847,7 +880,7 @@
       "titre": "Noël à Arkham",
       "titreVO": null,
       "type": "scenario",
-      "cycle": null,
+      "cycle": "Cycle 12",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -878,7 +911,7 @@
       "titre": "Les Ombres de Yog Sothoth",
       "titreVO": null,
       "type": "campagne",
-      "cycle": null,
+      "cycle": "Cycle 10",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -1001,7 +1034,7 @@
       "titre": "Quête Onirique Étendue",
       "titreVO": null,
       "type": "autre",
-      "cycle": "Cycle 5",
+      "cycle": "Cycle 11",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -1032,7 +1065,7 @@
       "titre": "Renouveau Conspiration d'Innsmouth",
       "titreVO": "Return to the Innsmouth Conspiracy",
       "type": "autre",
-      "cycle": "Cycle 5",
+      "cycle": "Cycle 11",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -1063,7 +1096,7 @@
       "titre": "Renouveau Dévoreurs des Rêves",
       "titreVO": null,
       "type": "autre",
-      "cycle": "Cycle 5",
+      "cycle": "Cycle 11",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,
@@ -1156,7 +1189,7 @@
       "titre": "La Sororité des Secrets",
       "titreVO": null,
       "type": "scenario",
-      "cycle": "Cycle 4",
+      "cycle": "Cycle 8",
       "etat": "disponible",
       "langue": "fr",
       "publie": true,

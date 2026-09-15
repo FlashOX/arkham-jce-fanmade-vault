@@ -6,35 +6,8 @@
 <title>… | Les Archives Miskatoniques</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Spectral:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
 <style>
-  :root {
-    --bg: #17181c;
-    --bg-elevated: #1f2025;
-    --card: #212228;
-    --border: #2c2d34;
-    --text: #e7e6e3;
-    --text-dim: #9a9aa2;
-    --accent: #7d6b9e;
-    --accent-soft: rgba(125,107,158,0.16);
-
-    --type-campagne-soft: var(--accent-soft);
-    --type-campagne-text: #cabfe0;
-    --type-scenario-soft: rgba(179,116,63,0.18);
-    --type-scenario-text: #e3b98a;
-    --type-investigateurs-soft: rgba(74,143,149,0.18);
-    --type-investigateurs-text: #a9d8da;
-    --type-autre-soft: rgba(125,143,94,0.18);
-    --type-autre-text: #c3d1a8;
-    --type-all-soft: rgba(231,230,227,0.12);
-    --type-all-text: var(--text);
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Work Sans', sans-serif;
-  }
   a { color: var(--accent); }
   header {
     background: var(--bg-elevated);
@@ -55,34 +28,15 @@
 
   .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 22px; }
   .meta .vo { color: var(--text-dim); font-style: italic; font-size: 0.9rem; }
-  .tag {
-    font-size: 0.7rem;
-    padding: 3px 10px;
-    border-radius: 999px;
-    background: var(--accent-soft);
-    color: #cabfe0;
-  }
-  .tag.color-campagne { background: var(--type-campagne-soft); color: var(--type-campagne-text); }
-  .tag.color-scenario { background: var(--type-scenario-soft); color: var(--type-scenario-text); }
-  .tag.color-investigateurs { background: var(--type-investigateurs-soft); color: var(--type-investigateurs-text); }
-  .tag.color-autre { background: var(--type-autre-soft); color: var(--type-autre-text); }
-  .tag.cycle { background: var(--type-all-soft); color: var(--type-all-text); }
 
   .dl-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--accent-soft);
-    border: 1px solid var(--accent);
-    border-radius: 7px;
     padding: 9px 16px;
-    color: #cabfe0;
-    text-decoration: none;
     font-size: 0.88rem;
     margin-bottom: 28px;
-    transition: background 0.15s, color 0.15s;
   }
-  .dl-btn:hover { background: var(--accent); color: var(--bg); }
   .dl-btn svg { width: 16px; height: 16px; }
 
   .resume { font-size: 0.98rem; line-height: 1.7; white-space: pre-line; margin-bottom: 32px; }
@@ -160,18 +114,8 @@
 </main>
 <p id="status">Chargement…</p>
 
+<script src="js/common.js"></script>
 <script>
-const TYPE_LABEL = {
-  scenario: "Scénario",
-  campagne: "Campagne",
-  investigateurs: "Investigateurs",
-  "cartes-joueur": "Cartes joueur",
-  autre: "Autre",
-};
-const chipKeyForType = (type) => (["campagne", "scenario", "investigateurs"].includes(type) ? type : "autre");
-const IA_ARCHIVE = (id) => `https://archive.org/compress/${encodeURIComponent(id)}`;
-const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-
 const id = new URLSearchParams(location.search).get("id");
 
 Promise.all([
