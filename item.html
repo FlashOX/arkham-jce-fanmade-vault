@@ -29,15 +29,75 @@
   .meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 22px; }
   .meta .vo { color: var(--text-dim); font-style: italic; font-size: 0.9rem; }
 
+  #dlWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
   .dl-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 9px 16px;
     font-size: 0.88rem;
-    margin-bottom: 28px;
   }
   .dl-btn svg { width: 16px; height: 16px; }
+
+  .mpc-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 8px 12px;
+  }
+  .mpc-contact strong { color: var(--text); font-weight: 600; }
+
+  .info-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: #cabfe0;
+    font-size: 0.66rem;
+    font-weight: 700;
+    cursor: help;
+  }
+  .info-badge .tooltip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    width: 230px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 10px 12px;
+    color: var(--text);
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    cursor: default;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    z-index: 10;
+  }
+  .info-badge .tooltip a { color: var(--accent); }
+  .info-badge:hover .tooltip,
+  .info-badge:focus .tooltip,
+  .info-badge:focus-within .tooltip { display: block; }
 
   .resume { font-size: 0.98rem; line-height: 1.7; white-space: pre-line; margin-bottom: 32px; }
 
@@ -141,9 +201,17 @@ Promise.all([
     `;
 
     const dlWrap = document.getElementById("dlWrap");
-    dlWrap.innerHTML = it.archive
+    const dlHtml = it.archive
       ? `<a class="dl-btn" href="${esc(IA_ARCHIVE(it.archive.id))}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg> Télécharger l'archive complète</a>`
       : `<span style="color:var(--text-dim); font-size:0.88rem;">Pas encore hébergé — bientôt disponible.</span>`;
+    const mpcHtml = it.contactPanierPartage
+      ? `<span class="mpc-contact">Contact Panier MPC : <strong>${esc(it.contactPanierPartage)}</strong>
+          <span class="info-badge" tabindex="0">?
+            <span class="tooltip">Personne à contacter via le Discord de la communauté pour obtenir le panier <a href="https://www.makeplayingcards.com/" target="_blank" rel="noopener">MPC</a> prêt à imprimer.</span>
+          </span>
+        </span>`
+      : "";
+    dlWrap.innerHTML = dlHtml + mpcHtml;
 
     document.getElementById("resume").textContent = s.resume;
 

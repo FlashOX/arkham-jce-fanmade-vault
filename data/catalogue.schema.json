@@ -140,7 +140,10 @@
             "bleed": { "type": "boolean" }
           }
         },
-        "contactPanierPartage": { "type": ["string", "null"] },
+        "contactPanierPartage": {
+          "type": ["string", "null"],
+          "description": "Pseudo Discord de la personne à contacter pour obtenir le panier MPC (makeplayingcards.com) prêt à imprimer de ce contenu. null si inconnu."
+        },
         "commentaire": { "type": ["string", "null"] },
         "creator": {
           "type": "string",

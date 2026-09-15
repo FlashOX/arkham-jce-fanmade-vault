@@ -1,7 +1,7 @@
 {
   "meta": {
     "langue": "fr",
-    "miseAJour": "2026-09-05",
+    "miseAJour": "2026-09-15",
     "source": "fanmade_listing_fr.csv — communauté arkhamhorrorfr (forum + Discord)",
     "note": "Champ `type` = type de contenu ; champ `cycle` = cycle de traduction fan-made (indépendant du type). Voir `cycles` pour le détail de chaque cycle."
   },
@@ -98,7 +98,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-alice-au-pays-des-merveilles",
@@ -129,7 +129,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": "Création originale FR.",
       "archive": {
         "id": "ahlcg-fr-au-bord-du-gouffre",
@@ -159,7 +159,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": "Création originale FR.",
       "archive": {
         "id": "ahlcg-fr-au-coeur-des-tenebres",
@@ -189,7 +189,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": null,
       "datePublication": null,
@@ -213,7 +213,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-les-chiens-de-tindalos",
@@ -275,7 +275,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Wywid",
       "commentaire": "Création originale FR.",
       "archive": {
         "id": "ahlcg-fr-dimensions-etranges",
@@ -329,7 +329,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-la-couleur-tombee-du-ciel",
@@ -360,7 +360,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-desolation-a-bord-du-constellation",
@@ -391,7 +391,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": "Création originale FR.",
       "archive": {
         "id": "ahlcg-fr-les-disparus-de-killineq",
@@ -421,7 +421,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": "Création originale FR.",
       "archive": {
         "id": "ahlcg-fr-face-au-wendigo",
@@ -451,7 +451,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-le-festival",
@@ -482,7 +482,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655 / Ayoross",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-fondations-cyclopeenes",
@@ -513,7 +513,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655",
       "commentaire": null,
       "creator": "The Beard",
       "archive": {
@@ -544,7 +544,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-investigateurs-fan-made",
@@ -574,7 +574,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-investigateurs-fan-made-cycle-2",
@@ -629,7 +629,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-jouet-dune-illusion",
@@ -684,7 +684,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-letrange-cas-du-docteur-jekyll-et-mr-hyde",
@@ -715,7 +715,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-levenement-de-svalbard",
@@ -746,7 +746,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-lhotel-du-grand-chene",
@@ -777,7 +777,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655",
       "commentaire": null,
       "archive": null,
       "datePublication": null,
@@ -801,7 +801,7 @@
         "noBleed": false,
         "bleed": true
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-la-legende-du-cavalier-sans-tete",
@@ -832,7 +832,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": "Création originale FR.",
       "archive": {
         "id": "ahlcg-fr-la-maison-vaudou",
@@ -862,7 +862,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Ayoross",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-matiere-noire",
@@ -893,7 +893,7 @@
         "noBleed": false,
         "bleed": true
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655",
       "commentaire": null,
       "creator": "Frying Tonight",
       "archive": {
@@ -955,7 +955,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-le-palais-du-rire",
@@ -986,7 +986,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-le-pont-des-soupirs",
@@ -1017,7 +1017,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": "Création originale FR.",
       "archive": {
         "id": "ahlcg-fr-pulsions-cynegetiques",
@@ -1047,7 +1047,7 @@
         "noBleed": false,
         "bleed": true
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655",
       "commentaire": null,
       "creator": "Jeff et Stefanie Abbot",
       "archive": {
@@ -1078,7 +1078,7 @@
         "noBleed": false,
         "bleed": true
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655",
       "commentaire": null,
       "creator": "DerbK, Hauke",
       "archive": {
@@ -1109,7 +1109,7 @@
         "noBleed": false,
         "bleed": true
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Franck2655",
       "commentaire": null,
       "creator": "DerbK, Franck2655, Live Moore, Mendax",
       "archive": {
@@ -1140,7 +1140,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-sang-verse-a-salem",
@@ -1171,7 +1171,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-les-seuils-de-la-croyance",
@@ -1232,7 +1232,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-la-symphonie-derich-zann",
@@ -1263,7 +1263,7 @@
         "noBleed": false,
         "bleed": false
       },
-      "contactPanierPartage": null,
+      "contactPanierPartage": "Vinnquest",
       "commentaire": null,
       "archive": {
         "id": "ahlcg-fr-le-wyrm-de-pensher",
