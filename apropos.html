@@ -10,9 +10,15 @@
 <style>
   a { color: var(--accent); }
   header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
     background: var(--bg-elevated);
     border-bottom: 1px solid var(--border);
     padding: 18px 32px;
+  }
+  @media (max-width: 640px) {
+    header { position: static; }
   }
   header a.back {
     display: inline-flex;
