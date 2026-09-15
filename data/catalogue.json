@@ -765,7 +765,7 @@
       "titreVO": null,
       "type": "campagne",
       "cycle": "Cycle 15",
-      "etat": "inconnu",
+      "etat": "disponible",
       "langue": "fr",
       "publie": true,
       "image": "img/thumbs/lombre-des-grands-anciens.jpg",
@@ -775,11 +775,17 @@
       },
       "images": {
         "noBleed": false,
-        "bleed": false
+        "bleed": true
       },
       "contactPanierPartage": "Franck2655",
-      "commentaire": null,
-      "archive": null,
+      "commentaire": "Création originale FR.",
+      "creator": "Franck2655",
+      "archive": {
+        "id": "ahlcg-fr-lombre-des-grands-anciens",
+        "guide": "ahlcg-fr-lombre-des-grands-anciens-guide.pdf",
+        "planche": "ahlcg-fr-lombre-des-grands-anciens-planche-a4.zip",
+        "images": "ahlcg-fr-lombre-des-grands-anciens-cartes-avec-bleed.zip"
+      },
       "datePublication": null,
       "sortKey": "L'ombre des Grands Anciens"
     },
